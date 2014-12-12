@@ -1,0 +1,9 @@
+2014-12-12 16:33:18 |main| [INFO] - info
+2014-12-12 16:33:18 |main| [DEBUG] - debug
+2014-12-12 16:33:18 |main| [ERROR] - error
+2014-12-12 16:33:55 |com.glacier.spider.NewsEye.main(NewsEye.java:14)| [INFO] - info
+2014-12-12 16:33:55 |com.glacier.spider.NewsEye.main(NewsEye.java:15)| [DEBUG] - debug
+2014-12-12 16:33:55 |com.glacier.spider.NewsEye.main(NewsEye.java:16)| [ERROR] - error
+2014-12-12 16:34:09 |com.glacier.spider.NewsEye.main(NewsEye.java:14)| [INFO] - info
+2014-12-12 16:34:09 |com.glacier.spider.NewsEye.main(NewsEye.java:15)| [DEBUG] - debug
+2014-12-12 16:34:09 |com.glacier.spider.NewsEye.main(NewsEye.java:16)| [ERROR] - error
