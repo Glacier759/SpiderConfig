@@ -1,5 +1,6 @@
 package com.glacier.spider;
 
+import com.glacier.spider.bloomfilter.BloomFilter;
 import org.apache.log4j.Logger;
 
 /**
@@ -11,9 +12,9 @@ public class NewsEye {
 
     public static void main(String[] args) {
         try {
-            logger.info("info");
-            logger.debug("debug");
-            logger.error("error");
+            logger.info("[开始执行]");
+            BloomFilter bloomFilter = new BloomFilter(1000);
+
         }catch (Exception e){
             e.printStackTrace();
         }
