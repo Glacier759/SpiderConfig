@@ -8,3 +8,192 @@
 2014-12-12 16:34:09 |com.glacier.spider.NewsEye.main(NewsEye.java:15)| [DEBUG] - debug
 2014-12-12 16:34:09 |com.glacier.spider.NewsEye.main(NewsEye.java:16)| [ERROR] - error
 2014-12-12 17:48:34 |com.glacier.spider.NewsEye.main(NewsEye.java:15)| [INFO] - [开始执行]
+2014-12-12 18:26:55 |com.glacier.spider.NewsEye.main(NewsEye.java:17)| [INFO] - [开始执行]
+2014-12-12 18:27:30 |com.glacier.spider.NewsEye.main(NewsEye.java:17)| [INFO] - [开始执行]
+2014-12-12 18:58:01 |com.glacier.spider.NewsEye.main(NewsEye.java:17)| [INFO] - [开始执行]
+2014-12-12 18:58:15 |com.glacier.spider.NewsEye.main(NewsEye.java:17)| [INFO] - [开始执行]
+2014-12-12 18:58:25 |com.glacier.spider.NewsEye.main(NewsEye.java:17)| [INFO] - [开始执行]
+2014-12-12 18:58:35 |com.glacier.spider.NewsEye.main(NewsEye.java:17)| [INFO] - [开始执行]
+2014-12-12 18:58:44 |com.glacier.spider.NewsEye.main(NewsEye.java:17)| [INFO] - [开始执行]
+2014-12-12 19:51:04 |com.glacier.spider.NewsEye.main(NewsEye.java:20)| [INFO] - [程序开始执行]
+2014-12-12 19:51:04 |com.glacier.spider.NewsEye.main(NewsEye.java:23)| [INFO] - [BloomFilter] 初始化成功
+2014-12-12 19:51:04 |com.glacier.spider.NewsEye.saveBloomFilter(NewsEye.java:70)| [ERROR] - java.io.NotSerializableException: com.glacier.spider.bloomfilter.BloomFilter
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1183)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:347)
+	at com.glacier.spider.NewsEye.saveBloomFilter(NewsEye.java:65)
+	at com.glacier.spider.NewsEye.main(NewsEye.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+
+2014-12-12 19:51:04 |com.glacier.spider.NewsEye.main(NewsEye.java:28)| [INFO] - [程序执行完毕]
+2014-12-12 19:52:47 |com.glacier.spider.NewsEye.main(NewsEye.java:20)| [INFO] - [程序开始执行]
+2014-12-12 19:52:47 |com.glacier.spider.NewsEye.initBloomFilter(NewsEye.java:54)| [ERROR] - java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: com.glacier.spider.bloomfilter.BloomFilter
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:370)
+	at com.glacier.spider.NewsEye.initBloomFilter(NewsEye.java:41)
+	at com.glacier.spider.NewsEye.main(NewsEye.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+Caused by: java.io.NotSerializableException: com.glacier.spider.bloomfilter.BloomFilter
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1183)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:347)
+	at com.glacier.spider.NewsEye.saveBloomFilter(NewsEye.java:65)
+	at com.glacier.spider.NewsEye.main(NewsEye.java:26)
+	... 5 more
+
+2014-12-12 19:52:47 |com.glacier.spider.NewsEye.main(NewsEye.java:27)| [INFO] - [BloomFilter] 保存成功
+2014-12-12 19:52:47 |com.glacier.spider.NewsEye.main(NewsEye.java:28)| [INFO] - [程序执行完毕]
+2014-12-12 19:53:08 |com.glacier.spider.NewsEye.main(NewsEye.java:20)| [INFO] - [程序开始执行]
+2014-12-12 19:53:08 |com.glacier.spider.NewsEye.initBloomFilter(NewsEye.java:54)| [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.NewsEye.initBloomFilter(NewsEye.java:44)
+	at com.glacier.spider.NewsEye.main(NewsEye.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+
+2014-12-12 19:53:08 |com.glacier.spider.NewsEye.main(NewsEye.java:27)| [INFO] - [BloomFilter] 保存成功
+2014-12-12 19:53:08 |com.glacier.spider.NewsEye.main(NewsEye.java:28)| [INFO] - [程序执行完毕]
+2014-12-12 19:54:12 |com.glacier.spider.NewsEye.main(NewsEye.java:20)| [INFO] - [程序开始执行]
+2014-12-12 19:54:12 |com.glacier.spider.NewsEye.main(NewsEye.java:23)| [INFO] - [BloomFilter] 初始化成功
+2014-12-12 19:54:12 |com.glacier.spider.NewsEye.saveBloomFilter(NewsEye.java:70)| [ERROR] - java.io.NotSerializableException: com.glacier.spider.bloomfilter.BloomFilter
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1183)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:347)
+	at com.glacier.spider.NewsEye.saveBloomFilter(NewsEye.java:65)
+	at com.glacier.spider.NewsEye.main(NewsEye.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+
+2014-12-12 19:54:12 |com.glacier.spider.NewsEye.main(NewsEye.java:28)| [INFO] - [程序执行完毕]
+2014-12-12 20:15:23 |com.glacier.spider.NewsEye.main(NewsEye.java:20)| [INFO] - [程序开始执行]
+2014-12-12 20:15:23 |com.glacier.spider.NewsEye.main(NewsEye.java:23)| [INFO] - [BloomFilter] 初始化成功
+2014-12-12 20:15:23 |com.glacier.spider.NewsEye.main(NewsEye.java:27)| [INFO] - [BloomFilter] 保存成功
+2014-12-12 20:15:23 |com.glacier.spider.NewsEye.main(NewsEye.java:28)| [INFO] - [程序执行完毕]
+2014-12-12 21:42:16 |com.glacier.spider.NewsEye.main(NewsEye.java:25)| [INFO] - [程序开始执行]
+2014-12-12 21:42:16 |com.glacier.spider.NewsEye.main(NewsEye.java:28)| [INFO] - [BloomFilter] 初始化成功
+2014-12-12 21:42:17 |com.glacier.spider.NewsEye.main(NewsEye.java:38)| [INFO] - [BloomFilter] 保存成功
+2014-12-12 21:42:17 |com.glacier.spider.NewsEye.main(NewsEye.java:39)| [INFO] - [程序执行完毕]
+2014-12-12 21:42:32 |com.glacier.spider.NewsEye.main(NewsEye.java:25)| [INFO] - [程序开始执行]
+2014-12-12 21:42:32 |com.glacier.spider.NewsEye.main(NewsEye.java:28)| [INFO] - [BloomFilter] 初始化成功
+2014-12-12 21:42:33 |com.glacier.spider.NewsEye.main(NewsEye.java:38)| [INFO] - [BloomFilter] 保存成功
+2014-12-12 21:42:33 |com.glacier.spider.NewsEye.main(NewsEye.java:39)| [INFO] - [程序执行完毕]
+2014-12-12 21:44:59 |com.glacier.spider.NewsEye.main(NewsEye.java:25)| [INFO] - [程序开始执行]
+2014-12-12 21:44:59 |com.glacier.spider.NewsEye.main(NewsEye.java:28)| [INFO] - [BloomFilter] 初始化成功
+2014-12-12 21:45:00 |com.glacier.spider.NewsEye.main(NewsEye.java:38)| [INFO] - [BloomFilter] 保存成功
+2014-12-12 21:45:00 |com.glacier.spider.NewsEye.main(NewsEye.java:39)| [INFO] - [程序执行完毕]
+2014-12-12 22:11:18 |com.glacier.spider.NewsEye.main(NewsEye.java:30)| [INFO] - [程序开始执行]
+2014-12-12 22:11:18 |com.glacier.spider.NewsEye.main(NewsEye.java:33)| [INFO] - [BloomFilter] 初始化成功
+2014-12-12 22:11:19 |org.apache.http.impl.conn.SingleClientConnManager.getConnection(SingleClientConnManager.java:212)| [DEBUG] - Get connection for route HttpRoute[{}->http://newspaper.jfdaily.com]
+2014-12-12 22:11:19 |org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:145)| [DEBUG] - Connecting to newspaper.jfdaily.com:80
+2014-12-12 22:11:19 |org.apache.http.client.protocol.RequestAddCookies.process(RequestAddCookies.java:132)| [DEBUG] - CookieSpec selected: best-match
+2014-12-12 22:11:19 |org.apache.http.client.protocol.RequestAuthCache.process(RequestAuthCache.java:75)| [DEBUG] - Auth cache not set in the context
+2014-12-12 22:11:19 |org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:643)| [DEBUG] - Attempt 1 to execute request
+2014-12-12 22:11:19 |org.apache.http.impl.conn.DefaultClientConnection.sendRequestHeader(DefaultClientConnection.java:264)| [DEBUG] - Sending request: GET /jfrb/default.htm HTTP/1.1
+2014-12-12 22:11:19 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - >> "GET /jfrb/default.htm HTTP/1.1[\r][\n]"
+2014-12-12 22:11:19 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - >> "Host: newspaper.jfdaily.com[\r][\n]"
+2014-12-12 22:11:19 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - >> "Connection: Keep-Alive[\r][\n]"
+2014-12-12 22:11:19 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - >> "User-Agent: Apache-HttpClient/4.1.2 (java 1.5)[\r][\n]"
+2014-12-12 22:11:19 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - >> "[\r][\n]"
+2014-12-12 22:11:19 |org.apache.http.impl.conn.DefaultClientConnection.sendRequestHeader(DefaultClientConnection.java:268)| [DEBUG] - >> GET /jfrb/default.htm HTTP/1.1
+2014-12-12 22:11:19 |org.apache.http.impl.conn.DefaultClientConnection.sendRequestHeader(DefaultClientConnection.java:271)| [DEBUG] - >> Host: newspaper.jfdaily.com
+2014-12-12 22:11:19 |org.apache.http.impl.conn.DefaultClientConnection.sendRequestHeader(DefaultClientConnection.java:271)| [DEBUG] - >> Connection: Keep-Alive
+2014-12-12 22:11:19 |org.apache.http.impl.conn.DefaultClientConnection.sendRequestHeader(DefaultClientConnection.java:271)| [DEBUG] - >> User-Agent: Apache-HttpClient/4.1.2 (java 1.5)
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "HTTP/1.1 200 OK[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "Date: Fri, 12 Dec 2014 15:23:08 GMT[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "Server: Apache/2.0.58 (Unix) DAV/2[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "Last-Modified: Sat, 01 Jan 2011 07:06:30 GMT[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "Accept-Ranges: bytes[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "Content-Length: 902[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "Keep-Alive: timeout=7[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "Connection: Keep-Alive[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "Content-Type: text/html[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:249)| [DEBUG] - Receiving response: HTTP/1.1 200 OK
+2014-12-12 22:11:20 |org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:252)| [DEBUG] - << HTTP/1.1 200 OK
+2014-12-12 22:11:20 |org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:255)| [DEBUG] - << Date: Fri, 12 Dec 2014 15:23:08 GMT
+2014-12-12 22:11:20 |org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:255)| [DEBUG] - << Server: Apache/2.0.58 (Unix) DAV/2
+2014-12-12 22:11:20 |org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:255)| [DEBUG] - << Last-Modified: Sat, 01 Jan 2011 07:06:30 GMT
+2014-12-12 22:11:20 |org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:255)| [DEBUG] - << Accept-Ranges: bytes
+2014-12-12 22:11:20 |org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:255)| [DEBUG] - << Content-Length: 902
+2014-12-12 22:11:20 |org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:255)| [DEBUG] - << Keep-Alive: timeout=7
+2014-12-12 22:11:20 |org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:255)| [DEBUG] - << Connection: Keep-Alive
+2014-12-12 22:11:20 |org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:255)| [DEBUG] - << Content-Type: text/html
+2014-12-12 22:11:20 |org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)| [DEBUG] - Connection can be kept alive for 7000 MILLISECONDS
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0xef][0xbb][0xbf]<html><head>[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "<meta http-equiv="Content-Type" content="text/html; charset=utf-8">[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "</head>[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "<body>[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "<script>[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9]var zt = false;[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9]var myDate = new Date();[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9]var t=myDate.getTime();  [\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9]var url = urlId = new Array();   //[0xe5][0x88][0x9b][0xe5][0xbb][0xba][0xe4][0xb8][0x80][0xe4][0xb8][0xaa][0xe5][0x90][0x8d][0xe7][0xa7][0xb0][0xe4][0xb8][0xba]TupleValue[0xe7][0x9a][0x84][0xe6][0x95][0xb0][0xe7][0xbb][0x84][\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9]for(i=0;i<10;i++){[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9]var x=t-(24*60*60*1000*i)   [\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9]myDate.setTime(x);   [\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9]var n = myDate.getUTCFullYear();[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9]var y = myDate.getMonth()+1; [\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9]var r = myDate.getDate();[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9]if(y<10){y="0"+y};[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9]if(r<10){r="0"+r};[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9] [\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9]url[i] = "html/"+n+"-"+y+"/"+r+"/node_2.htm";[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9][\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9]} [\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9]getURL(0);[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "function getURL(id){[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9]$.ajax({[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9][0x9]type:"GET",[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9][0x9]url:url[id],[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9][0x9]data:"",[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9][0x9]success:function(s){[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9][0x9][0x9]if(zt == false){zt=true;window.open(url[id],"_self");}[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9][0x9]},[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9][0x9]error: function(){[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9][0x9]   getURL(++id);[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9]   }[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[0x9][0x9]});[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "}[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:63)| [DEBUG] - << "</script>[\r][\n]"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.Wire.wire(Wire.java:77)| [DEBUG] - << "</body></html>"
+2014-12-12 22:11:20 |org.apache.http.impl.conn.SingleClientConnManager.releaseConnection(SingleClientConnManager.java:267)| [DEBUG] - Releasing connection org.apache.http.impl.conn.SingleClientConnManager$ConnAdapter@611c3b04
+2014-12-12 22:11:20 |com.glacier.spider.NewsEye.main(NewsEye.java:45)| [INFO] - [BloomFilter] 保存成功
+2014-12-12 22:11:20 |com.glacier.spider.NewsEye.main(NewsEye.java:46)| [INFO] - [程序执行完毕]
+2014-12-12 22:14:03 |com.glacier.spider.NewsEye.main(NewsEye.java:31)| [INFO] - [程序开始执行]
+2014-12-12 22:14:03 |com.glacier.spider.NewsEye.main(NewsEye.java:34)| [INFO] - [BloomFilter] 初始化成功
+2014-12-12 22:14:03 |com.glacier.spider.NewsEye.main(NewsEye.java:43)| [INFO] - [BloomFilter] 保存成功
+2014-12-12 22:14:03 |com.glacier.spider.NewsEye.main(NewsEye.java:44)| [INFO] - [程序执行完毕]
+2014-12-12 22:14:53 |com.glacier.spider.NewsEye.main(NewsEye.java:31)| [INFO] - [程序开始执行]
+2014-12-12 22:14:53 |com.glacier.spider.NewsEye.main(NewsEye.java:34)| [INFO] - [BloomFilter] 初始化成功
+2014-12-12 22:14:53 |com.glacier.spider.NewsEye.main(NewsEye.java:48)| [ERROR] - org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://newspaper.jfdaily.com/jfrb/default.html
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:435)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:410)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:164)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:153)
+	at com.glacier.spider.NewsEye.main(NewsEye.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+
+2014-12-12 22:15:11 |com.glacier.spider.NewsEye.main(NewsEye.java:31)| [INFO] - [程序开始执行]
+2014-12-12 22:15:11 |com.glacier.spider.NewsEye.main(NewsEye.java:34)| [INFO] - [BloomFilter] 初始化成功
+2014-12-12 22:15:13 |com.glacier.spider.NewsEye.main(NewsEye.java:43)| [INFO] - [BloomFilter] 保存成功
+2014-12-12 22:15:13 |com.glacier.spider.NewsEye.main(NewsEye.java:44)| [INFO] - [程序执行完毕]
