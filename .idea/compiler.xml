@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="NewsEye" />
+        <module name="Weibo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="NewsEye" target="1.5" />
+      <module name="Weibo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

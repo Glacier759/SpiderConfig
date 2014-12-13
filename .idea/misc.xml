@@ -8,6 +8,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/NewsEye/pom.xml" />
+        <option value="$PROJECT_DIR$/Weibo/pom.xml" />
       </list>
     </option>
   </component>

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/NewsEye/NewsEye.iml" filepath="$PROJECT_DIR$/NewsEye/NewsEye.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpiderConfig.iml" filepath="$PROJECT_DIR$/SpiderConfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Weibo/Weibo.iml" filepath="$PROJECT_DIR$/Weibo/Weibo.iml" />
     </modules>
   </component>
 </project>
