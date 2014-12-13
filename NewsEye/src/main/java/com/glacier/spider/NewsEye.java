@@ -1,6 +1,9 @@
 package com.glacier.spider;
 
 import com.glacier.spider.bloomfilter.BloomFilter;
+import com.glacier.spider.configure.Configure;
+import com.glacier.spider.configure.ParseConfigure;
+import com.glacier.spider.crawler.Crawler;
 import org.apache.log4j.Logger;
 
 import java.io.*;
@@ -13,7 +16,7 @@ import java.util.Date;
 public class NewsEye {
 
     private static Logger logger = Logger.getLogger(NewsEye.class.getName());
-    public static BloomFilter bloomFilter;
+
 
     public static void main(String[] args) {
         try {
@@ -22,10 +25,10 @@ public class NewsEye {
             if ( initBloomFilter() )
                 logger.info("[BloomFilter] 初始化成功");
 
-//            Configure configure = new ParseConfigure("asds");
-//            for (Configure.Config configObj:configure.configList) {
-//                Crawler crawler = new Crawler(configObj);
-//            }
+            Configure configure = new ParseConfigure("asds");
+            for (Configure.Config configObj:configure.configList) {
+                Crawler crawler = new Crawler(configObj);
+            }
 
             if ( saveBloomFilter() )
                 logger.info("[BloomFilter] 保存成功");
@@ -48,14 +51,14 @@ public class NewsEye {
             File filterFile = new File("filter.record");    //布隆过滤器以对象流保存在文件，后期可以考虑存入数据库
             if ( filterFile.exists() ) {
                 ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filterFile));
-                bloomFilter = (BloomFilter)ois.readObject();
+                Crawler.bloomFilter = (BloomFilter)ois.readObject();
                 SimpleDateFormat format = new SimpleDateFormat("dd");
                 String today = format.format(new Date());
-                if ( !today.equals(bloomFilter.getRecodeDate()) )
-                    bloomFilter = new BloomFilter(100000);
+                if ( !today.equals(Crawler.bloomFilter.getRecodeDate()) )
+                    Crawler.bloomFilter = new BloomFilter(100000);
             }
             else {
-                bloomFilter = new BloomFilter(100000);
+                Crawler.bloomFilter = new BloomFilter(100000);
             }
             return true;
         }catch (Exception e) {
@@ -76,7 +79,7 @@ public class NewsEye {
             if ( filterFile.exists() )
                 filterFile.delete();
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filterFile));
-            oos.writeObject(bloomFilter);
+            oos.writeObject(Crawler.bloomFilter);
             return true;
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
