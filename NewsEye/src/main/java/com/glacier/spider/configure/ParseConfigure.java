@@ -40,14 +40,14 @@ public class ParseConfigure extends Configure {
                     Element newspaper = iterator.next();
                     Config configObj = new Config();
                     List<Element> newspaperList = newspaper.elements("newspaper");
-
-                    for ( Iterator<Element> newsIterator = classList.iterator(); newsIterator.hasNext(); ) {
+                    for ( Iterator<Element> newsIterator = newspaperList.iterator(); newsIterator.hasNext(); ) {
                         try {
                             Element newsInfo = newsIterator.next();
                             NewspaperClass newsObj = new NewspaperClass();
                             newsObj.paper_name = newsInfo.attributeValue("paper_name");
                             newsObj.paper_starturl = newsInfo.attributeValue("paper_starturl");
                             newsObj.paper_encode = newsInfo.attributeValue("paper_encode");
+                            System.out.println(newsObj);
                             configObj.newspaperList.add(newsObj);
                         }catch (Exception e) {
                             ByteArrayOutputStream baos = new ByteArrayOutputStream();

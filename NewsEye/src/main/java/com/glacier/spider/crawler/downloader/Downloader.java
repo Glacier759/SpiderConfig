@@ -18,9 +18,10 @@ public class Downloader {
     private static Logger logger = Logger.getLogger(Downloader.class.getName());
 
     public static Document document(String url, String encode) {
+
         Document document = null;
         try {
-            if ( encode.equals("utf-8") || encode.equals("utf8") ) {
+            if ( encode.equals("utf-8") || encode.equals("utf8") || encode.equals("UTF-8") || encode.equals("UTF8") ) {
                 document = Jsoup.connect(url)
                         .timeout(50000)
                         .userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 Safari/537.36")

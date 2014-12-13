@@ -4,6 +4,7 @@ import com.glacier.spider.bloomfilter.BloomFilter;
 import com.glacier.spider.configure.Configure;
 import com.glacier.spider.configure.ParseConfigure;
 import com.glacier.spider.crawler.Crawler;
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 
 import java.io.*;
@@ -25,9 +26,11 @@ public class NewsEye {
             if ( initBloomFilter() )
                 logger.info("[BloomFilter] 初始化成功");
 
-            Configure configure = new ParseConfigure("asds");
-            for (Configure.Config configObj:configure.configList) {
+            String xml = FileUtils.readFileToString(new File("config.xml"));
+            ParseConfigure configure = new ParseConfigure(xml);
+            for (ParseConfigure.Config configObj:configure.configList) {
                 Crawler crawler = new Crawler(configObj);
+                crawler.start();
             }
 
             if ( saveBloomFilter() )

@@ -31,7 +31,7 @@ public class ContentPageProcessor extends PageProcessor implements Runnable {
     public void parseContent(Document document) {
         try {
             Elements titleEle = null;
-            titleEle = document.select(config.content.content_outer).select(config.content.content_tag);
+            titleEle = document.select(config.content.title_outer).select(config.content.title_tag);
 
             String title = null;
             if ( config.content.title_draw.equals("text") ) {
@@ -53,7 +53,7 @@ public class ContentPageProcessor extends PageProcessor implements Runnable {
             Elements imgEles = document.select(config.content.img_outer).select(config.content.img_tag);
             for ( Element imgEle:imgEles ) {
                 String imgSrc = imgEle.attr("abs:src");
-                if ( imgSrc.contains("jpg") || imgSrc.contains("png") )
+                if ( (imgSrc.contains("jpg") || imgSrc.contains("png")) && !imgList.contains(imgSrc) )
                     imgList.add(imgSrc);
             }
 
@@ -107,25 +107,24 @@ public class ContentPageProcessor extends PageProcessor implements Runnable {
 
 
     public void run() {
-        synchronized (Crawler.bloomFilter) {
+        //synchronized (Crawler.bloomFilter) {
             while(Crawler.redisScheduler.length() > 0) {
                 try {
                     String value = Crawler.redisScheduler.get();
-                    String[] valueArry = value.split("|");
+                    String[] valueArry = value.split(",");
                     String newsLink = valueArry[0];
                     String encode = valueArry[1];
                     String pageName = valueArry[2];
                     String paperName = valueArry[3];
-
                     if (!Crawler.bloomFilter.contains(newsLink)) {
-                        logger.info("[即将获取] " + newsLink);
+                        logger.info("[即将获取] " + newsLink + "\tThread-" + Thread.currentThread().getName());
 
                         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
                         SaveFormat.encode = "UTF-8";
                         SaveFormat.language = "中文";
                         SaveFormat.crawlDate = dateFormat.format(new Date());
-                        SaveFormat.newspaper = pageName;
+                        SaveFormat.newspaper = paperName;
                         SaveFormat.source = newsLink;
                         SaveFormat.page = pageName;
 
@@ -133,17 +132,19 @@ public class ContentPageProcessor extends PageProcessor implements Runnable {
                         contentDoc.setBaseUri(newsLink);
                         parseContent(contentDoc);
 
-                        SaveFormat.save();
+                        String saveFile = SaveFormat.save();
+                        logger.info("[获取完毕] 存储至" + saveFile);
                         Crawler.bloomFilter.add(newsLink);
                     } else {
                         logger.info("[BloomFilter] 已存在 " + newsLink);
                     }
+                    Crawler.redisScheduler.remove(value);
                 }catch (Exception e) {
                     ByteArrayOutputStream baos = new ByteArrayOutputStream();
                     e.printStackTrace(new PrintStream(baos));
                     logger.error(baos.toString());
                 }
             }
-        }
+        //}
     }
 }

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<SpiderConfig>
+    <class>
+        <newspaper paper_name="北京晨报" paper_starturl="http://bjcb.morningpost.com.cn/" paper_encode="UTF-8" />
+        <page>
+            <page_url_outer page_url_node="element">body</page_url_outer>
+            <page_url_tag>a[id=pageLink]</page_url_tag>
+            <page_url_attr attr_value="abs:href" page_url_draw="fullstring">
+                <page_draw>
+                    <page_url_sub></page_url_sub>
+                    <page_url_front></page_url_front>
+                    <page_url_rear></page_url_rear>
+                    <page_url_have></page_url_have>
+                </page_draw>
+            </page_url_attr>
+        </page>
+        <news>
+            <news_url_outer news_url_node="element">map[name=pagepicmap]</news_url_outer>
+            <news_url_tag>area[href]</news_url_tag>
+            <news_url_attr attr_value="abs:href" news_url_draw="fullstring">
+                <news_draw>
+                    <news_url_sub></news_url_sub>
+                    <news_url_front></news_url_front>
+                    <news_url_rear></news_url_rear>
+                    <news_url_have></news_url_have>
+                </news_draw>
+            </news_url_attr>
+        </news>
+        <content>
+            <title>
+                <title_outer>body</title_outer>
+                <title_tag title_draw="text">td[class=title_a]</title_tag>
+                <title_attr></title_attr>
+            </title>
+            <time_format>xxxx-xx/xx</time_format>
+            <text>
+                <content_outer>founder-content</content_outer>
+                <content_tag>p</content_tag>
+            </text>
+            <image>
+                <img_outer>table[align=center]</img_outer>
+                <img_tag>img</img_tag>
+            </image>
+        </content>
+    </class>
+</SpiderConfig>

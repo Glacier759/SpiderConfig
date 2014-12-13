@@ -26,17 +26,18 @@ public class SaveFormat {
 
     private static Logger logger = Logger.getLogger(SaveFormat.class.getName());
 
-    public static void save() {
+    public static String save() {
         try {
-            save(new File("./NewsEye"));
+            return save(new File("./Data"));
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             e.printStackTrace(new PrintStream(baos));
             logger.debug(baos.toString());
         }
+        return null;
     }
 
-    public static void save(File savePath) {
+    public static String save(File savePath) {
         try {
             Document xmlDoc = DocumentHelper.createDocument();
             Element root = xmlDoc.addElement("root");
@@ -66,14 +67,17 @@ public class SaveFormat {
 
             String xml = formatXML(root);
             String fileName = System.currentTimeMillis() + xml.hashCode() + ".xml";
+            File saveFile = new File(savePath, fileName);
 
-            FileUtils.writeStringToFile(new File(savePath, fileName), xml, "UTF-8");
+            FileUtils.writeStringToFile(saveFile, xml, "UTF-8");
 
+            return saveFile.getName();
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             e.printStackTrace(new PrintStream(baos));
             logger.debug(baos.toString());
         }
+        return null;
     }
 
     private static String formatXML(Element root) {
