@@ -1,6 +1,7 @@
- var sinaSSOEncoder = sinaSSOEncoder || {}; (function() {
-        var a = 0,
-        b = 8;
+ var sinaSSOEncoder = sinaSSOEncoder || {}; 
+(function() {
+        var a = 0;
+        var b = 8;
         this.hex_sha1 = function(a) {
             return i(c(h(a), a.length * b))
         };

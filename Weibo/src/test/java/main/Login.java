@@ -1,5 +1,6 @@
-package com.glacier.spider.login;
+package main;
 
+import com.glacier.spider.login.MyHttpConnectionManager;
 import com.sun.org.apache.xml.internal.security.utils.Base64;
 import org.apache.commons.io.FileUtils;
 import org.apache.http.Header;
@@ -14,6 +15,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
 import org.json.JSONObject;
+import utils.sina.RegexPaserUtil;
 
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
@@ -23,7 +25,6 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.GZIPInputStream;
@@ -90,7 +91,7 @@ public class Login {
             Invocable invoke = (Invocable) jsEngine;
 
             String pass = (String) invoke.invokeFunction("getPassEncoding", new Object[] {
-               pubkey, servertime, nonce, password
+                    pubkey, servertime, nonce, password
             });
 
             System.out.println(pass);
@@ -168,13 +169,8 @@ public class Login {
             UrlEncodedFormEntity params = new UrlEncodedFormEntity(nvps, "UTF-8");
             httpPost.setEntity(params);
 
-            String cookies = "";
-
             HttpResponse response = client.execute(httpPost);
             printHeaders(response.getAllHeaders());
-
-            //取得第一次时的cookie，最后与第二次获得的cookie去做操作
-
             HttpEntity entity = response.getEntity();
 
             String content = getGZIPContent(entity);
@@ -182,6 +178,66 @@ public class Login {
 
             String location = getRedirectLocation(content);
             System.out.println("location url------" + location);
+
+            String cookies = "";
+
+            // 取得第一次时的cookie,最后与第二次获得的cookie去做与操作
+            if (location.contains("retcode=0")) {
+                String temp = "";
+                int count = 1;
+                org.apache.http.Header[] h = response.getAllHeaders();
+                String SSOLoginState = "", cookies_sus;
+                for (int i = 0; i < h.length; i++) {
+                    if (h[i].getName().contains("Set-Cookie")) {
+                        // System.out.println("第一次---header[" + i + "]------" +
+                        // h[i]);
+                        temp = h[i].getValue();
+                        // 此处为要获取SSOLoginState,此值等LT的值
+                        if (temp.contains("LT=")) {
+                            String begin = "LT=";
+                            String end = ";";
+
+                            RegexPaserUtil regexPaserUtil = new RegexPaserUtil(
+                                    begin, end, RegexPaserUtil.TEXTEGEXANDNRT);
+                            regexPaserUtil.reset(temp);
+
+                            SSOLoginState = regexPaserUtil.getText();
+                        } else if (temp.contains("SUS=")) {
+                            // 处理SUS值
+                            String begin = "SUS=";
+                            String end = ";";
+
+                            RegexPaserUtil regexPaserUtil = new RegexPaserUtil(
+                                    begin, end, RegexPaserUtil.TEXTEGEXANDNRT);
+                            regexPaserUtil.reset(temp);
+
+                            cookies_sus = regexPaserUtil.getText();
+                        }
+                        // cookie是键值对，此处的";"一定要加上
+                        if (count == 1) {
+                            cookies = cookies + temp;
+                        } else {
+                            cookies = cookies + ";" + temp;
+                        }
+                        count++;
+                    }
+                }
+                cookies = cookies.replace("path=/;", "").replace("Httponly", "")
+                        .replaceAll("domain=.sina.com.cn;", "").replace("httponly",
+                                "").replace("path=/", "").replace(
+                                "domain=.sina.com.cn", "").replaceAll(
+                                "expires.*?;", "").replace(
+                                "domain=login.sina.com.cn", "").replace(" ", "")
+                        + ";wvr=5; un=" + "l_ee_hom@msn.cn";
+                //cookies = cookies + ";myuid=" + loginPojo.getUid();// 添加的myUid是为解决验证码
+                cookies = cookies
+                        + ";SinaRot_wb_r_topic=39;UV5PAGE=usr513_90; UV5=usr319_182;";// 添加的SinaRot_wb_r_topic为解决话题内容content的抓取
+                cookies = cookies + "SSOLoginState=" + SSOLoginState;
+                //cookies = cookies + ";" + login_sid_t;
+                //cookies = cookies + ";" + UUG;
+
+                System.out.println("cookies - " + cookies);
+            }
 
             HttpGet httpGet = new HttpGet(location);
             httpGet.setHeader("Cookie", cookies);
