@@ -106,7 +106,7 @@ public class Login {
     public void preLogin() {
         try {
             HttpGet httpGet = new HttpGet(
-                    "http://login.sina.com.cn/sso/prelogin.php?entry=account&callback=sinaSSOController.preloginCallBack&su=&rsakt=mod&client=ssologin.js(v1.4.18)&_="
+                    "http://login.sina.com.cn/sso/prelogin.php?entry=account&callback=sinaSSOController.preloginCallBack&su="+getUsername("l_ee_hom@msn.cn")+"&rsakt=mod&checkpin=1&client=ssologin.js(v1.4.18)&_="
                             + (new Date()).getTime());
             HttpResponse response = client.execute(httpGet);
             String json = EntityUtils.toString(response.getEntity());
@@ -230,16 +230,17 @@ public class Login {
                                 "domain=login.sina.com.cn", "").replace(" ", "")
                         + ";wvr=5; un=" + "l_ee_hom@msn.cn";
                 //cookies = cookies + ";myuid=" + loginPojo.getUid();// 添加的myUid是为解决验证码
-                cookies = cookies
-                        + ";SinaRot_wb_r_topic=39;UV5PAGE=usr513_90; UV5=usr319_182;";// 添加的SinaRot_wb_r_topic为解决话题内容content的抓取
-                cookies = cookies + "SSOLoginState=" + SSOLoginState;
+                //cookies = cookies
+                //        + ";SinaRot_wb_r_topic=39;UV5PAGE=usr513_90; UV5=usr319_182;";// 添加的SinaRot_wb_r_topic为解决话题内容content的抓取
+                cookies = cookies + ";SSOLoginState=" + SSOLoginState;
                 //cookies = cookies + ";" + login_sid_t;
                 //cookies = cookies + ";" + UUG;
 
                 System.out.println("cookies - " + cookies);
             }
 
-            HttpGet httpGet = new HttpGet(location);
+            String ajaxlogin = "http://weibo.com/ajaxlogin.php?framelogin=1&callback=parent.sinaSSOController.feedBackUrlCallBack&sudaref=weibo.com";
+            HttpGet httpGet = new HttpGet(ajaxlogin);
             httpGet.setHeader("Cookie", cookies);
 
             MyHttpConnectionManager.setHandleRedirect(client, false);
@@ -247,9 +248,57 @@ public class Login {
             printHeaders(response.getAllHeaders());
             MyHttpConnectionManager.setHandleRedirect(client, true);
 
+
+            Header[] headers = response.getAllHeaders();
+            for ( Header header:headers ) {
+                if ( header.getName().contains("Set-Cookie") ) {
+                    String temp = header.getValue();
+
+                    System.out.println(temp);
+
+                    if ( temp.contains("YF-Ugrow-G0=") ) {
+                        String begin = "YF-Ugrow-G0=";
+                        String end = ";";
+
+                        RegexPaserUtil regexPaserUtil = new RegexPaserUtil(begin, end, RegexPaserUtil.TEXTEGEXANDNRT);
+                        regexPaserUtil.reset(temp);
+
+                        String ugrow = regexPaserUtil.getText();
+                        System.out.println(ugrow);
+                        cookies += ";YF-Ugrow-G0=" + ugrow;
+                    }
+                }
+            }
+            System.out.println("cookie --- " + cookies);
+
             entity = response.getEntity();
             content = getContent(entity, "GBK");
-            System.out.println("最后一次取得的content---\n" + content);
+            System.out.println("第二次取得的content---\n" + content);
+
+            String home = "http://weibo.com/?wrv=5&lf=reg";
+            httpGet = new HttpGet(home);
+            httpGet.setHeader("Cookie", cookies);
+            //MyHttpConnectionManager.setHandleRedirect(client, false);
+            response = client.execute(httpGet);
+            //MyHttpConnectionManager.setHandleRedirect(client, true);
+            System.out.println("http status --- " + response.getStatusLine());
+            printHeaders(response.getAllHeaders());
+            entity = response.getEntity();
+            content = getContent(entity, "GBK");
+            System.out.println("第三次取得的content---\n" + content);
+
+
+
+
+            String myHome = "http://weibo.com/u/2314283235/home?wvr=5&lf=reg";
+            httpGet = new HttpGet(myHome);
+            httpGet.setHeader("Cookie", cookies);
+            response = client.execute(httpGet);
+            System.out.println("http status --- " + response.getStatusLine());
+            printHeaders(response.getAllHeaders());
+            entity = response.getEntity();
+            content = getContent(entity, "UTF-8");
+            System.out.println("第四次取得的content---\n" + content);
 
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
