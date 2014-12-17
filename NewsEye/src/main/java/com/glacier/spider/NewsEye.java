@@ -1,7 +1,6 @@
 package com.glacier.spider;
 
-import com.glacier.spider.bloomfilter.BloomFilter;
-import com.glacier.spider.configure.Configure;
+import com.glacier.spider.crawler.scheduler.BloomFilter;
 import com.glacier.spider.configure.ParseConfigure;
 import com.glacier.spider.crawler.Crawler;
 import org.apache.commons.io.FileUtils;

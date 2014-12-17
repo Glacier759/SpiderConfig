@@ -1,4 +1,4 @@
-package com.glacier.spider.bloomfilter;
+package com.glacier.spider.crawler.scheduler;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;

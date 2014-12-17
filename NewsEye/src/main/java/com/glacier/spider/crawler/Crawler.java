@@ -1,12 +1,11 @@
 package com.glacier.spider.crawler;
 
-import com.glacier.spider.bloomfilter.BloomFilter;
+import com.glacier.spider.crawler.scheduler.BloomFilter;
 import com.glacier.spider.configure.Configure;
 import com.glacier.spider.crawler.downloader.Downloader;
 import com.glacier.spider.crawler.pageprocessor.ContentPageProcessor;
 import com.glacier.spider.crawler.pageprocessor.NewsPageProcessor;
 import com.glacier.spider.crawler.pageprocessor.PagePageProcessor;
-import com.glacier.spider.crawler.pageprocessor.PageProcessor;
 import com.glacier.spider.crawler.scheduler.RedisScheduler;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Document;
