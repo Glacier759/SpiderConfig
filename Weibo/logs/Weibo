@@ -1,0 +1,7 @@
+2014-12-17 20:42:28 [INFO] - [Login] 'rrenlixiang@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:37)}
+2014-12-17 20:42:30 [INFO] - [login] 'rrenlixiang@163.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:77)}
+2014-12-17 20:42:30 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:141)}
+2014-12-17 20:42:30 [INFO] - [解析] 正在获取第 1 页 / 1054 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:154)}
+2014-12-17 20:42:30 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:156)}
+2014-12-17 20:42:31 [INFO] - [解析] 正在获取第 2 页 / 1054 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:154)}
+2014-12-17 20:42:31 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:156)}

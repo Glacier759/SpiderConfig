@@ -25,8 +25,9 @@ public class Crawler {
         httpClient = loginCN.login(GetAccounts.accounts("weibo"));
 
         Downloader.setClient(httpClient);
-        Document document = Downloader.document("http://weibo.cn/1723475551/fans", Downloader.HTTP_GET);
+        Document document = Downloader.document("http://weibo.cn/slrui", Downloader.HTTP_GET);
         UserPageProcessor userPageProcessor = new UserPageProcessor();
-        userPageProcessor.getFansList(document);
+        //Document fansDocument = Downloader.document(userPageProcessor.getURL(document).get("资料"), Downloader.HTTP_GET);
+        userPageProcessor.getWeibo(document);
     }
 }

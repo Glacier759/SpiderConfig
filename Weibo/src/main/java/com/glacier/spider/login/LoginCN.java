@@ -6,8 +6,10 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.params.CookiePolicy;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.params.CoreConnectionPNames;
 import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
@@ -74,6 +76,12 @@ public class LoginCN {
             MyHttpConnectionManager.setHandleRedirect(httpClient, true);
             EntityUtils.toString(response.getEntity());
             logger.info("[login] '" + username + "' 登陆成功!");
+
+            httpClient.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 60000);
+            httpClient.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT, 60000);
+            httpClient.getParams().setBooleanParameter("http.tcp.nodelay", true);
+            httpClient.getParams().setParameter("http.connection.stalecheck", false);
+            httpClient.getParams().setParameter("http.protocol.cookie-policy", CookiePolicy.BROWSER_COMPATIBILITY);
 
             return httpClient;
         }catch (Exception e) {
