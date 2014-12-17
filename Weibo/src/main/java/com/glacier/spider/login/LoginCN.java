@@ -10,6 +10,7 @@ import org.apache.http.client.params.CookiePolicy;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.CoreConnectionPNames;
+import org.apache.http.params.CoreProtocolPNames;
 import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
@@ -79,6 +80,7 @@ public class LoginCN {
 
             httpClient.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 60000);
             httpClient.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT, 60000);
+            httpClient.getParams().setParameter(CoreProtocolPNames.WAIT_FOR_CONTINUE, 60000);
             httpClient.getParams().setBooleanParameter("http.tcp.nodelay", true);
             httpClient.getParams().setParameter("http.connection.stalecheck", false);
             httpClient.getParams().setParameter("http.protocol.cookie-policy", CookiePolicy.BROWSER_COMPATIBILITY);

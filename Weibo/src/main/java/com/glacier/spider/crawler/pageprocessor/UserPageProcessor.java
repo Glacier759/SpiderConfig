@@ -2,6 +2,7 @@ package com.glacier.spider.crawler.pageprocessor;
 
 import com.glacier.spider.crawler.downloader.Downloader;
 import com.glacier.spider.crawler.pipeline.WeiboStruct;
+import org.apache.http.Header;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
