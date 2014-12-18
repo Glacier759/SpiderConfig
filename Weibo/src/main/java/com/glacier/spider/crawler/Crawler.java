@@ -26,9 +26,10 @@ public class Crawler {
         httpClient = loginCN.login(GetAccounts.accounts("weibo"));
 
         Downloader.setClient(httpClient);
-        Document document = Downloader.searchDocument("王力宏");
-        SearchPageProcessor pageProcessor = new SearchPageProcessor();
-        pageProcessor.getSearchList(document);
+        Downloader.topicDocument("ss");
+       // Document document = Downloader.searchDocument("王力宏");
+        //SearchPageProcessor pageProcessor = new SearchPageProcessor();
+        //pageProcessor.getSearchList(document);
 //        Document document = Downloader.document("http://weibo.cn/slrui", Downloader.HTTP_GET);
 //        UserPageProcessor userPageProcessor = new UserPageProcessor();
 //        Document fansDocument = Downloader.document(userPageProcessor.getURL(document).get("资料"), Downloader.HTTP_GET);

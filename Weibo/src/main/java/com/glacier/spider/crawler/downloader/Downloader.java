@@ -51,7 +51,7 @@ public class Downloader {
                 httpGet.setHeader("Referer", "http://weibo.cn/");
                 httpGet.setHeader("Accept-Language", "zh-CN,zh,q=0.8");
                 httpGet.setHeader("RA-Ver", "2.8.5");
-                httpGet.setHeader("RA-Sid", "RA-Sid: 6BB2C802-20140627-183131-586b2e-69394f");
+                httpGet.setHeader("RA-Sid", "6BB2C802-20140627-183131-586b2e-69394f");
 
                 httpGet.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 60000);
                 httpGet.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT, 60000);
@@ -72,7 +72,7 @@ public class Downloader {
                 httpPost.setHeader("Referer", "http://weibo.cn/");
                 httpPost.setHeader("Accept-Language", "zh-CN,zh,q=0.8");
                 httpPost.setHeader("RA-Ver", "2.8.5");
-                httpPost.setHeader("RA-Sid", "RA-Sid: 6BB2C802-20140627-183131-586b2e-69394f");
+                httpPost.setHeader("RA-Sid", "6BB2C802-20140627-183131-586b2e-69394f");
                 
                 httpPost.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 60000);
                 httpPost.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT, 60000);
@@ -99,6 +99,29 @@ public class Downloader {
         try {
             String search = "http://weibo.cn/search/mblog?hideSearchFrame=&keyword=" + key + "&page=1";
             return document(search, Downloader.HTTP_GET);
+        }catch (Exception e) {
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            e.printStackTrace(new PrintStream(baos));
+            logger.error(baos.toString());
+        }
+        return null;
+    }
+
+    public static Document topicDocument(String topic) {
+        try {
+            HttpGet httpGet = new HttpGet("http://huati.weibo.cn");
+
+            httpGet.setHeader("Host", "huati.weibo.cn");
+            httpGet.setHeader("Connection", "keep-alive");
+            httpGet.setHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
+            httpGet.setHeader("User-Agent", "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36");
+            httpGet.setHeader("Accept-Language", "zh-CN,zh,q=0.8");
+            httpGet.setHeader("RA-Ver", "2.8.6");
+            httpGet.setHeader("RA-Sid", "6BB2C802-20140627-183131-586b2e-69394f");
+
+            HttpResponse response = httpClient.execute(httpGet);
+            System.out.println(response.getStatusLine());
+            System.out.println(EntityUtils.toString(response.getEntity()));
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             e.printStackTrace(new PrintStream(baos));

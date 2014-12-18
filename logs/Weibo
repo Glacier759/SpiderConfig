@@ -260,3 +260,79 @@ Caused by: java.net.ConnectException: 拒绝连接
 2014-12-18 22:01:42 [INFO] - [解析] 当前页解析得到 11 条微博 {com.glacier.spider.crawler.pageprocessor.SearchPageProcessor.getSearchList(SearchPageProcessor.java:38)}
 2014-12-18 22:01:42 [INFO] - [解析] 正在获取第 2 页 / 100 页 {com.glacier.spider.crawler.pageprocessor.SearchPageProcessor.getSearchList(SearchPageProcessor.java:36)}
 2014-12-18 22:01:42 [INFO] - [解析] 当前页解析得到 10 条微博 {com.glacier.spider.crawler.pageprocessor.SearchPageProcessor.getSearchList(SearchPageProcessor.java:38)}
+2014-12-18 22:17:58 [INFO] - [Login] '2726492626@qq.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
+2014-12-18 22:18:05 [INFO] - [login] '2726492626@qq.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:79)}
+2014-12-18 22:18:06 [WARN] - Cookie rejected: "[version: 0][name: U_TRS1][value: 00000042.e7083e7d.5492e229.d9699e19][domain: .sina.com.cn][path: /][expiry: Sun Dec 15 22:18:17 CST 2024]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:18:06 [WARN] - Cookie rejected: "[version: 0][name: U_TRS2][value: 00000042.e71e3e7d.5492e229.04303300][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:19:34 [INFO] - [Login] '1825682313@qq.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
+2014-12-18 22:19:35 [INFO] - [login] '1825682313@qq.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:79)}
+2014-12-18 22:19:36 [WARN] - Cookie rejected: "[version: 0][name: U_TRS1][value: 00000042.e52248f0.5492e283.ff41fbbb][domain: .sina.com.cn][path: /][expiry: Sun Dec 15 22:19:47 CST 2024]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:19:36 [WARN] - Cookie rejected: "[version: 0][name: U_TRS2][value: 00000042.e52c48f0.5492e283.8488e9d6][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:21:02 [INFO] - [Login] 'xy_lr_92@126.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
+2014-12-18 22:21:04 [INFO] - [login] 'xy_lr_92@126.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:79)}
+2014-12-18 22:21:05 [WARN] - Cookie rejected: "[version: 0][name: U_TRS1][value: 00000042.535c4dcf.5492e2dc.65f5cb87][domain: .sina.com.cn][path: /][expiry: Sun Dec 15 22:21:16 CST 2024]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:21:05 [WARN] - Cookie rejected: "[version: 0][name: U_TRS2][value: 00000042.53664dcf.5492e2dc.c11eb383][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:21:45 [INFO] - [Login] 'xylr92@126.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
+2014-12-18 22:21:47 [INFO] - [login] 'xylr92@126.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:79)}
+2014-12-18 22:21:47 [WARN] - Cookie rejected: "[version: 0][name: U_TRS1][value: 00000042.d3881203.5492e306.d036a427][domain: .sina.com.cn][path: /][expiry: Sun Dec 15 22:21:58 CST 2024]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:21:47 [WARN] - Cookie rejected: "[version: 0][name: U_TRS2][value: 00000042.d3931203.5492e306.ed8c0f1f][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:29:14 [INFO] - [Login] '18092794430' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
+2014-12-18 22:29:17 [INFO] - [login] '18092794430' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:79)}
+2014-12-18 22:29:17 [WARN] - Cookie rejected: "[version: 0][name: U_TRS1][value: 00000042.43db64a2.5492e4c9.94433f81][domain: .sina.com.cn][path: /][expiry: Sun Dec 15 22:29:29 CST 2024]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:29:17 [WARN] - Cookie rejected: "[version: 0][name: U_TRS2][value: 00000042.43e564a2.5492e4c9.1f2b35a9][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:30:14 [INFO] - [Login] '13289212979' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
+2014-12-18 22:30:26 [INFO] - [Login] '421186071rlx@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
+2014-12-18 22:30:28 [INFO] - [login] '421186071rlx@sina.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:79)}
+2014-12-18 22:30:28 [WARN] - Cookie rejected: "[version: 0][name: U_TRS1][value: 00000042.a140698b.5492e50f.c2f1619a][domain: .sina.com.cn][path: /][expiry: Sun Dec 15 22:30:39 CST 2024]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:30:28 [WARN] - Cookie rejected: "[version: 0][name: U_TRS2][value: 00000042.a14b698b.5492e50f.d14dfd30][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:33:10 [INFO] - [Login] 'rlx421186071@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
+2014-12-18 22:33:13 [INFO] - [login] 'rlx421186071@sina.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:79)}
+2014-12-18 22:33:13 [WARN] - Cookie rejected: "[version: 0][name: U_TRS1][value: 00000042.1da23d89.5492e5b4.f81fb8d0][domain: .sina.com.cn][path: /][expiry: Sun Dec 15 22:33:24 CST 2024]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:33:13 [WARN] - Cookie rejected: "[version: 0][name: U_TRS2][value: 00000042.1dac3d89.5492e5b4.f657d1c4][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:33:24 [INFO] - [Login] '421186071rlx@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
+2014-12-18 22:33:27 [ERROR] - java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:275)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:334)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:687)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:633)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1323)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:468)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:429)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:410)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:164)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:153)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:40)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:34)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:26)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:92)}
+2014-12-18 22:33:27 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:62)
+	at com.glacier.spider.crawler.downloader.Downloader.topicDocument(Downloader.java:122)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:29)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:93)}
+2014-12-18 22:33:48 [INFO] - [Login] 'rrenlixiang@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
+2014-12-18 22:33:55 [INFO] - [login] 'rrenlixiang@163.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:79)}
+2014-12-18 22:33:55 [WARN] - Cookie rejected: "[version: 0][name: U_TRS1][value: 00000042.fd6a4474.5492e5df.ed3fbec9][domain: .sina.com.cn][path: /][expiry: Sun Dec 15 22:34:07 CST 2024]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:33:55 [WARN] - Cookie rejected: "[version: 0][name: U_TRS2][value: 00000042.fd754474.5492e5df.9b9e649c][domain: .sina.com.cn][path: /][expiry: null]". Illegal domain attribute "sina.com.cn". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:37:15 [INFO] - [Login] 'rrenlixiang@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
+2014-12-18 22:37:17 [INFO] - [login] 'rrenlixiang@sina.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:79)}
+2014-12-18 22:37:18 [WARN] - Cookie rejected: "[version: 0][name: SUB][value: deleted][domain: .weibo.com][path: /][expiry: Thu Jan 01 08:00:01 CST 1970]". Illegal domain attribute "weibo.com". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
+2014-12-18 22:38:00 [INFO] - [Login] 'rlx421186071@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
+2014-12-18 22:38:02 [INFO] - [login] 'rlx421186071@163.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:79)}
+2014-12-18 22:38:03 [WARN] - Cookie rejected: "[version: 0][name: SUB][value: deleted][domain: .weibo.com][path: /][expiry: Thu Jan 01 08:00:01 CST 1970]". Illegal domain attribute "weibo.com". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
