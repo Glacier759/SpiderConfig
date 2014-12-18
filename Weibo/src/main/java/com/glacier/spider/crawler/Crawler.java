@@ -1,6 +1,7 @@
 package com.glacier.spider.crawler;
 
 import com.glacier.spider.crawler.downloader.Downloader;
+import com.glacier.spider.crawler.pageprocessor.SearchPageProcessor;
 import com.glacier.spider.crawler.pageprocessor.UserPageProcessor;
 import com.glacier.spider.login.GetAccounts;
 import com.glacier.spider.login.LoginCN;
@@ -25,9 +26,12 @@ public class Crawler {
         httpClient = loginCN.login(GetAccounts.accounts("weibo"));
 
         Downloader.setClient(httpClient);
-        Document document = Downloader.document("http://weibo.cn/slrui", Downloader.HTTP_GET);
-        UserPageProcessor userPageProcessor = new UserPageProcessor();
-        //Document fansDocument = Downloader.document(userPageProcessor.getURL(document).get("资料"), Downloader.HTTP_GET);
-        userPageProcessor.getWeibo(document);
+        Document document = Downloader.searchDocument("王力宏");
+        SearchPageProcessor pageProcessor = new SearchPageProcessor();
+        pageProcessor.getSearchList(document);
+//        Document document = Downloader.document("http://weibo.cn/slrui", Downloader.HTTP_GET);
+//        UserPageProcessor userPageProcessor = new UserPageProcessor();
+//        Document fansDocument = Downloader.document(userPageProcessor.getURL(document).get("资料"), Downloader.HTTP_GET);
+//        userPageProcessor.getUserInfo(fansDocument);
     }
 }

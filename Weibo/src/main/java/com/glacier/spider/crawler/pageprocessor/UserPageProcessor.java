@@ -1,8 +1,8 @@
 package com.glacier.spider.crawler.pageprocessor;
 
 import com.glacier.spider.crawler.downloader.Downloader;
+import com.glacier.spider.crawler.pipeline.UserStruct;
 import com.glacier.spider.crawler.pipeline.WeiboStruct;
-import org.apache.http.Header;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -20,8 +20,9 @@ import java.util.List;
 public class UserPageProcessor {
 
     private static Logger logger = Logger.getLogger(UserPageProcessor.class.getName());
+    private UserStruct userStruct = new UserStruct();
 
-    public void getFansMap( Document document ) {
+    public HashMap<String,String> getFansMap( Document document ) {
         try {
             logger.info("[解析] 正在获取粉丝列表...");
 
@@ -34,14 +35,17 @@ public class UserPageProcessor {
                     String fansName = fansA.text();
                     String fansLink = fansA.attr("abs:href");
                     fansMap.put(fansName, fansLink);
-                    System.out.println(fansName + "\t" + fansLink);
+                    //System.out.println(fansName + "\t" + fansLink);
                 }
             }while ((document = next(document)) != null);
+            userStruct.fansMap = fansMap;
+            return fansMap;
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             e.printStackTrace(new PrintStream(baos));
             logger.error(baos.toString());
         }
+        return null;
     }
 
     public HashMap<String,String> getFollowMap( Document document ) {
@@ -57,9 +61,11 @@ public class UserPageProcessor {
                     String followName = followA.text();
                     String followLink = followA.attr("abs:href");
                     followMap.put(followName, followLink);
-                    System.out.println(followName + "\t" + followLink);
+                    //System.out.println(followName + "\t" + followLink);
                 }
             }while ((document = next(document)) != null);
+            //weiboStruct.setFollowMap(followMap);
+            userStruct.followMap = followMap;
             return followMap;
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -78,22 +84,28 @@ public class UserPageProcessor {
             for ( Element divClassC:divClassCs ) {
                 if ( divClassC.html().contains("alt=\"头像\"") ) {
                     headImage = divClassC.select("img").attr("abs:src");
-                    System.out.println("头像 = " + headImage);
+                    //System.out.println("头像 = " + headImage);
+                    userStruct.basicInfo.put("头像", headImage);
                 }
                 else if ( divClassC.html().contains("微博等级") && divClassC.html().contains("/urank") ) {
                     Elements levelEles = divClassC.select("a[href]");
                     for ( Element levelEle:levelEles ) {
                         if ( levelEle.attr("abs:href").contains("urank") ) {
                             weiboLevel = levelEle.text();
-                            System.out.println("微博等级 = " + weiboLevel);
+                            //System.out.println("微博等级 = " + weiboLevel);
+                            userStruct.basicInfo.put("微博等级", weiboLevel);
                         }
                     }
                     if ( divClassC.html().contains("会员等级：未开通") )
                         isVip = false;
                     else
                         isVip = true;
-                    System.out.println("isVip = " + isVip);
-                }
+                    //System.out.println("isVip = " + isVip);
+                    if ( isVip )
+                        userStruct.basicInfo.put("Vip", "是");
+                    else
+                        userStruct.basicInfo.put("Vip", "否");
+                }//微博等级、是否会员完
                 else if ( divClassC.html().contains("昵称:") && divClassC.html().contains("性别:") ) {
                     String divHTML = divClassC.html();
                     if ( divHTML.contains("<br />") ) {
@@ -112,7 +124,8 @@ public class UserPageProcessor {
                                         tag += "," + element.text();
                                     }
                                     tag = tag.substring(1);
-                                    System.out.println("标签 = " + tag);
+                                    //System.out.println("标签 = " + tag);
+                                    userStruct.basicInfo.put("标签", tag);
                                     break;
                                 }
                             }
@@ -123,12 +136,21 @@ public class UserPageProcessor {
                                 tag += "," + tagEle.text();
                             }
                             tag = tag.substring(1);
-                            System.out.println("标签 ~ " + tag);
+                            //System.out.println("标签 ~ " + tag);
+                            userStruct.basicInfo.put("标签", tag);
                         }
                         divHTML = divHTML.substring(0, divHTML.indexOf("标签:"));
                     }
-                    System.out.println(divHTML);
-                }
+                    String[] infoArry = divHTML.split("\n");
+                    for ( String info:infoArry ) {
+                        if ( info.length() > 0 ) {
+                            String key = info.substring(0, info.indexOf(':'));
+                            String value = info.substring(info.indexOf(':')+1);
+                            //System.out.println(key + " = " + value);
+                            userStruct.basicInfo.put(key, value);
+                        }
+                    }
+                }//基本信息完
             }
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -137,10 +159,9 @@ public class UserPageProcessor {
         }
     }
 
-    public void getWeibo( Document document ) {
+    public List<WeiboStruct> getWeibo( Document document ) {
         try {
             logger.info("[解析] 正在获取用户微博...");
-            List<WeiboStruct> weiboList = new ArrayList<WeiboStruct>();
 
             Element maxPageEle = document.select("input[type=hidden]").first();
             String maxPage;
@@ -157,6 +178,7 @@ public class UserPageProcessor {
                 logger.info("[解析] 当前页解析得到 " + weiboDivs.size() + " 条微博");
                 for (Element weiboDiv : weiboDivs) {
                     WeiboStruct struct = new WeiboStruct();
+                    struct.setWeiboID(weiboDiv.attr("id"));
                     Element weiboText = weiboDiv.select("span[class=ctt]").first();
                     if (weiboText == null)
                         continue;
@@ -194,10 +216,16 @@ public class UserPageProcessor {
 
                     Element fromDate = weiboDiv.select("span[class=ct]").first();
                     String fromDateText = fromDate.text();
-                    weiboDate = fromDateText.substring(0, fromDateText.indexOf("来自"));
-                    weiboFrom = fromDateText.substring(fromDateText.indexOf("来自"));
-                    struct.setWeiboDate(weiboDate);
-                    struct.setWeiboFrom(weiboFrom);
+                    if ( fromDateText.contains("来自") ) {
+                        weiboDate = fromDateText.substring(0, fromDateText.indexOf("来自"));
+                        weiboFrom = fromDateText.substring(fromDateText.indexOf("来自"));
+                        struct.setWeiboDate(weiboDate);
+                        struct.setWeiboFrom(weiboFrom);
+                    }
+                    else {
+                        struct.setWeiboDate(fromDateText);
+                        struct.setWeiboFrom("来自火星");
+                    }
 
                     Element weiboForward = weiboDiv.select("span[class=cmt]").first();
                     if (weiboForward != null) {
@@ -210,15 +238,17 @@ public class UserPageProcessor {
                         struct.setForwardReason("");
                     }
                     System.out.println(struct.getWeiboText());
-                    weiboList.add(struct);
+                    userStruct.weiboList.add(struct);
                 }
                 count ++;   //当前页标
             }while( (document = next(document)) != null );
+            return userStruct.weiboList;
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             e.printStackTrace(new PrintStream(baos));
             logger.error(baos.toString());
         }
+        return null;
     }
 
     private Document next( Document document ) {

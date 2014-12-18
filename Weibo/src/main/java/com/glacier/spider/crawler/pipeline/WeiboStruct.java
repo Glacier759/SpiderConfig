@@ -1,5 +1,7 @@
 package com.glacier.spider.crawler.pipeline;
 
+import java.util.HashMap;
+
 /**
  * Created by glacier on 14-12-17.
  */
@@ -10,6 +12,15 @@ public class WeiboStruct {
     private String weiboImage;
     private String weiboLikeCount, weiboForwardCount, weiboCommentCount;
     private String weiboDate, weiboFrom;
+    private String weiboID;
+
+    public String getWeiboID() {
+        return weiboID;
+    }
+
+    public void setWeiboID(String weiboID) {
+        this.weiboID = weiboID;
+    }
 
     public void setWeiboText( String weiboText ) {     this.weiboText = weiboText; }
     public void setWeiboSender( String weiboSender ) {     this.weiboSender = weiboSender; }
