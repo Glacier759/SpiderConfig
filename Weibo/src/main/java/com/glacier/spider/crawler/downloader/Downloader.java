@@ -15,7 +15,10 @@ import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
+import javax.swing.text.html.parser.Entity;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStreamReader;
@@ -108,25 +111,27 @@ public class Downloader {
     }
 
     public static Document topicDocument(String topic) {
-        try {
-            HttpGet httpGet = new HttpGet("http://huati.weibo.cn");
-
-            httpGet.setHeader("Host", "huati.weibo.cn");
-            httpGet.setHeader("Connection", "keep-alive");
-            httpGet.setHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
-            httpGet.setHeader("User-Agent", "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36");
-            httpGet.setHeader("Accept-Language", "zh-CN,zh,q=0.8");
-            httpGet.setHeader("RA-Ver", "2.8.6");
-            httpGet.setHeader("RA-Sid", "6BB2C802-20140627-183131-586b2e-69394f");
-
-            HttpResponse response = httpClient.execute(httpGet);
-            System.out.println(response.getStatusLine());
-            System.out.println(EntityUtils.toString(response.getEntity()));
-        }catch (Exception e) {
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            e.printStackTrace(new PrintStream(baos));
-            logger.error(baos.toString());
-        }
+//        try {
+//            HttpGet httpGet = new HttpGet("http://m.weibo.cn/p/index?containerid=100808558dc0694893f9249cbbf30b3c821934");
+//
+//            httpGet.setHeader("Host", "huati.weibo.cn");
+//            httpGet.setHeader("Connection", "keep-alive");
+//            httpGet.setHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
+//            httpGet.setHeader("User-Agent", "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36");
+//            httpGet.setHeader("Accept-Language", "zh-CN,zh,q=0.8");
+//            httpGet.setHeader("RA-Ver", "2.8.6");
+//            httpGet.setHeader("RA-Sid", "6BB2C802-20140627-183131-586b2e-69394f");
+//
+//            HttpResponse response = httpClient.execute(httpGet);
+//            System.out.println(response.getStatusLine());
+//            String html = EntityUtils.toString(response.getEntity());
+//            System.out.println(html);
+//
+//        }catch (Exception e) {
+//            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//            e.printStackTrace(new PrintStream(baos));
+//            logger.error(baos.toString());
+//        }
         return null;
     }
 
