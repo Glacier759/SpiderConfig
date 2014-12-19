@@ -16,3 +16,9 @@ SpiderConfig
 >应用多线程提高抓取效率
 
 >仿照scrapy、webmagic等项目进行模块划分(我还是做的有些不太对)..
+
+###2014-12-19 22:06
+
+>增加start.sh启动脚本 参数为配置文件id
+
+>增加数据库spider_config字段存储BloomFilter
