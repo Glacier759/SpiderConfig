@@ -1,5 +1,6 @@
 package com.glacier.spider.crawler.pipeline;
 
+import com.glacier.spider.NewsEye;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.dom4j.Document;
@@ -28,7 +29,7 @@ public class SaveFormat {
 
     public static String save() {
         try {
-            return save(new File("./Data"));
+            return save(new File("./Data_" + NewsEye.USERNAME));
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             e.printStackTrace(new PrintStream(baos));

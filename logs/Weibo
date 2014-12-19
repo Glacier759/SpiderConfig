@@ -91,3 +91,5 @@ Caused by: java.net.ConnectException: 拒绝连接
 2014-12-19 17:09:46 [WARN] - Cookie rejected: "[version: 0][name: SUB][value: deleted][domain: .weibo.com][path: /][expiry: Thu Jan 01 08:00:01 CST 1970]". Illegal domain attribute "weibo.com". Domain of origin: "huati.weibo.cn" {org.apache.http.client.protocol.ResponseProcessCookies.processCookies(ResponseProcessCookies.java:127)}
 2014-12-19 17:12:38 [INFO] - [Login] 'glacier421186071@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:39)}
 2014-12-19 17:12:41 [INFO] - [login] 'glacier421186071@163.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:79)}
+2014-12-19 17:34:27 [INFO] - [Login] 'glacier421186071@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2014-12-19 17:34:29 [INFO] - [login] 'glacier421186071@sina.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}

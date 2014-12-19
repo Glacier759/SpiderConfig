@@ -27,6 +27,7 @@ import java.util.List;
 public class LoginCN {
 
     private String loginURL = "http://login.weibo.cn/login/";
+    private String homePage;
 
     private static Logger logger = Logger.getLogger(LoginCN.class.getName());
 
@@ -75,7 +76,7 @@ public class LoginCN {
             MyHttpConnectionManager.setHandleRedirect(httpClient, false);
             response = httpClient.execute(httpGet);
             MyHttpConnectionManager.setHandleRedirect(httpClient, true);
-            EntityUtils.toString(response.getEntity());
+            homePage = EntityUtils.toString(response.getEntity());
             logger.info("[login] '" + username + "' 登陆成功!");
 
             httpClient.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 60000);
@@ -93,4 +94,6 @@ public class LoginCN {
         }
         return null;
     }
+
+    public String getHomePage(){    return homePage;    }
 }
