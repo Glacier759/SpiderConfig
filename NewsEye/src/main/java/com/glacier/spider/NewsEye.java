@@ -1,6 +1,7 @@
 package com.glacier.spider;
 
 import com.glacier.spider.configure.GetConfigure;
+import com.glacier.spider.crawler.pipeline.SaveFormat;
 import com.glacier.spider.crawler.scheduler.BloomFilter;
 import com.glacier.spider.configure.ParseConfigure;
 import com.glacier.spider.crawler.Crawler;
@@ -17,7 +18,7 @@ import java.util.Date;
 public class NewsEye {
 
     private static Logger logger = Logger.getLogger(NewsEye.class.getName());
-    public static String USERNAME;
+    public static String USERNAME, FILENAME;
 
     public static void main(String[] args) {
         try {
@@ -49,6 +50,13 @@ public class NewsEye {
 
                     GetConfigure.setBloomFilter(id, Crawler.bloomFilter);
                     logger.info("[BloomFilter] 保存成功");
+                }
+                logger.info("[压缩] 数据正在压缩打包...");
+                if (SaveFormat.compressFile()) {
+                    logger.info("[压缩] 数据压缩打包成功 保存至 " + NewsEye.FILENAME);
+                }
+                else {
+                    logger.info("[压缩] 数据压缩打包出现异常");
                 }
 
                 logger.info("[程序执行完毕]");

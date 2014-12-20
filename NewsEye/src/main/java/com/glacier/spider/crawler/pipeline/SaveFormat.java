@@ -81,6 +81,33 @@ public class SaveFormat {
         return null;
     }
 
+    public static boolean compressFile() {
+        try {
+            File file = new File("./Data_" + NewsEye.USERNAME);
+            if ( !file.exists() ) {
+                logger.error("[压缩] 需要压缩的文件不存在");
+                return false;
+            }
+            else {
+                NewsEye.FILENAME = file.getName() + "_" + System.currentTimeMillis() + ".tar.gz";
+                String shell = "sh /home/glacier/Java/IDE/IDEA/IdeaProjects/SpiderConfig/NewsEye/compress.sh " + file.getName() + " " + NewsEye.FILENAME;
+                Process process = Runtime.getRuntime().exec(shell);
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                String temp;
+                while( (temp = bufferedReader.readLine()) != null ) {
+                    System.out.println(temp);
+                }
+                process.waitFor();
+                return true;
+            }
+        }catch (Exception e) {
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            e.printStackTrace(new PrintStream(baos));
+            logger.debug(baos.toString());
+            return false;
+        }
+    }
+
     private static String formatXML(Element root) {
         String formatXMLStr = null;
         try {
