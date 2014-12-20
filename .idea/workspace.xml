@@ -81,7 +81,7 @@
       <file leaf-file-name="NewsEye.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewsEye/src/main/java/com/glacier/spider/NewsEye.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48824593" vertical-offset="540" max-vertical-offset="1368">
+            <state vertical-scroll-proportion="0.48913044" vertical-offset="540" max-vertical-offset="1368">
               <caret line="55" column="71" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
               <folding />
             </state>
@@ -232,10 +232,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1279" />
-    <option name="y" value="283" />
-    <option name="width" value="1368" />
-    <option name="height" value="742" />
+    <option name="x" value="-180" />
+    <option name="y" value="298" />
+    <option name="width" value="1223" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -920,15 +920,15 @@
       <workItem from="1418896858274" duration="11694000" />
       <workItem from="1418979458939" duration="15450000" />
       <workItem from="1419070153645" duration="647000" />
-      <workItem from="1419071394767" duration="4289000" />
+      <workItem from="1419071394767" duration="5644000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140625000" />
+    <option name="totallyTimeSpent" value="141980000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1279" y="283" width="1368" height="742" extended-state="6" />
+    <frame x="-180" y="298" width="1223" height="741" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1350,7 +1350,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewsEye/src/main/java/com/glacier/spider/NewsEye.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48824593" vertical-offset="540" max-vertical-offset="1368">
+        <state vertical-scroll-proportion="0.48913044" vertical-offset="540" max-vertical-offset="1368">
           <caret line="55" column="71" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
           <folding />
         </state>
