@@ -1,5 +1,6 @@
 package com.glacier.spider.configure;
 
+import com.glacier.spider.NewsEye;
 import com.glacier.spider.crawler.scheduler.BloomFilter;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -47,12 +48,26 @@ public class GetConfigure {
         return null;
     }
 
+    public static void setFileName(Integer id) {
+        try {
+            init();
+            ConfigBatis configBatis = mapper.getConfigBatis(id);
+            session.commit();
+            configBatis.setFilename(NewsEye.FILENAME);
+            mapper.setFileName(configBatis);
+            session.commit();
+        }catch (Exception e) {
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            e.printStackTrace(new PrintStream(baos));
+            logger.error(baos.toString());
+        }
+    }
+
     public static BloomFilter getBloomFilter(Integer id) {
         try {
             init();
-            BloomBatis bloomBatis = mapper.getBloomFilter(id);
-            System.out.println(bloomBatis);
-            byte[] bloomByte = bloomBatis.getBloomfilter();
+            ConfigBatis configBatis = mapper.getConfigBatis(id);
+            byte[] bloomByte = configBatis.getBloomfilter();
             ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(bloomByte));
             BloomFilter bloomFilter = (BloomFilter)ois.readObject();
             if ( bloomFilter == null )

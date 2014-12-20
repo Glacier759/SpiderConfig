@@ -1,8 +1,9 @@
 package com.glacier.spider.configure;
 
-
 /**
- * Created by glacier on 14-12-19.
+ * Created by IntelliJ IDEA on 2014-12-20 20:35.
+ * Author:  Glacier (RenLixiang), OurHom.759@gmail.com
+ * Company: Class 1204 of Computer Science and Technology
  */
 public class BloomBatis {
     public Integer getId() {

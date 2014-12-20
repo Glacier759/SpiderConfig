@@ -5,7 +5,8 @@ package com.glacier.spider.configure;
  */
 public interface MysqlOperation {
     public String getConfigure(Integer id);
-    public BloomBatis getBloomFilter(Integer id);
+    public ConfigBatis getConfigBatis(Integer id);
     public void setBloomFilter(BloomBatis bloom);
     public String getUsername(Integer id);
+    public void setFileName(ConfigBatis configBatis);
 }

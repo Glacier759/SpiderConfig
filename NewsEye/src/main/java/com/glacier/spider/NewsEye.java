@@ -54,6 +54,7 @@ public class NewsEye {
                 logger.info("[压缩] 数据正在压缩打包...");
                 if (SaveFormat.compressFile()) {
                     logger.info("[压缩] 数据压缩打包成功 保存至 " + NewsEye.FILENAME);
+                    GetConfigure.setFileName(id);
                 }
                 else {
                     logger.info("[压缩] 数据压缩打包出现异常");

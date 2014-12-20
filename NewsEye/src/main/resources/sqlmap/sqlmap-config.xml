@@ -2,6 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.glacier.spider.configure.MysqlOperation">
+    <resultMap id="ConfigBatis" type="ConfigBatis">
+        <result column="id" property="id" />
+        <result column="uid" property="uid" />
+        <result column="aid" property="aid" />
+        <result column="conf" property="conf" />
+        <result column="submit_date" property="submit_date" />
+        <result column="active" property="active" />
+        <result column="filename" property="filename" />
+        <result column="bloomfilter" property="bloomfilter" javaType="byte[]" jdbcType="BLOB" typeHandler="org.apache.ibatis.type.ByteArrayTypeHandler" />
+    </resultMap>
     <resultMap id="BloomBatis" type="BloomBatis">
         <result column="id" property="id" />
         <result column="bloomfilter" property="bloomfilter" javaType="byte[]" jdbcType="BLOB" typeHandler="org.apache.ibatis.type.ByteArrayTypeHandler" />
@@ -10,8 +20,8 @@
     <select id="getConfigure" parameterType="Integer" resultType="String">
         SELECT conf FROM spider_config WHERE id = #{id};
     </select>
-    <select id="getBloomFilter" parameterType="Integer" resultType="BloomBatis">
-        SELECT bloomfilter FROM spider_config WHERE id = #{id};
+    <select id="getConfigBatis" parameterType="Integer" resultType="ConfigBatis">
+        SELECT * FROM spider_config WHERE id = #{id};
     </select>
     <update id="setBloomFilter" parameterType="BloomBatis">
         UPDATE spider_config SET bloomfilter = #{bloomfilter} WHERE id = #{id};
@@ -19,4 +29,7 @@
     <select id="getUsername" parameterType="String" resultType="String">
         SELECT spider_user.screen_name FROM spider_user,spider_config WHERE spider_user.id=spider_config.uid AND spider_config.id = #{id};
     </select>
+    <update id="setFileName" parameterType="ConfigBatis">
+        UPDATE spider_config SET filename = #{filename} WHERE id = #{id};
+    </update>
 </mapper>

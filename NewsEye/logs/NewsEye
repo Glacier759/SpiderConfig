@@ -1172,3 +1172,300 @@ Caused by: java.lang.IllegalStateException: Object has already been retured to t
 2014-12-20 20:00:09 [INFO] - [压缩] 数据正在压缩打包... {com.glacier.spider.NewsEye.main(NewsEye.java:54)}
 2014-12-20 20:00:09 [INFO] - [压缩] 数据压缩打包成功 {com.glacier.spider.NewsEye.main(NewsEye.java:56)}
 2014-12-20 20:00:09 [INFO] - [程序执行完毕] {com.glacier.spider.NewsEye.main(NewsEye.java:62)}
+2014-12-20 20:44:15 [ERROR] - org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in sqlmap/sqlmap-config.xml
+### The error occurred while processing mapper_resultMap[BloomBatis]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'getConfigBatis'.  Cause: java.lang.ClassNotFoundException: Cannot find class: getConfigBatis
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:23)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:51)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:35)
+	at com.glacier.spider.configure.GetConfigure.init(GetConfigure.java:27)
+	at com.glacier.spider.configure.GetConfigure.getUsername(GetConfigure.java:108)
+	at com.glacier.spider.NewsEye.main(NewsEye.java:40)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'getConfigBatis'.  Cause: java.lang.ClassNotFoundException: Cannot find class: getConfigBatis
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:105)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:88)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:49)
+	... 4 more
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'getConfigBatis'.  Cause: java.lang.ClassNotFoundException: Cannot find class: getConfigBatis
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:113)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:88)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:311)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:103)
+	... 6 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'getConfigBatis'.  Cause: java.lang.ClassNotFoundException: Cannot find class: getConfigBatis
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:94)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:83)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:128)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:111)
+	... 9 more
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'getConfigBatis'.  Cause: java.lang.ClassNotFoundException: Cannot find class: getConfigBatis
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:109)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:115)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:92)
+	... 13 more
+Caused by: java.lang.ClassNotFoundException: Cannot find class: getConfigBatis
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:188)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:87)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:250)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:105)
+	... 15 more
+ {com.glacier.spider.configure.GetConfigure.init(GetConfigure.java:33)}
+2014-12-20 20:44:15 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.configure.GetConfigure.getUsername(GetConfigure.java:109)
+	at com.glacier.spider.NewsEye.main(NewsEye.java:40)
+ {com.glacier.spider.configure.GetConfigure.getUsername(GetConfigure.java:115)}
+2014-12-20 20:44:15 [INFO] - [程序开始执行] {com.glacier.spider.NewsEye.main(NewsEye.java:41)}
+2014-12-20 20:44:16 [ERROR] - org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in sqlmap/sqlmap-config.xml
+### The error occurred while processing mapper_resultMap[BloomBatis]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'getConfigBatis'.  Cause: java.lang.ClassNotFoundException: Cannot find class: getConfigBatis
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:23)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:51)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:35)
+	at com.glacier.spider.configure.GetConfigure.init(GetConfigure.java:27)
+	at com.glacier.spider.configure.GetConfigure.getConfigure(GetConfigure.java:39)
+	at com.glacier.spider.NewsEye.main(NewsEye.java:43)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'getConfigBatis'.  Cause: java.lang.ClassNotFoundException: Cannot find class: getConfigBatis
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:105)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:88)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:49)
+	... 4 more
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'getConfigBatis'.  Cause: java.lang.ClassNotFoundException: Cannot find class: getConfigBatis
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:113)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:88)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:311)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:103)
+	... 6 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'getConfigBatis'.  Cause: java.lang.ClassNotFoundException: Cannot find class: getConfigBatis
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:94)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:83)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:128)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:111)
+	... 9 more
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'getConfigBatis'.  Cause: java.lang.ClassNotFoundException: Cannot find class: getConfigBatis
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:109)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:115)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:92)
+	... 13 more
+Caused by: java.lang.ClassNotFoundException: Cannot find class: getConfigBatis
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:188)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:87)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:250)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:105)
+	... 15 more
+ {com.glacier.spider.configure.GetConfigure.init(GetConfigure.java:33)}
+2014-12-20 20:44:16 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.configure.GetConfigure.getConfigure(GetConfigure.java:40)
+	at com.glacier.spider.NewsEye.main(NewsEye.java:43)
+ {com.glacier.spider.configure.GetConfigure.getConfigure(GetConfigure.java:46)}
+2014-12-20 20:44:16 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.configure.ParseConfigure.<init>(ParseConfigure.java:26)
+	at com.glacier.spider.NewsEye.main(NewsEye.java:43)
+ {com.glacier.spider.configure.ParseConfigure.<init>(ParseConfigure.java:110)}
+2014-12-20 20:44:16 [INFO] - [压缩] 数据正在压缩打包... {com.glacier.spider.NewsEye.main(NewsEye.java:54)}
+2014-12-20 20:44:16 [ERROR] - [压缩] 需要压缩的文件不存在 {com.glacier.spider.crawler.pipeline.SaveFormat.compressFile(SaveFormat.java:88)}
+2014-12-20 20:44:16 [INFO] - [压缩] 数据压缩打包出现异常 {com.glacier.spider.NewsEye.main(NewsEye.java:60)}
+2014-12-20 20:44:16 [INFO] - [程序执行完毕] {com.glacier.spider.NewsEye.main(NewsEye.java:63)}
+2014-12-20 20:46:21 [INFO] - [程序开始执行] {com.glacier.spider.NewsEye.main(NewsEye.java:41)}
+2014-12-20 20:46:21 [INFO] - [类别总数] 1 {com.glacier.spider.configure.ParseConfigure.<init>(ParseConfigure.java:30)}
+2014-12-20 20:46:21 [INFO] - [报刊总数] 1 {com.glacier.spider.configure.ParseConfigure.<init>(ParseConfigure.java:36)}
+2014-12-20 20:46:21 [INFO] - [初始化] 配置文件初始化完成 {com.glacier.spider.crawler.Crawler.<init>(Crawler.java:31)}
+2014-12-20 20:46:22 [ERROR] - java.lang.NullPointerException
+	at java.io.ByteArrayInputStream.<init>(ByteArrayInputStream.java:106)
+	at com.glacier.spider.configure.GetConfigure.getBloomFilter(GetConfigure.java:71)
+	at com.glacier.spider.NewsEye.main(NewsEye.java:46)
+ {com.glacier.spider.configure.GetConfigure.getBloomFilter(GetConfigure.java:79)}
+2014-12-20 20:46:22 [INFO] - [BloomFilter] 初始化成功 {com.glacier.spider.NewsEye.main(NewsEye.java:47)}
+2014-12-20 20:46:22 [INFO] - [初始化] 抓取模块启动 - 213123 {com.glacier.spider.crawler.Crawler.start(Crawler.java:87)}
+2014-12-20 20:46:22 [INFO] - [初始化] 正在预抓取报刊正文地址 {com.glacier.spider.crawler.Crawler.start(Crawler.java:95)}
+2014-12-20 20:46:24 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325847.htm	Thread-Thread-3 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:24 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325846.htm	Thread-Thread-4 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:24 [INFO] - [获取完毕] 存储至1419919621871.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:24 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325848.htm	Thread-Thread-3 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:24 [INFO] - [获取完毕] 存储至1417963300325.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:24 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325907.htm	Thread-Thread-4 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:25 [INFO] - [获取完毕] 存储至1419545194102.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:25 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325837.htm	Thread-Thread-3 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:25 [INFO] - [获取完毕] 存储至1419449490733.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:25 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325836.htm	Thread-Thread-4 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:25 [INFO] - [获取完毕] 存储至1418889085306.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:25 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325865.htm	Thread-Thread-6 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:25 [INFO] - [获取完毕] 存储至1419952056724.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:25 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325867.htm	Thread-Thread-4 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:25 [INFO] - [获取完毕] 存储至1417932105911.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:25 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325866.htm	Thread-Thread-6 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:25 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325868.htm	Thread-Thread-7 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:25 [INFO] - [获取完毕] 存储至1417243969766.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:25 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325898.htm	Thread-Thread-4 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:25 [INFO] - [获取完毕] 存储至1418475210376.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:25 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325896.htm	Thread-Thread-6 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:25 [INFO] - [获取完毕] 存储至1417647630770.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:25 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325897.htm	Thread-Thread-7 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:26 [INFO] - [获取完毕] 存储至1418690220906.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:26 [ERROR] - redis.clients.jedis.exceptions.JedisException: Could not return the resource to the pool
+	at redis.clients.util.Pool.returnResourceObject(Pool.java:65)
+	at redis.clients.jedis.JedisPool.returnResource(JedisPool.java:113)
+	at com.glacier.spider.crawler.scheduler.RedisScheduler.remove(RedisScheduler.java:50)
+	at com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:141)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalStateException: Object has already been retured to this pool or is invalid
+	at org.apache.commons.pool2.impl.GenericObjectPool.returnObject(GenericObjectPool.java:582)
+	at redis.clients.util.Pool.returnResourceObject(Pool.java:63)
+	... 4 more
+ {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:145)}
+2014-12-20 20:46:26 [ERROR] - java.lang.ClassCastException: java.lang.Long cannot be cast to [B
+	at redis.clients.jedis.Connection.getBinaryBulkReply(Connection.java:202)
+	at redis.clients.jedis.Connection.getBulkReply(Connection.java:191)
+	at redis.clients.jedis.Jedis.rpop(Jedis.java:1150)
+	at com.glacier.spider.crawler.scheduler.RedisScheduler.get(RedisScheduler.java:33)
+	at com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:113)
+	at java.lang.Thread.run(Thread.java:745)
+ {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:145)}
+2014-12-20 20:46:26 [INFO] - [获取完毕] 存储至1417888233978.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:26 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325871.htm	Thread-Thread-6 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:26 [INFO] - [获取完毕] 存储至1418433733592.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:26 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325872.htm	Thread-Thread-7 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:26 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325869.htm	Thread-Thread-9 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:26 [INFO] - [获取完毕] 存储至1417880780579.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:26 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325870.htm	Thread-Thread-7 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:26 [INFO] - [获取完毕] 存储至1418613757327.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:26 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325902.htm	Thread-Thread-6 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:26 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325901.htm	Thread-Thread-10 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:26 [INFO] - [获取完毕] 存储至1420808475472.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:26 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325899.htm	Thread-Thread-9 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:26 [INFO] - [获取完毕] 存储至1418092017856.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:26 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325903.htm	Thread-Thread-7 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:26 [INFO] - [获取完毕] 存储至1418999955820.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:26 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325900.htm	Thread-Thread-6 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:26 [INFO] - [获取完毕] 存储至1419733742328.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:26 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325842.htm	Thread-Thread-10 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:26 [INFO] - [获取完毕] 存储至1418431260715.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:26 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325844.htm	Thread-Thread-9 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:27 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325845.htm	Thread-Thread-11 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1416970474988.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325843.htm	Thread-Thread-7 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1417244368548.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325883.htm	Thread-Thread-6 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1419296008572.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325859.htm	Thread-Thread-12 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1419835766141.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325858.htm	Thread-Thread-11 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1421071055526.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325856.htm	Thread-Thread-9 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1417831533671.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325855.htm	Thread-Thread-7 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1417536763785.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325857.htm	Thread-Thread-6 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:27 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325906.htm	Thread-Thread-13 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1420001103414.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1419369174895.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1419946611944.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1418340203307.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1418309449914.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325860.htm	Thread-Thread-14 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:27 [INFO] - [获取完毕] 存储至1417746731389.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:27 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325861.htm	Thread-Thread-13 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:28 [INFO] - [获取完毕] 存储至1417029268380.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:28 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325894.htm	Thread-Thread-15 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:28 [INFO] - [获取完毕] 存储至1419725413132.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:28 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325893.htm	Thread-Thread-15 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:28 [INFO] - [获取完毕] 存储至1420619706356.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:28 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325904.htm	Thread-Thread-16 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:28 [INFO] - [获取完毕] 存储至1420366672182.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:28 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325905.htm	Thread-Thread-15 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:29 [INFO] - [获取完毕] 存储至1419305219600.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:29 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325882.htm	Thread-Thread-17 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:29 [INFO] - [获取完毕] 存储至1418160440953.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:29 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325879.htm	Thread-Thread-15 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:29 [INFO] - [获取完毕] 存储至1418978606594.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:29 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325878.htm	Thread-Thread-17 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:29 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325885.htm	Thread-Thread-18 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:29 [INFO] - [获取完毕] 存储至1419826117186.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:29 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325884.htm	Thread-Thread-15 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:29 [INFO] - [获取完毕] 存储至1421208135628.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:29 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325880.htm	Thread-Thread-17 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:29 [INFO] - [获取完毕] 存储至1419252263112.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:29 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325881.htm	Thread-Thread-18 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:30 [INFO] - [获取完毕] 存储至1417249215664.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:30 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325891.htm	Thread-Thread-17 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:30 [INFO] - [获取完毕] 存储至1420903226817.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:30 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325892.htm	Thread-Thread-18 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:30 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325841.htm	Thread-Thread-19 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:30 [INFO] - [获取完毕] 存储至1419603570486.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:30 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325839.htm	Thread-Thread-17 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:30 [INFO] - [获取完毕] 存储至1417268452253.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:30 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325838.htm	Thread-Thread-18 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:30 [INFO] - [获取完毕] 存储至1420861670265.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:30 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325840.htm	Thread-Thread-15 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:30 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325849.htm	Thread-Thread-20 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:30 [INFO] - [获取完毕] 存储至1420816177471.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:30 [INFO] - [获取完毕] 存储至1419336526115.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:30 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325913.htm	Thread-Thread-21 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:30 [INFO] - [获取完毕] 存储至1420552599656.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:30 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325909.htm	Thread-Thread-20 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1418586019926.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325910.htm	Thread-Thread-15 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1417946667805.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325911.htm	Thread-Thread-21 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [ERROR] - redis.clients.jedis.exceptions.JedisException: Could not return the resource to the pool
+	at redis.clients.util.Pool.returnResourceObject(Pool.java:65)
+	at redis.clients.jedis.JedisPool.returnResource(JedisPool.java:113)
+	at com.glacier.spider.crawler.scheduler.RedisScheduler.get(RedisScheduler.java:35)
+	at com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:113)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalStateException: Object has already been retured to this pool or is invalid
+	at org.apache.commons.pool2.impl.GenericObjectPool.returnObject(GenericObjectPool.java:582)
+	at redis.clients.util.Pool.returnResourceObject(Pool.java:63)
+	... 4 more
+ {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:145)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325863.htm	Thread-Thread-22 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1418484452039.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325864.htm	Thread-Thread-19 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1421170761501.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325862.htm	Thread-Thread-20 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325875.htm	Thread-Thread-23 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1418312488061.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325876.htm	Thread-Thread-15 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1421082162382.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325873.htm	Thread-Thread-20 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1418115922953.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325877.htm	Thread-Thread-19 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325874.htm	Thread-Thread-24 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1418215027242.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325908.htm	Thread-Thread-23 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1420513698682.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1419397114915.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1420676839556.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1418236742899.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325886.htm	Thread-Thread-25 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1419014143383.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325889.htm	Thread-Thread-23 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:31 [INFO] - [获取完毕] 存储至1420462100063.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:31 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325890.htm	Thread-Thread-24 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:32 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325887.htm	Thread-Thread-26 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:32 [INFO] - [获取完毕] 存储至1420606516601.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:32 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325888.htm	Thread-Thread-25 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:32 [INFO] - [获取完毕] 存储至1417526591883.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:32 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325853.htm	Thread-Thread-23 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:32 [INFO] - [获取完毕] 存储至1419660926468.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:32 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325850.htm	Thread-Thread-19 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:32 [INFO] - [获取完毕] 存储至1419930896184.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:32 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325854.htm	Thread-Thread-24 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:32 [INFO] - [获取完毕] 存储至1420109380752.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:32 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325852.htm	Thread-Thread-26 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:32 [INFO] - [获取完毕] 存储至1417170079942.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:32 [INFO] - [即将获取] http://bjcb.morningpost.com.cn/html/2014-12/20/content_325851.htm	Thread-Thread-25 {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:120)}
+2014-12-20 20:46:32 [INFO] - [获取完毕] 存储至1420990513109.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:32 [INFO] - [获取完毕] 存储至1420009857153.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:32 [INFO] - [获取完毕] 存储至1419493865614.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:32 [INFO] - [获取完毕] 存储至1419503552008.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:32 [INFO] - [获取完毕] 存储至1420304616554.xml {com.glacier.spider.crawler.pageprocessor.ContentPageProcessor.run(ContentPageProcessor.java:136)}
+2014-12-20 20:46:32 [INFO] - [BloomFilter] 保存成功 {com.glacier.spider.NewsEye.main(NewsEye.java:52)}
+2014-12-20 20:46:32 [INFO] - [压缩] 数据正在压缩打包... {com.glacier.spider.NewsEye.main(NewsEye.java:54)}
+2014-12-20 20:46:33 [INFO] - [压缩] 数据压缩打包成功 保存至 Data_213123_1419079592886.tar.gz {com.glacier.spider.NewsEye.main(NewsEye.java:56)}
+2014-12-20 20:46:33 [INFO] - [程序执行完毕] {com.glacier.spider.NewsEye.main(NewsEye.java:63)}
