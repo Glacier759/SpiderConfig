@@ -22,3 +22,5 @@ SpiderConfig
 >增加start.sh启动脚本 参数为配置文件id
 
 >增加数据库spider_config字段存储BloomFilter
+
+>增加compress.sh脚本  在抓取任务结束后自动进行打包并删除目录功能
