@@ -45,4 +45,20 @@ public class WeiboStruct {
     public String getWeiboCommentCount() {  return weiboCommentCount;   }
     public String getWeiboDate() {  return weiboDate;   }
     public String getWeiboFrom() {  return weiboFrom;   }
+
+    public String toString() {
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("weibo id: " + weiboID + "\n");
+        buffer.append(weiboSender + " : " + weiboText + "\n");
+        if ( !weiboForward.equals("") && !forwardReason.equals("") ) {
+            buffer.append(weiboSender + " " + weiboForward + " - " + forwardReason + "\n");
+        }
+        if ( !weiboImage.equals("") ) {
+            buffer.append("image - " + weiboImage + "\n");
+        }
+        buffer.append("like: " + weiboLikeCount + "\tforward: " + weiboForwardCount + "\tcommment: " + weiboCommentCount + "\n");
+        buffer.append("date: " + weiboDate + "\tfrom: " + weiboFrom + "\n");
+
+        return buffer.toString();
+    }
 }

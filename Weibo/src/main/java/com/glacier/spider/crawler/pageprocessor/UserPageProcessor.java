@@ -13,6 +13,9 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by glacier on 14-12-17.
@@ -22,7 +25,42 @@ public class UserPageProcessor {
     private static Logger logger = Logger.getLogger(UserPageProcessor.class.getName());
     private UserStruct userStruct = new UserStruct();
 
-    public HashMap<String,String> getFansMap( Document document ) {
+    public void getFansMap( Document document ) {
+        Document fans_document = Downloader.document(this.getURL(document).get("粉丝"), Downloader.HTTP_GET);
+        get_fans_map(fans_document);
+    }
+
+    public void getFollowMap( Document document ) {
+        Document follow_document = Downloader.document(this.getURL(document).get("关注"), Downloader.HTTP_GET);
+        get_follow_map(follow_document);
+    }
+
+    public void getUserInfo( Document document ) {
+
+        Element element = document.select("div[class=tip2]").first();
+
+        Pattern pattern = Pattern.compile("微博\\[(\\d+)\\]");
+        Matcher matcher = pattern.matcher(element.toString());
+        if ( matcher.find() ) { userStruct.weibo_count = matcher.group(1);  }
+
+        pattern = Pattern.compile("关注\\[(\\d+)\\]");
+        matcher = pattern.matcher(element.toString());
+        if ( matcher.find() ) { userStruct.follow_count = matcher.group(1); }
+
+        pattern = Pattern.compile("粉丝\\[(\\d+)\\]");
+        matcher = pattern.matcher(element.toString());
+        if ( matcher.find() ) { userStruct.fans_count = matcher.group(1);   }
+
+        userStruct.user_url = document.baseUri();
+        //Document user_document = Downloader.document(this.getURL(document).get("资料"), Downloader.HTTP_GET);
+        //get_user_info(user_document);
+    }
+
+    public UserStruct getUserStruct() {
+        return userStruct;
+    }
+
+    private HashMap<String,String> get_fans_map( Document document ) {
         try {
             logger.info("[解析] 正在获取粉丝列表...");
 
@@ -48,7 +86,7 @@ public class UserPageProcessor {
         return null;
     }
 
-    public HashMap<String,String> getFollowMap( Document document ) {
+    private HashMap<String,String> get_follow_map( Document document ) {
         try {
             logger.info("[解析] 正在获取关注列表...");
 
@@ -75,9 +113,11 @@ public class UserPageProcessor {
         return null;
     }
 
-    public void getUserInfo( Document document ) {
+    private void get_user_info( Document document ) {
         try {
             logger.info("[解析] 正在获取用户资料...");
+            String userID = document.baseUri().replace("http://weibo.cn/","").replace("/info","");
+            userStruct.user_id = userID;
             String headImage, weiboLevel, tag="";
             boolean isVip;
             Elements divClassCs = document.select("div[class=c]");
@@ -85,7 +125,7 @@ public class UserPageProcessor {
                 if ( divClassC.html().contains("alt=\"头像\"") ) {
                     headImage = divClassC.select("img").attr("abs:src");
                     //System.out.println("头像 = " + headImage);
-                    userStruct.basicInfo.put("头像", headImage);
+                    userStruct.basicInfo.put("head_image", headImage);
                 }
                 else if ( divClassC.html().contains("微博等级") && divClassC.html().contains("/urank") ) {
                     Elements levelEles = divClassC.select("a[href]");
@@ -93,7 +133,7 @@ public class UserPageProcessor {
                         if ( levelEle.attr("abs:href").contains("urank") ) {
                             weiboLevel = levelEle.text();
                             //System.out.println("微博等级 = " + weiboLevel);
-                            userStruct.basicInfo.put("微博等级", weiboLevel);
+                            userStruct.basicInfo.put("weibo_level", weiboLevel);
                         }
                     }
                     if ( divClassC.html().contains("会员等级：未开通") )
@@ -102,9 +142,9 @@ public class UserPageProcessor {
                         isVip = true;
                     //System.out.println("isVip = " + isVip);
                     if ( isVip )
-                        userStruct.basicInfo.put("Vip", "是");
+                        userStruct.basicInfo.put("is_vip", "true");
                     else
-                        userStruct.basicInfo.put("Vip", "否");
+                        userStruct.basicInfo.put("is_vip", "false");
                 }//微博等级、是否会员完
                 else if ( divClassC.html().contains("昵称:") && divClassC.html().contains("性别:") ) {
                     String divHTML = divClassC.html();
@@ -125,7 +165,7 @@ public class UserPageProcessor {
                                     }
                                     tag = tag.substring(1);
                                     //System.out.println("标签 = " + tag);
-                                    userStruct.basicInfo.put("标签", tag);
+                                    userStruct.basicInfo.put("tag", tag);
                                     break;
                                 }
                             }
@@ -137,17 +177,23 @@ public class UserPageProcessor {
                             }
                             tag = tag.substring(1);
                             //System.out.println("标签 ~ " + tag);
-                            userStruct.basicInfo.put("标签", tag);
+                            userStruct.basicInfo.put("tag", tag);
                         }
                         divHTML = divHTML.substring(0, divHTML.indexOf("标签:"));
                     }
                     String[] infoArry = divHTML.split("\n");
                     for ( String info:infoArry ) {
-                        if ( info.length() > 0 ) {
-                            String key = info.substring(0, info.indexOf(':'));
-                            String value = info.substring(info.indexOf(':')+1);
-                            //System.out.println(key + " = " + value);
-                            userStruct.basicInfo.put(key, value);
+                        try {
+                            if (info.length() > 0) {
+                                String key = info.substring(0, info.indexOf(':'));
+                                String value = info.substring(info.indexOf(':') + 1);
+                                //System.out.println(key + " = " + value);
+                                userStruct.basicInfo.put(key, value);
+                            }
+                        }catch (Exception e) {
+                            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                            e.printStackTrace(new PrintStream(baos));
+                            logger.error(baos.toString());
                         }
                     }
                 }//基本信息完
@@ -195,8 +241,10 @@ public class UserPageProcessor {
                         for (Element imageEle : imageEles) {
                             try {
                                 String eleText = imageEle.text();
-                                if (eleText.contains("原图")) {
+                                if (eleText.contains("图片")) {
                                     imageURL = imageEle.attr("href");
+                                    Document image_document = Downloader.document(imageURL, Downloader.HTTP_GET);
+                                    imageURL = image_document.select("img[alt]").first().attr("src");
                                 } else if (eleText.contains("赞")) {
                                     likeCount = eleText.substring(eleText.indexOf('[') + 1, eleText.indexOf(']'));
                                 } else if (eleText.contains("转发")) {
@@ -237,7 +285,7 @@ public class UserPageProcessor {
                         struct.setWeiboForward("");
                         struct.setForwardReason("");
                     }
-                    System.out.println(struct.getWeiboText());
+                    //System.out.println(struct.toString());
                     userStruct.weiboList.add(struct);
                 }
                 count ++;   //当前页标
@@ -266,7 +314,7 @@ public class UserPageProcessor {
         return null;
     }
 
-    public HashMap<String,String> getURL( Document document ) {
+    private HashMap<String,String> getURL( Document document ) {
         try {
             HashMap<String,String> urlMap = new HashMap<String, String>();
             Elements tagEles = document.select("a[href]");

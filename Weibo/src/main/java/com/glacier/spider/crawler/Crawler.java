@@ -3,11 +3,16 @@ package com.glacier.spider.crawler;
 import com.glacier.spider.crawler.downloader.Downloader;
 import com.glacier.spider.crawler.pageprocessor.SearchPageProcessor;
 import com.glacier.spider.crawler.pageprocessor.UserPageProcessor;
+import com.glacier.spider.crawler.pipeline.UserStruct;
 import com.glacier.spider.login.GetAccounts;
 import com.glacier.spider.login.LoginCN;
+import org.apache.commons.io.FileUtils;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.log4j.Logger;
+import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+
+import java.io.File;
 
 /**
  * Created by glacier on 14-12-17.
@@ -26,7 +31,18 @@ public class Crawler {
         httpClient = loginCN.login(GetAccounts.accounts("weibo"));
 
         Downloader.setClient(httpClient);
-        Downloader.topicDocument("ss");
+        Document document = Downloader.document("http://weibo.cn/3217179555", Downloader.HTTP_GET);
+        //Document document = Downloader.document("http://weibo.cn/musicmusicmusic", Downloader.HTTP_GET);
+        UserPageProcessor userPageProcessor = new UserPageProcessor();
+        userPageProcessor.getUserInfo(document);
+        userPageProcessor.getFollowMap(document);
+        userPageProcessor.getFansMap(document);
+        userPageProcessor.getWeibo(document);
+
+        UserStruct userStruct = userPageProcessor.getUserStruct();
+        userStruct.save4xml();
+
+        //Downloader.topicDocument("ss");
        // Document document = Downloader.searchDocument("王力宏");
         //SearchPageProcessor pageProcessor = new SearchPageProcessor();
         //pageProcessor.getSearchList(document);
