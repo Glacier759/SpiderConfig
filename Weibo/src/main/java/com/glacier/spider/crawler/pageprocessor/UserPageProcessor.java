@@ -1,6 +1,7 @@
 package com.glacier.spider.crawler.pageprocessor;
 
 import com.glacier.spider.crawler.downloader.Downloader;
+import com.glacier.spider.crawler.pipeline.UserInfo;
 import com.glacier.spider.crawler.pipeline.UserStruct;
 import com.glacier.spider.crawler.pipeline.WeiboStruct;
 import org.apache.log4j.Logger;
@@ -35,25 +36,27 @@ public class UserPageProcessor {
         get_follow_map(follow_document);
     }
 
-    public void getUserInfo( Document document ) {
+    public UserInfo getUserInfo( Document document ) {
+
+        userStruct.userInfo = get_user_info(Downloader.document(getURL(document).get("资料"), Downloader.HTTP_GET));
 
         Element element = document.select("div[class=tip2]").first();
 
         Pattern pattern = Pattern.compile("微博\\[(\\d+)\\]");
         Matcher matcher = pattern.matcher(element.toString());
-        if ( matcher.find() ) { userStruct.weibo_count = matcher.group(1);  }
+        if ( matcher.find() ) { userStruct.userInfo.weibo_count = matcher.group(1);  }
 
         pattern = Pattern.compile("关注\\[(\\d+)\\]");
         matcher = pattern.matcher(element.toString());
-        if ( matcher.find() ) { userStruct.follow_count = matcher.group(1); }
+        if ( matcher.find() ) { userStruct.userInfo.follow_count = matcher.group(1); }
 
         pattern = Pattern.compile("粉丝\\[(\\d+)\\]");
         matcher = pattern.matcher(element.toString());
-        if ( matcher.find() ) { userStruct.fans_count = matcher.group(1);   }
+        if ( matcher.find() ) { userStruct.userInfo.fans_count = matcher.group(1);   }
 
-        userStruct.user_url = document.baseUri();
-        //Document user_document = Downloader.document(this.getURL(document).get("资料"), Downloader.HTTP_GET);
-        //get_user_info(user_document);
+        userStruct.userInfo.user_url = document.baseUri();
+
+        return userStruct.userInfo;
     }
 
     public UserStruct getUserStruct() {
@@ -113,11 +116,13 @@ public class UserPageProcessor {
         return null;
     }
 
-    private void get_user_info( Document document ) {
+    private UserInfo get_user_info( Document document ) {
+        UserInfo userInfo = new UserInfo();
         try {
             logger.info("[解析] 正在获取用户资料...");
             String userID = document.baseUri().replace("http://weibo.cn/","").replace("/info","");
-            userStruct.user_id = userID;
+            userInfo.user_id = userID;
+            userInfo.user_name = document.title().substring(0, document.title().length()-3);
             String headImage, weiboLevel, tag="";
             boolean isVip;
             Elements divClassCs = document.select("div[class=c]");
@@ -125,7 +130,7 @@ public class UserPageProcessor {
                 if ( divClassC.html().contains("alt=\"头像\"") ) {
                     headImage = divClassC.select("img").attr("abs:src");
                     //System.out.println("头像 = " + headImage);
-                    userStruct.basicInfo.put("head_image", headImage);
+                    userInfo.basicInfo.put("head_image", headImage);
                 }
                 else if ( divClassC.html().contains("微博等级") && divClassC.html().contains("/urank") ) {
                     Elements levelEles = divClassC.select("a[href]");
@@ -133,7 +138,7 @@ public class UserPageProcessor {
                         if ( levelEle.attr("abs:href").contains("urank") ) {
                             weiboLevel = levelEle.text();
                             //System.out.println("微博等级 = " + weiboLevel);
-                            userStruct.basicInfo.put("weibo_level", weiboLevel);
+                            userInfo.basicInfo.put("weibo_level", weiboLevel);
                         }
                     }
                     if ( divClassC.html().contains("会员等级：未开通") )
@@ -142,9 +147,9 @@ public class UserPageProcessor {
                         isVip = true;
                     //System.out.println("isVip = " + isVip);
                     if ( isVip )
-                        userStruct.basicInfo.put("is_vip", "true");
+                        userInfo.basicInfo.put("is_vip", "true");
                     else
-                        userStruct.basicInfo.put("is_vip", "false");
+                        userInfo.basicInfo.put("is_vip", "false");
                 }//微博等级、是否会员完
                 else if ( divClassC.html().contains("昵称:") && divClassC.html().contains("性别:") ) {
                     String divHTML = divClassC.html();
@@ -165,7 +170,7 @@ public class UserPageProcessor {
                                     }
                                     tag = tag.substring(1);
                                     //System.out.println("标签 = " + tag);
-                                    userStruct.basicInfo.put("tag", tag);
+                                    userInfo.basicInfo.put("tag", tag);
                                     break;
                                 }
                             }
@@ -177,7 +182,7 @@ public class UserPageProcessor {
                             }
                             tag = tag.substring(1);
                             //System.out.println("标签 ~ " + tag);
-                            userStruct.basicInfo.put("tag", tag);
+                            userInfo.basicInfo.put("tag", tag);
                         }
                         divHTML = divHTML.substring(0, divHTML.indexOf("标签:"));
                     }
@@ -188,7 +193,7 @@ public class UserPageProcessor {
                                 String key = info.substring(0, info.indexOf(':'));
                                 String value = info.substring(info.indexOf(':') + 1);
                                 //System.out.println(key + " = " + value);
-                                userStruct.basicInfo.put(key, value);
+                                userInfo.basicInfo.put(key, value);
                             }
                         }catch (Exception e) {
                             ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -203,6 +208,7 @@ public class UserPageProcessor {
             e.printStackTrace(new PrintStream(baos));
             logger.error(baos.toString());
         }
+        return userInfo;
     }
 
     public List<WeiboStruct> getWeibo( Document document ) {

@@ -3,6 +3,7 @@ package com.glacier.spider.crawler;
 import com.glacier.spider.crawler.downloader.Downloader;
 import com.glacier.spider.crawler.pageprocessor.SearchPageProcessor;
 import com.glacier.spider.crawler.pageprocessor.UserPageProcessor;
+import com.glacier.spider.crawler.pipeline.UserInfo;
 import com.glacier.spider.crawler.pipeline.UserStruct;
 import com.glacier.spider.login.GetAccounts;
 import com.glacier.spider.login.LoginCN;
@@ -32,23 +33,17 @@ public class Crawler {
 
         Downloader.setClient(httpClient);
         Document document = Downloader.document("http://weibo.cn/3217179555", Downloader.HTTP_GET);
-        //Document document = Downloader.document("http://weibo.cn/musicmusicmusic", Downloader.HTTP_GET);
+//        //Document document = Downloader.document("http://weibo.cn/musicmusicmusic", Downloader.HTTP_GET);
         UserPageProcessor userPageProcessor = new UserPageProcessor();
-        userPageProcessor.getUserInfo(document);
-        userPageProcessor.getFollowMap(document);
-        userPageProcessor.getFansMap(document);
-        userPageProcessor.getWeibo(document);
-
-        UserStruct userStruct = userPageProcessor.getUserStruct();
-        userStruct.save4xml();
-
-        //Downloader.topicDocument("ss");
-       // Document document = Downloader.searchDocument("王力宏");
-        //SearchPageProcessor pageProcessor = new SearchPageProcessor();
-        //pageProcessor.getSearchList(document);
-//        Document document = Downloader.document("http://weibo.cn/slrui", Downloader.HTTP_GET);
-//        UserPageProcessor userPageProcessor = new UserPageProcessor();
-//        Document fansDocument = Downloader.document(userPageProcessor.getURL(document).get("资料"), Downloader.HTTP_GET);
-//        userPageProcessor.getUserInfo(fansDocument);
+        UserInfo userInfo = userPageProcessor.getUserInfo(document);
+        System.out.println(userInfo);
+//        userPageProcessor.getFollowMap(document);
+//        userPageProcessor.getFansMap(document);
+//        userPageProcessor.getWeibo(document);
+//
+//        UserStruct userStruct = userPageProcessor.getUserStruct();
+//        userStruct.save4xml();
+//        SearchPageProcessor searchPageProcessor = new SearchPageProcessor();
+//        searchPageProcessor.getSearchList("网络爬虫");
     }
 }

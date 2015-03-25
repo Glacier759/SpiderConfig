@@ -22,10 +22,8 @@ public class UserStruct {
     private Logger logger = Logger.getLogger(UserStruct.class.getName());
 
     public List<WeiboStruct> weiboList = new ArrayList<WeiboStruct>();
-    public HashMap<String,String> basicInfo = new HashMap<String,String>();
+    public UserInfo userInfo = new UserInfo();
     public HashMap<String,String> fansMap, followMap;
-    public String user_url = null, user_id = null;
-    public String weibo_count = null, follow_count = null, fans_count = null;
 
     public void save4xml() {
         try {
@@ -33,15 +31,15 @@ public class UserStruct {
             Element root = document.addElement("root");
 
             Element userEle = root.addElement("user_info");
-            if ( user_id != null ) {    userEle.addAttribute("user_id", this.user_id);  }
-            if ( user_url != null ) {   userEle.addAttribute("user_url", this.user_url);    }
-            if ( weibo_count != null ) {    userEle.addElement("weibo_count").addText(weibo_count); }
-            if ( follow_count != null ) {   userEle.addElement("follow_count").addText(follow_count);   }
-            if ( fans_count != null ) { userEle.addElement("fans_count").addText(fans_count);   }
-            if ( basicInfo.size() != 0 ) {
-                for ( String key : basicInfo.keySet() ) {
+            if ( userInfo.user_id != null ) {    userEle.addAttribute("user_id", userInfo.user_id);  }
+            if ( userInfo.user_url != null ) {   userEle.addAttribute("user_url", userInfo.user_url);    }
+            if ( userInfo.weibo_count != null ) {    userEle.addElement("weibo_count").addText(userInfo.weibo_count); }
+            if ( userInfo.follow_count != null ) {   userEle.addElement("follow_count").addText(userInfo.follow_count);   }
+            if ( userInfo.fans_count != null ) { userEle.addElement("fans_count").addText(userInfo.fans_count);   }
+            if ( userInfo.basicInfo.size() != 0 ) {
+                for ( String key : userInfo.basicInfo.keySet() ) {
                     Element key_ele = userEle.addElement(key);
-                    key_ele.addText(basicInfo.get(key));
+                    key_ele.addText(userInfo.basicInfo.get(key));
                 }
             }
 

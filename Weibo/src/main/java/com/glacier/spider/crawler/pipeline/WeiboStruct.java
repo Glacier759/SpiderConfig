@@ -13,6 +13,7 @@ public class WeiboStruct {
     private String weiboLikeCount, weiboForwardCount, weiboCommentCount;
     private String weiboDate, weiboFrom;
     private String weiboID;
+    private String weiboUser, userLink;
 
     public String getWeiboID() {
         return weiboID;

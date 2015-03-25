@@ -110,6 +110,34 @@ public class Downloader {
         return null;
     }
 
+    public static Document userDocument(String user) {
+        try {
+            String search = "http://weibo.cn/search/user/?keyword=" + user + "&page=1";
+            Document search_doc = document(search, Downloader.HTTP_GET);
+            do {
+                try {
+                    Elements elements = search_doc.select("table");
+                    for (Element element : elements) {
+                        String username = element.select("td[valign=top]").last().select("a[href]").first().text();
+                        if (username.equals(user)) {
+                            String user_link = element.select("td[valign=top]").first().select("a[href]").attr("abs:href");
+                            return Downloader.document(user_link, Downloader.HTTP_GET);
+                        }
+                    }
+                }catch (Exception e) {
+                    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                    e.printStackTrace(new PrintStream(baos));
+                    logger.error(baos.toString());
+                }
+            }while ( (search_doc = next(search_doc)) != null );
+        }catch (Exception e) {
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            e.printStackTrace(new PrintStream(baos));
+            logger.error(baos.toString());
+        }
+        return null;
+    }
+
     public static Document topicDocument(String topic) {
 //        try {
 //            HttpGet httpGet = new HttpGet("http://m.weibo.cn/p/index?containerid=100808558dc0694893f9249cbbf30b3c821934");
@@ -149,5 +177,23 @@ public class Downloader {
             e.printStackTrace();
         }
         return buffer.toString();
+    }
+
+    private static Document next( Document document ) {
+        try {
+            Elements pageListTags = document.select("div[id=pagelist]").select("a");
+            Element nextEle = pageListTags.first();
+            if ( pageListTags == null || nextEle == null ) {
+                return null;
+            }
+            if ( nextEle.text().equals("下页") ) {
+                return Downloader.document(nextEle.attr("abs:href"), Downloader.HTTP_GET);
+            }
+        }catch (Exception e) {
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            e.printStackTrace(new PrintStream(baos));
+            logger.error(baos.toString());
+        }
+        return null;
     }
 }
