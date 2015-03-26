@@ -50,21 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Weibo/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="2232">
-              <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Weibo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/Weibo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+              <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -73,8 +63,8 @@
       <file leaf-file-name="Crawler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/Crawler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="756">
-              <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -93,21 +83,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Downloader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/downloader/Downloader.java">
+      <file leaf-file-name="UserPageProcessor.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pageprocessor/UserPageProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1490" max-vertical-offset="3222">
-              <caret line="129" column="50" selection-start-line="129" selection-start-column="50" selection-end-line="129" selection-end-column="50" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7020">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#3386#3402#0" expanded="true" />
+                <element signature="e#4622#4638#0" expanded="true" />
+                <element signature="e#16962#16978#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserPageProcessor.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pageprocessor/UserPageProcessor.java">
+      <file leaf-file-name="Downloader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/downloader/Downloader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48247424" vertical-offset="1584" max-vertical-offset="6030">
-              <caret line="119" column="43" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3348" max-vertical-offset="3888">
+              <caret line="213" column="4" selection-start-line="213" selection-start-column="4" selection-end-line="217" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -171,10 +165,8 @@
         <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pipeline/Accounts.java" />
         <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/login/GetAccounts.java" />
         <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pipeline/MysqlOperation.java" />
-        <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/Weibo.java" />
         <option value="$PROJECT_DIR$/Weibo/pom.xml" />
         <option value="$PROJECT_DIR$/Weibo/src/main/resources/mybatis.xml" />
-        <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/login/LoginCN.java" />
         <option value="$PROJECT_DIR$/Weibo/src/test/java/topic.java" />
         <option value="$PROJECT_DIR$/NewsEye/src/main/java/com/glacier/spider/crawler/scheduler/BloomFilter.java" />
         <option value="$PROJECT_DIR$/NewsEye/src/main/java/com/glacier/spider/crawler/Crawler.java" />
@@ -187,12 +179,14 @@
         <option value="$PROJECT_DIR$/NewsEye/src/main/java/com/glacier/spider/NewsEye.java" />
         <option value="$PROJECT_DIR$/NewsEye/src/main/resources/sqlmap/sqlmap-config.xml" />
         <option value="$PROJECT_DIR$/Weibo/src/main/resources/sqlmap/sqlmap-accounts.xml" />
-        <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/downloader/Downloader.java" />
         <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pipeline/WeiboStruct.java" />
         <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pipeline/UserStruct.java" />
         <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pageprocessor/SearchPageProcessor.java" />
-        <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/Crawler.java" />
         <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pipeline/UserInfo.java" />
+        <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/Weibo.java" />
+        <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/Crawler.java" />
+        <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/login/LoginCN.java" />
+        <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/downloader/Downloader.java" />
         <option value="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pageprocessor/UserPageProcessor.java" />
       </list>
     </option>
@@ -233,8 +227,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="width" value="1282" />
-    <option name="height" value="1025" />
+    <option name="y" value="27" />
+    <option name="width" value="1368" />
+    <option name="height" value="742" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -893,15 +888,15 @@
       <workItem from="1421724081385" duration="367000" />
       <workItem from="1422105274379" duration="3000" />
       <workItem from="1427261250354" duration="17438000" />
-      <workItem from="1427285521681" duration="6898000" />
+      <workItem from="1427285521681" duration="12299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168736000" />
+    <option name="totallyTimeSpent" value="174137000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1282" height="1025" extended-state="6" />
+    <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -923,8 +918,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26948053" sideWeight="0.49882904" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3939394" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2693475" sideWeight="0.49882904" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57730263" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1091,13 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6745562" vertical-offset="270" max-vertical-offset="1098">
           <caret line="34" column="42" selection-start-line="32" selection-start-column="12" selection-end-line="34" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/login/LoginCN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="932" max-vertical-offset="1548">
-          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1283,22 +1271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/downloader/Downloader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1490" max-vertical-offset="3222">
-          <caret line="129" column="50" selection-start-line="129" selection-start-column="50" selection-end-line="129" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/Weibo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pipeline/MysqlOperation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
@@ -1311,25 +1283,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1890">
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pageprocessor/SearchPageProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="3132">
-          <caret line="46" column="83" selection-start-line="46" selection-start-column="83" selection-end-line="46" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#847#858#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/Crawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="756">
-          <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1352,11 +1305,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/Weibo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/login/LoginCN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81374323" vertical-offset="864" max-vertical-offset="1962">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <element signature="e#1334#1335#0" expanded="false" />
+            <element signature="e#1410#1411#0" expanded="false" />
+            <element signature="e#2383#2398#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pageprocessor/SearchPageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="3132">
+          <caret line="46" column="83" selection-start-line="46" selection-start-column="83" selection-end-line="46" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#847#858#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/Crawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/downloader/Downloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3348" max-vertical-offset="3888">
+          <caret line="213" column="4" selection-start-line="213" selection-start-column="4" selection-end-line="217" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pageprocessor/UserPageProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48247424" vertical-offset="1584" max-vertical-offset="6030">
-          <caret line="119" column="43" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7020">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#3386#3402#0" expanded="true" />
+            <element signature="e#4622#4638#0" expanded="true" />
+            <element signature="e#16962#16978#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

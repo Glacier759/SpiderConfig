@@ -28,6 +28,7 @@ import java.util.List;
 
 /**
  * Created by glacier on 14-12-17.
+ * @author Glacier<OurHom.759@gmail.com>
  */
 public class Downloader {
 
@@ -36,10 +37,20 @@ public class Downloader {
     public static String HTTP_GET = "get";
     public static String HTTP_POST = "post";
 
+    /**
+     * 设置Downloader模块所需的HttpClient
+     * @param client 经过登陆操作返回的HttpClient
+     * */
     public static void setClient(DefaultHttpClient client) {
         httpClient = client;
     }
 
+    /**
+     * 对相应地址使用相应方法返回抓取得到的dom树
+     * @param url 需要获取的地址
+     * @param method 访问该地址需要使用的HTTP请求方法
+     * @return 返回获取得到的Document文档树
+     * */
     public static Document document(String url, String method) {
         try {
             HttpResponse response = null;
@@ -87,7 +98,7 @@ public class Downloader {
             }
             HttpEntity entity = response.getEntity();
             Document document = Jsoup.parse(getContent(entity, "UTF-8"));
-            document.setBaseUri(url);
+            document.setBaseUri(url);   //设置document的来源地址
 
             return document;
         }catch (Exception e) {
@@ -98,6 +109,11 @@ public class Downloader {
         return null;
     }
 
+    /**
+     * 使用微博搜索功能检索关键字，返回的文档树检索首页，包含有所有包含该关键字的相关微博
+     * @param key 需要检索的关键字
+     * @return 经过微博搜索该关键字得到的document文档树
+     * */
     public static Document searchDocument(String key) {
         try {
             String search = "http://weibo.cn/search/mblog?hideSearchFrame=&keyword=" + key + "&page=1";
@@ -110,18 +126,23 @@ public class Downloader {
         return null;
     }
 
+    /**
+     * 使用微博搜索功能检索用户，返回用户的个人首页文档树，用户名与关键字严格匹配
+     * @param user 需要检索的用户昵称
+     * @return 检索用户的个人首页document文档树
+     * */
     public static Document userDocument(String user) {
         try {
             String search = "http://weibo.cn/search/user/?keyword=" + user + "&page=1";
             Document search_doc = document(search, Downloader.HTTP_GET);
             do {
                 try {
-                    Elements elements = search_doc.select("table");
+                    Elements elements = search_doc.select("table");     //遍历检索的到的所有带有相关关键字的用户
                     for (Element element : elements) {
-                        String username = element.select("td[valign=top]").last().select("a[href]").first().text();
-                        if (username.equals(user)) {
-                            String user_link = element.select("td[valign=top]").first().select("a[href]").attr("abs:href");
-                            return Downloader.document(user_link, Downloader.HTTP_GET);
+                        String username = element.select("td[valign=top]").last().select("a[href]").first().text();     //获取用户昵称
+                        if (username.equals(user)) {                                                                    //匹配用户昵称，要求完全一致
+                            String user_link = element.select("td[valign=top]").first().select("a[href]").attr("abs:href");     //获得匹配成功用户的首页地址
+                            return Downloader.document(user_link, Downloader.HTTP_GET);                                         //返回用户首页document文档树
                         }
                     }
                 }catch (Exception e) {
@@ -138,6 +159,11 @@ public class Downloader {
         return null;
     }
 
+    /**
+     * 使用微博搜索功能检索话题关键字，返回参与当前话题讨论的微博检索首页文档树
+     * @param topic 需要检索的话题
+     * @return 检索得到的参与该话题的微博搜索首页document文档树
+     * */
     public static Document topicDocument(String topic) {
 //        try {
 //            HttpGet httpGet = new HttpGet("http://m.weibo.cn/p/index?containerid=100808558dc0694893f9249cbbf30b3c821934");
@@ -163,6 +189,12 @@ public class Downloader {
         return null;
     }
 
+    /**
+     * 为保证文档树不产生乱码情况
+     * @param entity HTTP请求后得到的HttpEntity
+     * @param encode 需要指定的最终文字编码
+     * @return 返回按照指定编码转码后的页面源码
+     * */
     private static String getContent(HttpEntity entity, String encode) {
         BufferedReader reader = null;
         StringBuffer buffer = null;
@@ -179,6 +211,11 @@ public class Downloader {
         return buffer.toString();
     }
 
+    /**
+     * 对于搜索结果不能在一页进行展示的情况，利用该方法得到下一页的文档树
+     * @param document 存在该情况的当前document文档树
+     * @return 执行翻页操作后的document文档树
+     * */
     private static Document next( Document document ) {
         try {
             Elements pageListTags = document.select("div[id=pagelist]").select("a");

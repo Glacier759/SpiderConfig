@@ -23,18 +23,32 @@ import java.util.List;
 
 /**
  * Created by glacier on 14-12-17.
+ * @author Glacier<OurHom.759@gmail.com>
+ * 利用weibo.cn作为入口进行微博登陆
  */
+
 public class LoginCN {
 
-    private String loginURL = "http://login.weibo.cn/login/";
+    private String loginURL = "http://login.weibo.cn/login/";                   //登陆微博入口地址
     private String homePage;
 
     private static Logger logger = Logger.getLogger(LoginCN.class.getName());
 
+    /**
+     * 执行登录操作
+     * @param accounts 登陆所需要的账号密码，封装为Accounts类
+     * @return 返回登陆后维护有cookie等信息的HttpClient
+     * */
     public DefaultHttpClient login(Accounts accounts) {
         return login(accounts.getUsername(), accounts.getPassword());
     }
 
+    /**
+     * 执行登陆操作
+     * @param username 登陆需要的用户名
+     * @param password 用户名对应的密码
+     * @return 返回登录后维护有cookie等信息的HttpClient
+     * */
     public DefaultHttpClient login(String username, String password) {
         try {
             logger.info("[Login] '" + username + "' 正在登陆...");
@@ -42,11 +56,13 @@ public class LoginCN {
                     .userAgent("Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36")
                     .get();
 
+            //从登陆页面中提取一次登录请求所需要发送的数据字段
             String loginBackURL = document.select("input[name=backURL]").attr("value");
             String loginBackTitle = document.select("input[name=backTitle]").attr("value");
             String loginVK = document.select("input[name=vk]").attr("value");
             String loginSubmit = document.select("input[name=submit]").attr("value");
 
+            //构造传输参数集合
             List<NameValuePair> nvps = new ArrayList<NameValuePair>();
             nvps.add(new BasicNameValuePair("mobile", username));
             nvps.add(new BasicNameValuePair("password_" + loginVK.substring(0, 4), password));
@@ -57,11 +73,13 @@ public class LoginCN {
             nvps.add(new BasicNameValuePair("vk", loginVK));
             nvps.add(new BasicNameValuePair("submit", loginSubmit));
 
+            //执行Post请求以进行登陆
             HttpPost httpPost = new HttpPost(loginURL);
             httpPost.setEntity(new UrlEncodedFormEntity(nvps, "UTF-8"));
             DefaultHttpClient httpClient =MyHttpConnectionManager.getNewHttpClient();
             HttpResponse response = httpClient.execute(httpPost);
 
+            //URL重定向
             String locationURL = null;
             while( response.getFirstHeader("Location") != null) {
                 locationURL = response.getFirstHeader("Location").getValue();
@@ -72,6 +90,7 @@ public class LoginCN {
                 MyHttpConnectionManager.setHandleRedirect(httpClient, true);
             }
 
+            //取得重定向后的首页地址，登陆成功
             HttpGet httpGet = new HttpGet(locationURL);
             MyHttpConnectionManager.setHandleRedirect(httpClient, false);
             response = httpClient.execute(httpGet);
@@ -79,6 +98,7 @@ public class LoginCN {
             homePage = EntityUtils.toString(response.getEntity());
             logger.info("[login] '" + username + "' 登陆成功!");
 
+            //设置HttpClient相关参数，返回并维护该HttpClient
             httpClient.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 60000);
             httpClient.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT, 60000);
             httpClient.getParams().setParameter(CoreProtocolPNames.WAIT_FOR_CONTINUE, 60000);
@@ -95,5 +115,8 @@ public class LoginCN {
         return null;
     }
 
+    /**
+     * @return 返回登陆后首页的源码
+     * */
     public String getHomePage(){    return homePage;    }
 }

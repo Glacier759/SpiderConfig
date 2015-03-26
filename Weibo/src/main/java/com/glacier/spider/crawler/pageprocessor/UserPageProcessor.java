@@ -20,49 +20,77 @@ import java.util.regex.Pattern;
 
 /**
  * Created by glacier on 14-12-17.
+ * @author Glacier<OurHom.759@gmail.com>
+ * 以用户为主的页面解析模块
  */
 public class UserPageProcessor {
 
     private static Logger logger = Logger.getLogger(UserPageProcessor.class.getName());
     private UserStruct userStruct = new UserStruct();
 
+    /**
+     * 获取document对应博主的粉丝列表，由于weibo.cn的限制最多只能获取200个，结果维护在一个用户类UserStruct中的fansMap
+     * @param document 需要获取数据的微博博主首页document
+     * */
     public void getFansMap( Document document ) {
-        Document fans_document = Downloader.document(this.getURL(document).get("粉丝"), Downloader.HTTP_GET);
-        get_fans_map(fans_document);
+        Document fans_document = Downloader.document(this.getURL(document).get("粉丝"), Downloader.HTTP_GET);     //得到粉丝列表首页文档树
+        get_fans_map(fans_document);    //调用私有方法具体实现粉丝列表的获取
     }
 
+    /**
+     * 获取document对应博主的关注列表，由于weibo.cn的限制最多只能获取200个，结果维护在一个用户类UserStruct中的followMap
+     * @param document 需要获取数据的微博博主首页document
+     * */
     public void getFollowMap( Document document ) {
-        Document follow_document = Downloader.document(this.getURL(document).get("关注"), Downloader.HTTP_GET);
-        get_follow_map(follow_document);
+        Document follow_document = Downloader.document(this.getURL(document).get("关注"), Downloader.HTTP_GET);   //得到关注列表首页文档树
+        get_follow_map(follow_document);    //调用私有方法具体实现关注列表的获取
     }
 
+    /**
+     * 获取document对应博主的详细资料，结果维护在一个UserStruct中的UserInfo类中
+     * @param document 需要获取数据的微博博主首页document
+     * @return 包含有当前用户详细个人资料的UserInfo对象
+     * */
     public UserInfo getUserInfo( Document document ) {
 
+        //得到用户资料首页文档树，从该文档树中获取用户的基本信息（地区、性别、认证信息、个人简介、标签等）
         userStruct.userInfo = get_user_info(Downloader.document(getURL(document).get("资料"), Downloader.HTTP_GET));
 
         Element element = document.select("div[class=tip2]").first();
 
+        //获取当前用户发布微博数
         Pattern pattern = Pattern.compile("微博\\[(\\d+)\\]");
         Matcher matcher = pattern.matcher(element.toString());
         if ( matcher.find() ) { userStruct.userInfo.weibo_count = matcher.group(1);  }
 
+        //获取当前用户关注用户数
         pattern = Pattern.compile("关注\\[(\\d+)\\]");
         matcher = pattern.matcher(element.toString());
         if ( matcher.find() ) { userStruct.userInfo.follow_count = matcher.group(1); }
 
+        //获取当前用户粉丝数
         pattern = Pattern.compile("粉丝\\[(\\d+)\\]");
         matcher = pattern.matcher(element.toString());
         if ( matcher.find() ) { userStruct.userInfo.fans_count = matcher.group(1);   }
 
+        //获取当前用户首页地址
         userStruct.userInfo.user_url = document.baseUri();
 
         return userStruct.userInfo;
     }
 
+    /**
+     * @return 获取当前对象所维护的UserStruct对象
+     * */
     public UserStruct getUserStruct() {
         return userStruct;
     }
 
+    /**
+     * 获取粉丝列表实现代码
+     * @param document 粉丝列表首页document
+     * @return 粉丝列表HashMap,key为用户名,value为用户首页地址
+     * */
     private HashMap<String,String> get_fans_map( Document document ) {
         try {
             logger.info("[解析] 正在获取粉丝列表...");
@@ -89,6 +117,11 @@ public class UserPageProcessor {
         return null;
     }
 
+    /**
+     * 获取关注列表实现代码
+     * @param document 关注列表首页document
+     * @return 关注列表HashMap,key为用户名,value为用户首页地址
+     * */
     private HashMap<String,String> get_follow_map( Document document ) {
         try {
             logger.info("[解析] 正在获取关注列表...");
@@ -116,16 +149,23 @@ public class UserPageProcessor {
         return null;
     }
 
+    /**
+     * 获取用户详细资料具体实现
+     * @param document 资料首页document
+     * @return 封装有用户详细资料的UserInfo对象
+     * */
     private UserInfo get_user_info( Document document ) {
         UserInfo userInfo = new UserInfo();
         try {
             logger.info("[解析] 正在获取用户资料...");
             String userID = document.baseUri().replace("http://weibo.cn/","").replace("/info","");
-            userInfo.user_id = userID;
-            userInfo.user_name = document.title().substring(0, document.title().length()-3);
+            userInfo.user_id = userID;  //从资料首页地址中获取用户id
+            userInfo.user_name = document.title().substring(0, document.title().length()-3);    //从资料页面title中获取用户昵称
             String headImage, weiboLevel, tag="";
             boolean isVip;
             Elements divClassCs = document.select("div[class=c]");
+
+            //获取其他详细信息
             for ( Element divClassC:divClassCs ) {
                 if ( divClassC.html().contains("alt=\"头像\"") ) {
                     headImage = divClassC.select("img").attr("abs:src");
@@ -211,6 +251,11 @@ public class UserPageProcessor {
         return userInfo;
     }
 
+    /**
+     * 获取微博列表详细实现, 每条微博为一个WeiboStruct对象
+     * @param document 微博首页document文档树
+     * @return 返回包含有所有WeiboStruct的List
+     * */
     public List<WeiboStruct> getWeibo( Document document ) {
         try {
             logger.info("[解析] 正在获取用户微博...");
@@ -305,6 +350,11 @@ public class UserPageProcessor {
         return null;
     }
 
+    /**
+     * 对于搜索结果不能在一页进行展示的情况，利用该方法得到下一页的文档树
+     * @param document 存在该情况的当前document文档树
+     * @return 执行翻页操作后的document文档树
+     * */
     private Document next( Document document ) {
         try {
             Elements pageListTags = document.select("div[id=pagelist]").select("a");
@@ -320,6 +370,11 @@ public class UserPageProcessor {
         return null;
     }
 
+    /**
+     * 为了增加对代码的复用率,增加此方法用于获取粉丝列表、关注列表、用户资料首页地址
+     * @param document 微博用户首页文档树
+     * @return 返回HashMap中key为（资料、关注、粉丝）,value为对应的页面地址
+     * */
     private HashMap<String,String> getURL( Document document ) {
         try {
             HashMap<String,String> urlMap = new HashMap<String, String>();

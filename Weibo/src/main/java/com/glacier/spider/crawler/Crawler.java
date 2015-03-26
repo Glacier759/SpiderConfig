@@ -27,12 +27,15 @@ public class Crawler {
 
     }
 
+    /**
+     * 启动爬虫
+     * */
     public void start() {
-        LoginCN loginCN = new LoginCN();
-        httpClient = loginCN.login(GetAccounts.accounts("weibo"));
+        LoginCN loginCN = new LoginCN();            //实例化登陆模块，采用weibo.cn为微博登陆入口
+        httpClient = loginCN.login(GetAccounts.accounts("weibo"));  //使用数据库中weibo账号进行登陆，返回维护后的httpclient
 
-        Downloader.setClient(httpClient);
-        Document document = Downloader.document("http://weibo.cn/3217179555", Downloader.HTTP_GET);
+        Downloader.setClient(httpClient);       //为Downloader模块设置HttpClient
+        Document document = Downloader.document("http://weibo.cn/3217179555", Downloader.HTTP_GET);     //给予起始路径
 //        //Document document = Downloader.document("http://weibo.cn/musicmusicmusic", Downloader.HTTP_GET);
         UserPageProcessor userPageProcessor = new UserPageProcessor();
         UserInfo userInfo = userPageProcessor.getUserInfo(document);
