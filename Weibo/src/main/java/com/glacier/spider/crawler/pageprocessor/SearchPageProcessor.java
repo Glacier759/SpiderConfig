@@ -2,7 +2,6 @@ package com.glacier.spider.crawler.pageprocessor;
 
 import com.glacier.spider.crawler.downloader.Downloader;
 import com.glacier.spider.crawler.pipeline.UserInfo;
-import com.glacier.spider.crawler.pipeline.UserStruct;
 import com.glacier.spider.crawler.pipeline.WeiboStruct;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Document;
@@ -26,6 +25,10 @@ public class SearchPageProcessor {
     }
     private List<SearchAns> searchAnses = new ArrayList<SearchAns>();
 
+    /**
+     * 依据关键字进行搜索, 维护一个存有SearchAns对象的List, SearchAns中包含一个UserInfo对象与一个WeiboStruct对象
+     * @param key 需要检索的关键字
+     * */
     public void getSearchList( String key ) {
         try {
             Document document = Downloader.searchDocument(key);
@@ -37,6 +40,9 @@ public class SearchPageProcessor {
         }
     }
 
+    /**
+     * 获取用户详细资料具体实现, 保存在一个SearchAns中的UserInfo
+     * */
     public void get_user_info() {
         try {
             logger.info("[获取] 正在获取微博对应用户信息...");
@@ -52,6 +58,7 @@ public class SearchPageProcessor {
             logger.error(baos.toString());
         }
     }
+
 
     private void get_search_list(Document document ) {
         try {
