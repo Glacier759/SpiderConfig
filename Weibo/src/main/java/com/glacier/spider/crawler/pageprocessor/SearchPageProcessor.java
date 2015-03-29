@@ -1,9 +1,11 @@
 package com.glacier.spider.crawler.pageprocessor;
 
 import com.glacier.spider.crawler.downloader.Downloader;
-import com.glacier.spider.crawler.pipeline.UserInfo;
+
+import com.glacier.spider.crawler.pipeline.SearchAns;
 import com.glacier.spider.crawler.pipeline.WeiboStruct;
 import org.apache.log4j.Logger;
+
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -13,16 +15,14 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * Created by glacier on 14-12-18.
  */
 public class SearchPageProcessor {
 
     private static Logger logger = Logger.getLogger(SearchPageProcessor.class.getName());
-    class SearchAns{
-        UserInfo userInfo = null;
-        WeiboStruct weiboStruct = null;
-    }
+
     private List<SearchAns> searchAnses = new ArrayList<SearchAns>();
 
     /**
@@ -30,9 +30,19 @@ public class SearchPageProcessor {
      * @param key 需要检索的关键字
      * */
     public void getSearchList( String key ) {
+        getSearchList(key, false, false);
+    }
+
+    /**
+     * 依据关键字进行搜索, 维护一个存有SearchAns对象的List, SearchAns中包含一个UserInfo对象与一个WeiboStruct对象
+     * @param key 需要检索的关键字
+     * @param get_user 是否需要为条微博附带博主信息, true表示需要, false表示不需要
+     * @param save 是否需要将检索到的结果保存起来, true表示需要, false表示不需要
+     * */
+    public void getSearchList(String key, boolean get_user, boolean save) {
         try {
             Document document = Downloader.searchDocument(key);
-            get_search_list(document);
+            get_search_list(document, get_user, save);
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             e.printStackTrace(new PrintStream(baos));
@@ -41,26 +51,12 @@ public class SearchPageProcessor {
     }
 
     /**
-     * 获取用户详细资料具体实现, 保存在一个SearchAns中的UserInfo
+     * 获取微博搜索页面的微博集合
+     * @param document 搜索页面的document文档树
+     * @param get_user 是否需要为条微博附带博主信息, true表示需要, false表示不需要
+     * @param save 是否需要将检索到的结果保存起来, true表示需要, false表示不需要
      * */
-    public void get_user_info() {
-        try {
-            logger.info("[获取] 正在获取微博对应用户信息...");
-
-            for ( SearchAns searchAns : searchAnses ) {
-                String username = searchAns.weiboStruct.getWeiboSender();
-                Document user_doc = Downloader.userDocument(username);
-                searchAns.userInfo = new UserPageProcessor().getUserInfo(user_doc);
-            }
-        }catch (Exception e) {
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            e.printStackTrace(new PrintStream(baos));
-            logger.error(baos.toString());
-        }
-    }
-
-
-    private void get_search_list(Document document ) {
+    private void get_search_list(Document document, boolean get_user, boolean save) {
         try {
             logger.info("[解析] 正在获取搜索结果微博...");
 
@@ -140,9 +136,18 @@ public class SearchPageProcessor {
                             struct.setWeiboForward("");
                             struct.setForwardReason("");
                         }
-                        System.out.println(struct);
                         searchAns.weiboStruct = struct;
+                        if ( get_user == true ) {
+                            String username = searchAns.weiboStruct.getWeiboSender();
+                            Document user_doc = Downloader.userDocument(username);
+                            searchAns.userInfo = new UserPageProcessor().getUserInfo(user_doc);
+                        }
                         searchAnses.add(searchAns);
+                        //--------------------------------
+                        if ( save == true ) {
+                            searchAns.save4xml();
+                        }
+                        //--------------------------------
                     }
                     count++;   //当前页标
                 }catch (Exception e) {
@@ -158,6 +163,19 @@ public class SearchPageProcessor {
         }
     }
 
+    /**
+     * 返回维护的List<SearchAns> SearchAns内维护有一个WeiboStruct和UserInfo
+     * @return 返回维护的List<SearchAns> SearchAns内维护有一个WeiboStruct和UserInfo
+     * */
+    public List<SearchAns> getSearchAnses() {
+        return searchAnses;
+    }
+
+    /**
+     * 对于搜索结果不能在一页进行展示的情况，利用该方法得到下一页的文档树
+     * @param document 存在该情况的当前document文档树
+     * @return 执行翻页操作后的document文档树
+     * */
     private Document next( Document document ) {
         try {
             Elements pageListTags = document.select("div[id=pagelist]").select("a");
@@ -172,4 +190,6 @@ public class SearchPageProcessor {
         }
         return null;
     }
+
+
 }

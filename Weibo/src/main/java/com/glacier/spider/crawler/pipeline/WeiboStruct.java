@@ -50,7 +50,7 @@ public class WeiboStruct {
     public String toString() {
         StringBuffer buffer = new StringBuffer();
         buffer.append("weibo id: " + weiboID + "\n");
-        buffer.append(weiboSender + " : " + weiboText + "\n");
+        buffer.append(weiboSender + " " + weiboText + "\n");
         if ( !weiboForward.equals("") && !forwardReason.equals("") ) {
             buffer.append(weiboSender + " " + weiboForward + " - " + forwardReason + "\n");
         }

@@ -35,18 +35,19 @@ public class Crawler {
         httpClient = loginCN.login(GetAccounts.accounts("weibo"));  //使用数据库中weibo账号进行登陆，返回维护后的httpclient
 
         Downloader.setClient(httpClient);       //为Downloader模块设置HttpClient
-        Document document = Downloader.document("http://weibo.cn/3217179555", Downloader.HTTP_GET);     //给予起始路径
+//        Document document = Downloader.document("http://weibo.cn/3217179555", Downloader.HTTP_GET);     //给予起始路径
 //        //Document document = Downloader.document("http://weibo.cn/musicmusicmusic", Downloader.HTTP_GET);
-        UserPageProcessor userPageProcessor = new UserPageProcessor();
-        UserInfo userInfo = userPageProcessor.getUserInfo(document);
-        System.out.println(userInfo);
+//        UserPageProcessor userPageProcessor = new UserPageProcessor();
+//        UserInfo userInfo = userPageProcessor.getUserInfo(document);
+//        System.out.println(userInfo);
 //        userPageProcessor.getFollowMap(document);
 //        userPageProcessor.getFansMap(document);
 //        userPageProcessor.getWeibo(document);
 //
 //        UserStruct userStruct = userPageProcessor.getUserStruct();
 //        userStruct.save4xml();
-//        SearchPageProcessor searchPageProcessor = new SearchPageProcessor();
-//        searchPageProcessor.getSearchList("网络爬虫");
+
+        SearchPageProcessor searchPageProcessor = new SearchPageProcessor();
+        searchPageProcessor.getSearchList("网络爬虫", true, true);
     }
 }

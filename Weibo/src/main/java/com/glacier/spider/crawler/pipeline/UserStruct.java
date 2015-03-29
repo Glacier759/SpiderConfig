@@ -80,6 +80,8 @@ public class UserStruct {
                 }
             }
 
+            SearchAns.addFileInfo(root);
+
             File save_file = new File(System.currentTimeMillis() + ".xml");
             FileUtils.writeStringToFile(save_file, formatXML(root));
             logger.info("[保存成功] - " + save_file.getAbsolutePath());

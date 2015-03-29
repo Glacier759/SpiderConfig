@@ -1,0 +1,1757 @@
+2015-03-25 13:39:12 [ERROR] - org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in sqlmap/sqlmap-accounts.xml
+### The error may involve com.glacier.spider.crawler.pipeline.MysqlOperation.getAccounts
+### The error occurred while executing a query
+### Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:23)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:104)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:95)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:59)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:95)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:40)
+	at com.sun.proxy.$Proxy0.getAccounts(Unknown Source)
+	at com.glacier.spider.login.GetAccounts.accounts(GetAccounts.java:43)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:26)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1137)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:355)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2490)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2527)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2309)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:419)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:187)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:181)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:176)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.getConnection(UnpooledDataSource.java:80)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:371)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.getConnection(PooledDataSource.java:80)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:131)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.getConnection(JdbcTransaction.java:58)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:279)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:69)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:141)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:81)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:101)
+	... 13 more
+Caused by: java.net.ConnectException: 拒绝连接
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:305)
+	... 42 more
+ {com.glacier.spider.login.GetAccounts.accounts(GetAccounts.java:51)}
+2015-03-25 13:40:45 [INFO] - [Login] 'rrenlixiang@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 13:40:48 [INFO] - [login] 'rrenlixiang@sina.cn' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 13:40:48 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:164)}
+2015-03-25 13:40:48 [INFO] - [解析] 正在获取第 1 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:48 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:49 [INFO] - [解析] 正在获取第 2 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:49 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:49 [INFO] - [解析] 正在获取第 3 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:49 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:49 [INFO] - [解析] 正在获取第 4 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:49 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:49 [INFO] - [解析] 正在获取第 5 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:49 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:50 [INFO] - [解析] 正在获取第 6 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:50 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:50 [INFO] - [解析] 正在获取第 7 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:50 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:50 [INFO] - [解析] 正在获取第 8 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:50 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:51 [INFO] - [解析] 正在获取第 9 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:51 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:51 [INFO] - [解析] 正在获取第 10 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:51 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:51 [INFO] - [解析] 正在获取第 11 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:51 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:51 [INFO] - [解析] 正在获取第 12 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:51 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:52 [INFO] - [解析] 正在获取第 13 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:52 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:52 [INFO] - [解析] 正在获取第 14 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:52 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:53 [INFO] - [解析] 正在获取第 15 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:53 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:53 [INFO] - [解析] 正在获取第 16 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:53 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:53 [INFO] - [解析] 正在获取第 17 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:53 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:54 [INFO] - [解析] 正在获取第 18 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:54 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:54 [INFO] - [解析] 正在获取第 19 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:54 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:54 [INFO] - [解析] 正在获取第 20 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:54 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:54 [INFO] - [解析] 正在获取第 21 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:54 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:55 [INFO] - [解析] 正在获取第 22 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:55 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:40:55 [INFO] - [解析] 正在获取第 23 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:176)}
+2015-03-25 13:40:55 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:178)}
+2015-03-25 13:41:43 [INFO] - [Login] 'rleehom@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 13:41:45 [INFO] - [login] 'rleehom@sina.cn' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 13:41:46 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:80)}
+2015-03-25 13:44:34 [INFO] - [Login] '1498781360@qq.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 13:44:38 [INFO] - [login] '1498781360@qq.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 13:44:38 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:80)}
+2015-03-25 13:44:39 [ERROR] - java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1911)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:147)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:34)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:158)}
+2015-03-25 13:51:53 [INFO] - [Login] '2726492626@qq.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 13:51:55 [INFO] - [login] '2726492626@qq.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 13:51:56 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:95)}
+2015-03-25 13:51:56 [ERROR] - java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1911)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:162)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:37)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:34)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:173)}
+2015-03-25 13:52:23 [INFO] - [Login] '1825682313@qq.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 13:52:24 [INFO] - [login] '1825682313@qq.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 13:52:25 [INFO] - [解析] 正在获取粉丝列表... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_fans_map(UserPageProcessor.java:42)}
+2015-03-25 13:53:04 [INFO] - [Login] 'xy_lr_92@126.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 13:53:06 [INFO] - [login] 'xy_lr_92@126.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 13:53:07 [INFO] - [解析] 正在获取粉丝列表... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_fans_map(UserPageProcessor.java:42)}
+2015-03-25 13:56:17 [INFO] - [Login] 'xylr92@126.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 13:56:19 [INFO] - [login] 'xylr92@126.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 13:56:19 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:179)}
+2015-03-25 13:56:19 [INFO] - [解析] 正在获取第 1 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 13:56:19 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 13:56:19 [INFO] - [解析] 正在获取第 2 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 13:56:19 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 13:56:19 [INFO] - [解析] 正在获取第 3 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 13:56:19 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 13:56:20 [INFO] - [解析] 正在获取第 4 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 13:56:20 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 13:56:20 [INFO] - [解析] 正在获取第 5 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 13:56:20 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:09:41 [INFO] - [Login] '18092794430' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 14:09:43 [INFO] - [login] '18092794430' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 14:09:43 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:179)}
+2015-03-25 14:09:43 [INFO] - [解析] 正在获取第 1 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:09:43 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:09:44 [INFO] - [解析] 正在获取第 2 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:09:44 [INFO] - [解析] 当前页解析得到 10 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:09:44 [INFO] - [解析] 正在获取第 3 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:09:44 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:09:45 [INFO] - [解析] 正在获取第 4 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:09:45 [INFO] - [解析] 当前页解析得到 10 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:09:45 [INFO] - [解析] 正在获取第 5 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:09:45 [INFO] - [解析] 当前页解析得到 10 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:09:45 [INFO] - [解析] 正在获取第 6 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:09:45 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:18:26 [INFO] - [Login] '13289212979' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 14:18:27 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:26)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 14:18:27 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:65)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:29)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:96)}
+2015-03-25 14:18:27 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:179)}
+2015-03-25 14:18:27 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:181)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:265)}
+2015-03-25 14:18:27 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getURL(UserPageProcessor.java:288)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getFansMap(UserPageProcessor.java:26)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:32)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getURL(UserPageProcessor.java:304)}
+2015-03-25 14:18:40 [INFO] - [Login] '421186071rlx@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 14:18:46 [INFO] - [login] '421186071rlx@sina.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 14:18:46 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:179)}
+2015-03-25 14:18:46 [INFO] - [解析] 正在获取第 1 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:18:46 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:18:46 [INFO] - [解析] 正在获取第 2 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:18:46 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:18:46 [INFO] - [解析] 正在获取第 3 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:18:46 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:18:47 [INFO] - [解析] 正在获取第 4 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:18:47 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:18:47 [INFO] - [解析] 正在获取第 5 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:18:47 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:20:09 [INFO] - [Login] 'rlx421186071@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 14:20:11 [INFO] - [login] 'rlx421186071@sina.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 14:20:11 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:179)}
+2015-03-25 14:20:11 [INFO] - [解析] 正在获取第 1 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:20:11 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:20:11 [INFO] - [解析] 正在获取第 2 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:20:11 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:20:12 [INFO] - [解析] 正在获取第 3 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:20:12 [INFO] - [解析] 当前页解析得到 10 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:22:33 [INFO] - [Login] '421186071rlx@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 14:22:34 [INFO] - [login] '421186071rlx@sina.cn' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 14:22:35 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:179)}
+2015-03-25 14:22:35 [INFO] - [解析] 正在获取第 1 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:22:35 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:22:35 [INFO] - [解析] 正在获取第 2 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:22:35 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:22:35 [INFO] - [解析] 正在获取第 3 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:22:35 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:23:02 [INFO] - [Login] 'rrenlixiang@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 14:23:03 [INFO] - [login] 'rrenlixiang@163.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 14:23:04 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:179)}
+2015-03-25 14:23:04 [INFO] - [解析] 正在获取第 1 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:23:04 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:23:04 [INFO] - [解析] 正在获取第 2 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:23:04 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:23:04 [INFO] - [解析] 正在获取第 3 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:23:04 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:25:12 [INFO] - [Login] 'rrenlixiang@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 14:25:14 [INFO] - [login] 'rrenlixiang@sina.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 14:25:14 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:179)}
+2015-03-25 14:25:14 [INFO] - [解析] 正在获取第 1 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:25:14 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:27:49 [INFO] - [Login] 'rlx421186071@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 14:27:51 [INFO] - [login] 'rlx421186071@163.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 14:27:51 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:179)}
+2015-03-25 14:27:51 [INFO] - [解析] 正在获取第 1 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:27:51 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:28:50 [INFO] - [Login] 'OurHom.759@gmail.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 14:28:56 [INFO] - [login] 'OurHom.759@gmail.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 14:28:57 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:179)}
+2015-03-25 14:28:57 [INFO] - [解析] 正在获取第 1 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:28:57 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:31:11 [INFO] - [Login] 'glacierlx@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 14:31:13 [INFO] - [login] 'glacierlx@sina.cn' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 14:31:14 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:179)}
+2015-03-25 14:31:14 [INFO] - [解析] 正在获取第 1 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:31:14 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 14:32:16 [INFO] - [Login] 'glacier@xiyoulinux.org' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 14:32:18 [INFO] - [login] 'glacier@xiyoulinux.org' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 14:32:18 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:179)}
+2015-03-25 14:32:18 [INFO] - [解析] 正在获取第 1 页 / 880 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:191)}
+2015-03-25 14:32:18 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:193)}
+2015-03-25 15:46:54 [INFO] - [Login] 'rlx421186071@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 15:46:57 [INFO] - [login] 'rlx421186071@sina.cn' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 15:46:57 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:100)}
+2015-03-25 15:46:58 [ERROR] - java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1911)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:167)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:38)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:32)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:178)}
+2015-03-25 15:48:18 [INFO] - [Login] 'glacier421186071@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 15:48:20 [INFO] - [login] 'glacier421186071@163.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 15:48:20 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:101)}
+2015-03-25 15:48:20 [ERROR] - java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1911)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:170)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:39)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:32)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:178)}
+2015-03-25 15:48:44 [INFO] - [Login] 'glacier421186071@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 15:48:46 [INFO] - [login] 'glacier421186071@sina.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 15:48:47 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:101)}
+2015-03-25 15:48:47 [ERROR] - java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1911)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:170)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:39)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:32)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:178)}
+2015-03-25 15:56:52 [INFO] - [Login] 'rrenlixiang@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 15:56:53 [INFO] - [login] 'rrenlixiang@sina.cn' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 15:56:54 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:101)}
+2015-03-25 15:56:55 [ERROR] - java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1911)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:170)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:39)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:32)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:178)}
+2015-03-25 15:57:23 [INFO] - [Login] 'rleehom@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 15:57:24 [INFO] - [login] 'rleehom@sina.cn' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 15:57:25 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:101)}
+2015-03-25 15:58:58 [INFO] - [Login] '1498781360@qq.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 15:59:00 [INFO] - [login] '1498781360@qq.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 15:59:00 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:101)}
+2015-03-25 16:06:51 [INFO] - [Login] '2726492626@qq.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 16:06:53 [INFO] - [login] '2726492626@qq.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 16:06:54 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:101)}
+2015-03-25 16:08:09 [INFO] - [Login] '1825682313@qq.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 16:08:11 [INFO] - [login] '1825682313@qq.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 16:08:11 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:101)}
+2015-03-25 16:43:23 [INFO] - [Login] 'xy_lr_92@126.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 16:43:24 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:30)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 16:43:24 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:65)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:34)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:96)}
+2015-03-25 16:43:33 [INFO] - [Login] 'xylr92@126.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 16:43:34 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:30)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 16:43:34 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:65)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:34)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:96)}
+2015-03-25 16:43:39 [INFO] - [Login] '18092794430' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 16:43:40 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:30)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 16:43:40 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:65)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:34)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:96)}
+2015-03-25 16:44:05 [INFO] - [Login] '13289212979' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 16:44:06 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:30)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 16:44:06 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:65)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:34)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:96)}
+2015-03-25 16:44:10 [INFO] - [Login] '421186071rlx@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 16:44:12 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:30)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 16:44:12 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:65)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:34)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:96)}
+2015-03-25 16:44:35 [INFO] - [Login] 'rlx421186071@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 16:44:36 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:30)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 16:44:36 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:65)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:34)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.downloader.Downloader.document(Downloader.java:96)}
+2015-03-25 16:54:55 [INFO] - [Login] '421186071rlx@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 16:54:56 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 16:55:41 [INFO] - [Login] 'rrenlixiang@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 16:55:42 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 16:59:33 [INFO] - [Login] 'rrenlixiang@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 16:59:35 [INFO] - [login] 'rrenlixiang@sina.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 17:00:10 [INFO] - [Login] 'rlx421186071@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:00:11 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:01:45 [INFO] - [Login] 'OurHom.759@gmail.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:01:46 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:03:24 [INFO] - [Login] 'glacierlx@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:03:25 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:04:08 [INFO] - [Login] 'glacier@xiyoulinux.org' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:04:14 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:04:35 [INFO] - [Login] 'rlx421186071@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:04:36 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:04:48 [INFO] - [Login] 'glacier421186071@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:04:49 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:04:59 [INFO] - [Login] 'glacier421186071@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:05:00 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:05:24 [INFO] - [Login] 'rrenlixiang@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:05:25 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:05:37 [INFO] - [Login] 'rleehom@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:05:37 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:05:46 [INFO] - [Login] '1498781360@qq.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:05:46 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:05:58 [INFO] - [Login] '2726492626@qq.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:05:59 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:06:08 [INFO] - [Login] '1825682313@qq.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:06:10 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:10:26 [INFO] - [Login] 'xy_lr_92@126.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:10:27 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:10:42 [INFO] - [Login] 'xylr92@126.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:10:43 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:11:59 [INFO] - [Login] '18092794430' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:12:00 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:12:20 [INFO] - [Login] '13289212979' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:12:21 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:14:19 [INFO] - [Login] '421186071rlx@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:14:20 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:15:47 [INFO] - [Login] 'rlx421186071@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:15:48 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:24:20 [INFO] - [Login] '421186071rlx@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:24:21 [ERROR] - java.lang.NullPointerException
+	at java.net.URI$Parser.parse(URI.java:3023)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	at org.apache.http.client.methods.HttpGet.<init>(HttpGet.java:69)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:75)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:59:42 [INFO] - [Login] 'rrenlixiang@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 17:59:52 [ERROR] - java.lang.StringIndexOutOfBoundsException: String index out of range: 4
+	at java.lang.String.substring(String.java:1907)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:52)
+	at com.glacier.spider.login.LoginCN.login(LoginCN.java:35)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.login.LoginCN.login(LoginCN.java:93)}
+2015-03-25 17:59:52 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.pipeline.UserStruct.save4xml(UserStruct.java:71)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:52)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pipeline.UserStruct.save4xml(UserStruct.java:92)}
+2015-03-25 19:09:36 [INFO] - [Login] 'rrenlixiang@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 19:09:38 [INFO] - [login] 'rrenlixiang@sina.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 19:09:39 [INFO] - [解析] 正在获取关注列表... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_follow_map(UserPageProcessor.java:92)}
+2015-03-25 19:09:42 [INFO] - [解析] 正在获取粉丝列表... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_fans_map(UserPageProcessor.java:66)}
+2015-03-25 19:09:46 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:211)}
+2015-03-25 19:09:46 [INFO] - [解析] 正在获取第 1 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:46 [INFO] - [解析] 当前页解析得到 6 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:47 [INFO] - [解析] 正在获取第 2 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:47 [INFO] - [解析] 当前页解析得到 4 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:48 [INFO] - [解析] 正在获取第 3 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:48 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:49 [INFO] - [解析] 正在获取第 4 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:49 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:50 [INFO] - [解析] 正在获取第 5 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:50 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:50 [INFO] - [解析] 正在获取第 6 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:50 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:51 [INFO] - [解析] 正在获取第 7 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:51 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:52 [INFO] - [解析] 正在获取第 8 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:52 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:53 [INFO] - [解析] 正在获取第 9 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:53 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:54 [INFO] - [解析] 正在获取第 10 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:54 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:54 [INFO] - [解析] 正在获取第 11 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:54 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:55 [INFO] - [解析] 正在获取第 12 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:55 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:56 [INFO] - [解析] 正在获取第 13 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:56 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:57 [INFO] - [解析] 正在获取第 14 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:57 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:58 [INFO] - [解析] 正在获取第 15 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:58 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:09:59 [INFO] - [解析] 正在获取第 16 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:09:59 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:00 [INFO] - [解析] 正在获取第 17 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:00 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:00 [INFO] - [解析] 正在获取第 18 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:00 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:01 [INFO] - [解析] 正在获取第 19 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:01 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:02 [INFO] - [解析] 正在获取第 20 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:02 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:02 [INFO] - [解析] 正在获取第 21 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:02 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:03 [INFO] - [解析] 正在获取第 22 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:03 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:04 [INFO] - [解析] 正在获取第 23 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:04 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:04 [INFO] - [解析] 正在获取第 24 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:04 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:05 [INFO] - [解析] 正在获取第 25 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:05 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:06 [INFO] - [解析] 正在获取第 26 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:06 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:06 [INFO] - [解析] 正在获取第 27 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:06 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:07 [INFO] - [解析] 正在获取第 28 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:07 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:08 [INFO] - [解析] 正在获取第 29 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:08 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:08 [INFO] - [解析] 正在获取第 30 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:08 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:09 [INFO] - [解析] 正在获取第 31 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:09 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:10 [INFO] - [解析] 正在获取第 32 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:10 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:10 [INFO] - [解析] 正在获取第 33 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:10 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:11 [INFO] - [解析] 正在获取第 34 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:11 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:12 [INFO] - [解析] 正在获取第 35 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:12 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:13 [INFO] - [解析] 正在获取第 36 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:13 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:14 [INFO] - [解析] 正在获取第 37 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:14 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:15 [INFO] - [解析] 正在获取第 38 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:15 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:15 [INFO] - [解析] 正在获取第 39 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:15 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:16 [INFO] - [解析] 正在获取第 40 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:16 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:17 [INFO] - [解析] 正在获取第 41 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:17 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:17 [INFO] - [解析] 正在获取第 42 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:17 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:18 [INFO] - [解析] 正在获取第 43 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:18 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:19 [INFO] - [解析] 正在获取第 44 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:19 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:20 [INFO] - [解析] 正在获取第 45 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:20 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:20 [INFO] - [解析] 正在获取第 46 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:20 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:21 [INFO] - [解析] 正在获取第 47 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:21 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:21 [INFO] - [解析] 正在获取第 48 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:21 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:22 [INFO] - [解析] 正在获取第 49 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:22 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:23 [INFO] - [解析] 正在获取第 50 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:23 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:24 [INFO] - [解析] 正在获取第 51 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:24 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:24 [INFO] - [解析] 正在获取第 52 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:24 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:25 [INFO] - [解析] 正在获取第 53 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:25 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:25 [INFO] - [解析] 正在获取第 54 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:25 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:26 [INFO] - [解析] 正在获取第 55 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:26 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:27 [INFO] - [解析] 正在获取第 56 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:27 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:27 [INFO] - [解析] 正在获取第 57 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:27 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:28 [INFO] - [解析] 正在获取第 58 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:28 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:29 [INFO] - [解析] 正在获取第 59 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:29 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:29 [INFO] - [解析] 正在获取第 60 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:29 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:30 [INFO] - [解析] 正在获取第 61 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:30 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:31 [INFO] - [解析] 正在获取第 62 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:31 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:31 [INFO] - [解析] 正在获取第 63 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:31 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:32 [INFO] - [解析] 正在获取第 64 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:32 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:33 [INFO] - [解析] 正在获取第 65 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:33 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:34 [INFO] - [解析] 正在获取第 66 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:34 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:34 [INFO] - [解析] 正在获取第 67 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:34 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:34 [INFO] - [解析] 正在获取第 68 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:34 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:35 [INFO] - [解析] 正在获取第 69 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:35 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:36 [INFO] - [解析] 正在获取第 70 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:36 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:36 [INFO] - [解析] 正在获取第 71 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:36 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:37 [INFO] - [解析] 正在获取第 72 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:37 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:37 [INFO] - [解析] 正在获取第 73 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:37 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:38 [INFO] - [解析] 正在获取第 74 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:38 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:39 [INFO] - [解析] 正在获取第 75 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:39 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:39 [INFO] - [解析] 正在获取第 76 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:39 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:40 [INFO] - [解析] 正在获取第 77 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:40 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:40 [INFO] - [解析] 正在获取第 78 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:40 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:41 [INFO] - [解析] 正在获取第 79 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:41 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:41 [INFO] - [解析] 正在获取第 80 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:41 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:42 [INFO] - [解析] 正在获取第 81 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:42 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:43 [INFO] - [解析] 正在获取第 82 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:43 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:43 [INFO] - [解析] 正在获取第 83 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:43 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:44 [INFO] - [解析] 正在获取第 84 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:44 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:45 [INFO] - [解析] 正在获取第 85 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:45 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:46 [INFO] - [解析] 正在获取第 86 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:46 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:46 [INFO] - [解析] 正在获取第 87 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:46 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:46 [INFO] - [解析] 正在获取第 88 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:46 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:47 [INFO] - [解析] 正在获取第 89 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:47 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:48 [INFO] - [解析] 正在获取第 90 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:48 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:49 [INFO] - [解析] 正在获取第 91 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:49 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:50 [INFO] - [解析] 正在获取第 92 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:50 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:51 [INFO] - [解析] 正在获取第 93 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:51 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:52 [INFO] - [解析] 正在获取第 94 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:52 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:53 [INFO] - [解析] 正在获取第 95 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:53 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:53 [INFO] - [解析] 正在获取第 96 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:53 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:54 [INFO] - [解析] 正在获取第 97 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:54 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:54 [INFO] - [解析] 正在获取第 98 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:54 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:55 [INFO] - [解析] 正在获取第 99 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:55 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:57 [INFO] - [解析] 正在获取第 100 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:57 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:57 [INFO] - [解析] 正在获取第 101 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:57 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:58 [INFO] - [解析] 正在获取第 102 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:58 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:10:59 [INFO] - [解析] 正在获取第 103 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:10:59 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:00 [INFO] - [解析] 正在获取第 104 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:00 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:01 [INFO] - [解析] 正在获取第 105 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:01 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:02 [INFO] - [解析] 正在获取第 106 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:02 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:02 [INFO] - [解析] 正在获取第 107 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:02 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:03 [INFO] - [解析] 正在获取第 108 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:03 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:04 [INFO] - [解析] 正在获取第 109 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:04 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:05 [INFO] - [解析] 正在获取第 110 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:05 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:06 [INFO] - [解析] 正在获取第 111 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:06 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:06 [INFO] - [解析] 正在获取第 112 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:06 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:07 [INFO] - [解析] 正在获取第 113 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:07 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:08 [INFO] - [解析] 正在获取第 114 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:08 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:09 [INFO] - [解析] 正在获取第 115 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:09 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:10 [INFO] - [解析] 正在获取第 116 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:10 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:11 [INFO] - [解析] 正在获取第 117 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:11 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:12 [INFO] - [解析] 正在获取第 118 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:12 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:12 [INFO] - [解析] 正在获取第 119 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:12 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:13 [INFO] - [解析] 正在获取第 120 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:13 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:14 [INFO] - [解析] 正在获取第 121 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:14 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:15 [INFO] - [解析] 正在获取第 122 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:15 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:16 [INFO] - [解析] 正在获取第 123 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:16 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:16 [INFO] - [解析] 正在获取第 124 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:16 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:17 [INFO] - [解析] 正在获取第 125 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:17 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:18 [INFO] - [解析] 正在获取第 126 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:18 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:19 [INFO] - [解析] 正在获取第 127 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:19 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:20 [INFO] - [解析] 正在获取第 128 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:20 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:20 [INFO] - [解析] 正在获取第 129 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:20 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:21 [INFO] - [解析] 正在获取第 130 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:21 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:22 [INFO] - [解析] 正在获取第 131 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:22 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:23 [INFO] - [解析] 正在获取第 132 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:23 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:24 [INFO] - [解析] 正在获取第 133 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:24 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:24 [INFO] - [解析] 正在获取第 134 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:24 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:25 [INFO] - [解析] 正在获取第 135 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:25 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:26 [INFO] - [解析] 正在获取第 136 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:26 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:27 [INFO] - [解析] 正在获取第 137 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:27 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:28 [INFO] - [解析] 正在获取第 138 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:28 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:28 [INFO] - [解析] 正在获取第 139 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:28 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:29 [INFO] - [解析] 正在获取第 140 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:29 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:29 [ERROR] - 出现StringIndexOutOfBoundsException，可以弃之不理	line: 317 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:257)}
+2015-03-25 19:11:30 [INFO] - [解析] 正在获取第 141 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:30 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:31 [INFO] - [解析] 正在获取第 142 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:31 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:32 [INFO] - [解析] 正在获取第 143 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:32 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:32 [INFO] - [解析] 正在获取第 144 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:32 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:33 [INFO] - [解析] 正在获取第 145 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:33 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:33 [INFO] - [解析] 正在获取第 146 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:33 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:34 [INFO] - [解析] 正在获取第 147 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:34 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:35 [INFO] - [解析] 正在获取第 148 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:35 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:36 [INFO] - [解析] 正在获取第 149 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:36 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:37 [INFO] - [解析] 正在获取第 150 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:37 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:37 [INFO] - [解析] 正在获取第 151 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:37 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:38 [INFO] - [解析] 正在获取第 152 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:38 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:39 [INFO] - [解析] 正在获取第 153 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:39 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:40 [INFO] - [解析] 正在获取第 154 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:40 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:41 [INFO] - [解析] 正在获取第 155 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:41 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:41 [INFO] - [解析] 正在获取第 156 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:41 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:42 [INFO] - [解析] 正在获取第 157 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:42 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:43 [INFO] - [解析] 正在获取第 158 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:43 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:43 [INFO] - [解析] 正在获取第 159 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:43 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:44 [INFO] - [解析] 正在获取第 160 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:44 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:45 [INFO] - [解析] 正在获取第 161 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:45 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:46 [INFO] - [解析] 正在获取第 162 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:46 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:47 [INFO] - [解析] 正在获取第 163 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:47 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:47 [INFO] - [解析] 正在获取第 164 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:47 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:48 [INFO] - [解析] 正在获取第 165 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:48 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:49 [INFO] - [解析] 正在获取第 166 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:49 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:49 [INFO] - [解析] 正在获取第 167 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:49 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:50 [INFO] - [解析] 正在获取第 168 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:50 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:51 [INFO] - [解析] 正在获取第 169 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:51 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:52 [INFO] - [解析] 正在获取第 170 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:52 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:53 [INFO] - [解析] 正在获取第 171 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:53 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:54 [INFO] - [解析] 正在获取第 172 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:54 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:55 [INFO] - [解析] 正在获取第 173 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:55 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:56 [INFO] - [解析] 正在获取第 174 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:56 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:57 [INFO] - [解析] 正在获取第 175 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:57 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:58 [INFO] - [解析] 正在获取第 176 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:58 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:11:59 [INFO] - [解析] 正在获取第 177 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:11:59 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:00 [INFO] - [解析] 正在获取第 178 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:00 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:01 [INFO] - [解析] 正在获取第 179 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:01 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:02 [INFO] - [解析] 正在获取第 180 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:02 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:03 [INFO] - [解析] 正在获取第 181 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:03 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:04 [INFO] - [解析] 正在获取第 182 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:04 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:05 [INFO] - [解析] 正在获取第 183 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:05 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:05 [ERROR] - 出现StringIndexOutOfBoundsException，可以弃之不理	line: 317 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:257)}
+2015-03-25 19:12:05 [INFO] - [解析] 正在获取第 184 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:05 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:06 [INFO] - [解析] 正在获取第 185 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:06 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:08 [INFO] - [解析] 正在获取第 186 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:08 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:09 [INFO] - [解析] 正在获取第 187 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:09 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:10 [INFO] - [解析] 正在获取第 188 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:10 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:11 [INFO] - [解析] 正在获取第 189 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:11 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:12 [INFO] - [解析] 正在获取第 190 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:12 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:13 [INFO] - [解析] 正在获取第 191 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:13 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:14 [INFO] - [解析] 正在获取第 192 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:14 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:14 [INFO] - [解析] 正在获取第 193 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:14 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:15 [INFO] - [解析] 正在获取第 194 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:15 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:16 [INFO] - [解析] 正在获取第 195 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:16 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:17 [INFO] - [解析] 正在获取第 196 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:17 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:18 [INFO] - [解析] 正在获取第 197 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:18 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:19 [INFO] - [解析] 正在获取第 198 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:19 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:20 [INFO] - [解析] 正在获取第 199 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:20 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:20 [INFO] - [解析] 正在获取第 200 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:20 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:21 [INFO] - [解析] 正在获取第 201 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:21 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:22 [INFO] - [解析] 正在获取第 202 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:22 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:23 [INFO] - [解析] 正在获取第 203 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:23 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:24 [INFO] - [解析] 正在获取第 204 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:24 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:24 [INFO] - [解析] 正在获取第 205 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:24 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:25 [INFO] - [解析] 正在获取第 206 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:25 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:26 [INFO] - [解析] 正在获取第 207 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:26 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:27 [INFO] - [解析] 正在获取第 208 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:27 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:27 [INFO] - [解析] 正在获取第 209 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:27 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:28 [INFO] - [解析] 正在获取第 210 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:28 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:29 [INFO] - [解析] 正在获取第 211 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:29 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:30 [INFO] - [解析] 正在获取第 212 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:30 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:31 [INFO] - [解析] 正在获取第 213 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:31 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:31 [INFO] - [解析] 正在获取第 214 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:32 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:32 [INFO] - [解析] 正在获取第 215 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:32 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:33 [INFO] - [解析] 正在获取第 216 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:33 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:34 [INFO] - [解析] 正在获取第 217 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:34 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:35 [INFO] - [解析] 正在获取第 218 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:35 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:36 [INFO] - [解析] 正在获取第 219 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:36 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:37 [INFO] - [解析] 正在获取第 220 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:37 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:38 [INFO] - [解析] 正在获取第 221 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:38 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:39 [INFO] - [解析] 正在获取第 222 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:39 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:40 [INFO] - [解析] 正在获取第 223 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:40 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:41 [INFO] - [解析] 正在获取第 224 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:41 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:42 [INFO] - [解析] 正在获取第 225 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:42 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:43 [INFO] - [解析] 正在获取第 226 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:43 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:44 [INFO] - [解析] 正在获取第 227 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:44 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:45 [INFO] - [解析] 正在获取第 228 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:45 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:45 [INFO] - [解析] 正在获取第 229 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:45 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:46 [INFO] - [解析] 正在获取第 230 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:46 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:47 [INFO] - [解析] 正在获取第 231 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:47 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:47 [INFO] - [解析] 正在获取第 232 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:47 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:48 [INFO] - [解析] 正在获取第 233 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:48 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:49 [INFO] - [解析] 正在获取第 234 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:49 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:50 [INFO] - [解析] 正在获取第 235 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:50 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:50 [INFO] - [解析] 正在获取第 236 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:50 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:51 [INFO] - [解析] 正在获取第 237 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:51 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:52 [INFO] - [解析] 正在获取第 238 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:52 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:53 [INFO] - [解析] 正在获取第 239 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:53 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:54 [INFO] - [解析] 正在获取第 240 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:54 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:55 [INFO] - [解析] 正在获取第 241 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:55 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:56 [INFO] - [解析] 正在获取第 242 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:56 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:57 [INFO] - [解析] 正在获取第 243 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:57 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:57 [INFO] - [解析] 正在获取第 244 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:57 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:58 [INFO] - [解析] 正在获取第 245 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:58 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:12:59 [INFO] - [解析] 正在获取第 246 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:12:59 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:00 [INFO] - [解析] 正在获取第 247 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:00 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:01 [INFO] - [解析] 正在获取第 248 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:01 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:02 [INFO] - [解析] 正在获取第 249 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:02 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:03 [INFO] - [解析] 正在获取第 250 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:03 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:03 [INFO] - [解析] 正在获取第 251 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:03 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:04 [INFO] - [解析] 正在获取第 252 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:04 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:05 [INFO] - [解析] 正在获取第 253 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:05 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:06 [INFO] - [解析] 正在获取第 254 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:06 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:06 [INFO] - [解析] 正在获取第 255 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:06 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:07 [INFO] - [解析] 正在获取第 256 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:07 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:08 [INFO] - [解析] 正在获取第 257 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:08 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:09 [INFO] - [解析] 正在获取第 258 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:09 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:09 [INFO] - [解析] 正在获取第 259 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:09 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:10 [INFO] - [解析] 正在获取第 260 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:10 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:11 [INFO] - [解析] 正在获取第 261 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:11 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:12 [INFO] - [解析] 正在获取第 262 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:12 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:13 [INFO] - [解析] 正在获取第 263 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:13 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:14 [INFO] - [解析] 正在获取第 264 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:14 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:15 [INFO] - [解析] 正在获取第 265 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:15 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:16 [INFO] - [解析] 正在获取第 266 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:16 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:16 [INFO] - [解析] 正在获取第 267 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:16 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:17 [INFO] - [解析] 正在获取第 268 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:17 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:18 [INFO] - [解析] 正在获取第 269 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:18 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:19 [INFO] - [解析] 正在获取第 270 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:19 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:20 [INFO] - [解析] 正在获取第 271 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:20 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:20 [INFO] - [解析] 正在获取第 272 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:20 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:21 [INFO] - [解析] 正在获取第 273 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:21 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:22 [INFO] - [解析] 正在获取第 274 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:22 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:23 [INFO] - [解析] 正在获取第 275 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:23 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:24 [INFO] - [解析] 正在获取第 276 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:24 [INFO] - [解析] 当前页解析得到 4 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:25 [INFO] - [解析] 正在获取第 277 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:25 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:26 [INFO] - [解析] 正在获取第 278 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:26 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:27 [INFO] - [解析] 正在获取第 279 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:27 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:27 [INFO] - [解析] 正在获取第 280 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:27 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:28 [INFO] - [解析] 正在获取第 281 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:28 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:29 [INFO] - [解析] 正在获取第 282 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:29 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:29 [INFO] - [解析] 正在获取第 283 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:29 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:30 [INFO] - [解析] 正在获取第 284 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:30 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:31 [INFO] - [解析] 正在获取第 285 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:31 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:32 [INFO] - [解析] 正在获取第 286 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:32 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:33 [INFO] - [解析] 正在获取第 287 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:33 [INFO] - [解析] 当前页解析得到 4 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:34 [INFO] - [解析] 正在获取第 288 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:34 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:34 [INFO] - [解析] 正在获取第 289 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:34 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:35 [INFO] - [解析] 正在获取第 290 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:35 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:36 [INFO] - [解析] 正在获取第 291 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:36 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:37 [INFO] - [解析] 正在获取第 292 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:37 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:37 [INFO] - [解析] 正在获取第 293 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:37 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:38 [INFO] - [解析] 正在获取第 294 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:38 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:39 [INFO] - [解析] 正在获取第 295 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:39 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:40 [INFO] - [解析] 正在获取第 296 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:40 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:41 [INFO] - [解析] 正在获取第 297 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:41 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:42 [INFO] - [解析] 正在获取第 298 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:42 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:43 [INFO] - [解析] 正在获取第 299 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:43 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:44 [INFO] - [解析] 正在获取第 300 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:44 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:45 [INFO] - [解析] 正在获取第 301 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:45 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:46 [INFO] - [解析] 正在获取第 302 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:46 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:46 [INFO] - [解析] 正在获取第 303 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:46 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:47 [INFO] - [解析] 正在获取第 304 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:47 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:48 [ERROR] - 出现StringIndexOutOfBoundsException，可以弃之不理	line: 317 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:257)}
+2015-03-25 19:13:48 [INFO] - [解析] 正在获取第 305 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:48 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:48 [INFO] - [解析] 正在获取第 306 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:48 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:49 [INFO] - [解析] 正在获取第 307 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:49 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:50 [INFO] - [解析] 正在获取第 308 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:50 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:50 [INFO] - [解析] 正在获取第 309 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:50 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:51 [INFO] - [解析] 正在获取第 310 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:51 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:52 [INFO] - [解析] 正在获取第 311 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:52 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:53 [INFO] - [解析] 正在获取第 312 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:53 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:53 [INFO] - [解析] 正在获取第 313 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:53 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:55 [INFO] - [解析] 正在获取第 314 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:55 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:56 [INFO] - [解析] 正在获取第 315 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:56 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:57 [INFO] - [解析] 正在获取第 316 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:57 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:58 [INFO] - [解析] 正在获取第 317 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:58 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:58 [INFO] - [解析] 正在获取第 318 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:58 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:13:59 [INFO] - [解析] 正在获取第 319 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:13:59 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:00 [INFO] - [解析] 正在获取第 320 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:00 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:01 [INFO] - [解析] 正在获取第 321 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:01 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:02 [INFO] - [解析] 正在获取第 322 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:02 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:03 [INFO] - [解析] 正在获取第 323 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:03 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:04 [INFO] - [解析] 正在获取第 324 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:04 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:06 [INFO] - [解析] 正在获取第 325 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:06 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:07 [INFO] - [解析] 正在获取第 326 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:07 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:08 [INFO] - [解析] 正在获取第 327 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:08 [INFO] - [解析] 当前页解析得到 4 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:09 [INFO] - [解析] 正在获取第 328 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:09 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:09 [INFO] - [解析] 正在获取第 329 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:09 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:10 [INFO] - [解析] 正在获取第 330 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:10 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:11 [INFO] - [解析] 正在获取第 331 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:11 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:12 [INFO] - [解析] 正在获取第 332 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:12 [INFO] - [解析] 当前页解析得到 4 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:12 [INFO] - [解析] 正在获取第 333 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:12 [INFO] - [解析] 当前页解析得到 4 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:13 [INFO] - [解析] 正在获取第 334 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:13 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:14 [INFO] - [解析] 正在获取第 335 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:14 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:15 [INFO] - [解析] 正在获取第 336 页 / 881 页 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:223)}
+2015-03-25 19:14:15 [INFO] - [解析] 当前页解析得到 5 条微博 {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:225)}
+2015-03-25 19:14:15 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.next(UserPageProcessor.java:307)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getWeibo(UserPageProcessor.java:293)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:40)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.next(UserPageProcessor.java:313)}
+2015-03-25 19:14:17 [INFO] - [保存成功] - /home/glacier/Java/IDE/IDEA/IdeaProjects/SpiderConfig/1427282055912.xml {com.glacier.spider.crawler.pipeline.UserStruct.save4xml(UserStruct.java:87)}
+2015-03-25 20:26:30 [ERROR] - org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in sqlmap/sqlmap-accounts.xml
+### The error may involve com.glacier.spider.crawler.pipeline.MysqlOperation.getAccounts
+### The error occurred while executing a query
+### Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:23)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:104)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:95)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:59)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:95)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:40)
+	at com.sun.proxy.$Proxy0.getAccounts(Unknown Source)
+	at com.glacier.spider.login.GetAccounts.accounts(GetAccounts.java:43)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:31)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1137)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:355)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2490)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2527)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2309)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:419)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:187)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:181)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:176)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.getConnection(UnpooledDataSource.java:80)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:371)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.getConnection(PooledDataSource.java:80)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:131)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.getConnection(JdbcTransaction.java:58)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:279)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:69)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:56)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:141)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:81)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:101)
+	... 13 more
+Caused by: java.net.ConnectException: 拒绝连接
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:305)
+	... 42 more
+ {com.glacier.spider.login.GetAccounts.accounts(GetAccounts.java:51)}
+2015-03-25 20:26:58 [INFO] - [Login] 'rlx421186071@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 20:27:00 [INFO] - [login] 'rlx421186071@163.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 20:27:00 [INFO] - [解析] 正在获取用户微博... {com.glacier.spider.crawler.pageprocessor.SearchPageProcessor.get_search_list(SearchPageProcessor.java:37)}
+2015-03-25 20:27:00 [INFO] - [解析] 正在获取第 1 页 / 100 页 {com.glacier.spider.crawler.pageprocessor.SearchPageProcessor.get_search_list(SearchPageProcessor.java:49)}
+2015-03-25 20:27:01 [INFO] - [解析] 当前页解析得到 11 条微博 {com.glacier.spider.crawler.pageprocessor.SearchPageProcessor.get_search_list(SearchPageProcessor.java:51)}
+2015-03-25 20:27:01 [INFO] - [解析] 正在获取第 2 页 / 100 页 {com.glacier.spider.crawler.pageprocessor.SearchPageProcessor.get_search_list(SearchPageProcessor.java:49)}
+2015-03-25 20:27:01 [INFO] - [解析] 当前页解析得到 10 条微博 {com.glacier.spider.crawler.pageprocessor.SearchPageProcessor.get_search_list(SearchPageProcessor.java:51)}
+2015-03-25 20:27:03 [INFO] - [解析] 正在获取第 3 页 / 100 页 {com.glacier.spider.crawler.pageprocessor.SearchPageProcessor.get_search_list(SearchPageProcessor.java:49)}
+2015-03-25 20:27:03 [INFO] - [解析] 当前页解析得到 10 条微博 {com.glacier.spider.crawler.pageprocessor.SearchPageProcessor.get_search_list(SearchPageProcessor.java:51)}
+2015-03-25 21:27:12 [INFO] - [Login] 'OurHom.759@gmail.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 21:27:18 [INFO] - [login] 'OurHom.759@gmail.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 21:29:52 [INFO] - [Login] 'glacierlx@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 21:29:54 [INFO] - [login] 'glacierlx@sina.cn' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 21:33:28 [INFO] - [Login] 'glacier@xiyoulinux.org' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 21:33:30 [INFO] - [login] 'glacier@xiyoulinux.org' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 21:33:30 [ERROR] - java.lang.NullPointerException
+	at com.glacier.spider.crawler.downloader.Downloader.next(Downloader.java:180)
+	at com.glacier.spider.crawler.downloader.Downloader.userDocument(Downloader.java:126)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:45)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.downloader.Downloader.next(Downloader.java:186)}
+2015-03-25 21:35:30 [INFO] - [Login] 'rlx421186071@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 21:35:32 [INFO] - [login] 'rlx421186071@sina.cn' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 21:36:06 [INFO] - [Login] 'glacier421186071@163.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 21:36:07 [INFO] - [login] 'glacier421186071@163.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 22:28:55 [INFO] - [Login] 'glacier421186071@sina.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 22:28:57 [INFO] - [login] 'glacier421186071@sina.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 22:28:57 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:122)}
+2015-03-25 22:28:58 [ERROR] - java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1911)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:192)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:41)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:38)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:200)}
+2015-03-25 22:31:35 [INFO] - [Login] 'rrenlixiang@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 22:31:37 [INFO] - [login] 'rrenlixiang@sina.cn' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 22:31:38 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:122)}
+2015-03-25 22:31:38 [ERROR] - java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1911)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:193)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:41)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:38)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:201)}
+2015-03-25 22:32:01 [INFO] - [Login] 'rleehom@sina.cn' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 22:32:03 [INFO] - [login] 'rleehom@sina.cn' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 22:32:04 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:122)}
+2015-03-25 22:32:05 [ERROR] - java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1911)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:193)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:41)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:38)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:201)}
+2015-03-25 22:32:29 [INFO] - [Login] '1498781360@qq.com' 正在登陆... {com.glacier.spider.login.LoginCN.login(LoginCN.java:40)}
+2015-03-25 22:32:31 [INFO] - [login] '1498781360@qq.com' 登陆成功! {com.glacier.spider.login.LoginCN.login(LoginCN.java:80)}
+2015-03-25 22:32:32 [INFO] - [解析] 正在获取用户资料... {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:122)}
+2015-03-25 22:32:32 [ERROR] - java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1911)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:193)
+	at com.glacier.spider.crawler.pageprocessor.UserPageProcessor.getUserInfo(UserPageProcessor.java:41)
+	at com.glacier.spider.crawler.Crawler.start(Crawler.java:38)
+	at com.glacier.spider.Weibo.main(Weibo.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+ {com.glacier.spider.crawler.pageprocessor.UserPageProcessor.get_user_info(UserPageProcessor.java:201)}
