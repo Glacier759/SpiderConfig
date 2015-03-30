@@ -1,5 +1,6 @@
 package com.glacier.spider.crawler.downloader;
 
+import com.glacier.spider.utils.StringUtils;
 import javafx.geometry.VPos;
 import org.apache.http.*;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -193,7 +194,7 @@ public class Downloader {
      * 为保证文档树不产生乱码情况
      * @param entity HTTP请求后得到的HttpEntity
      * @param encode 需要指定的最终文字编码
-     * @return 返回按照指定编码转码后的页面源码
+     * @return 返回按照指定编码转码后的页面源码, 已进行全角转半角处理
      * */
     private static String getContent(HttpEntity entity, String encode) {
         BufferedReader reader = null;
@@ -208,7 +209,7 @@ public class Downloader {
         }catch (Exception e) {
             e.printStackTrace();
         }
-        return buffer.toString();
+        return StringUtils.full2half(buffer.toString());
     }
 
     /**
