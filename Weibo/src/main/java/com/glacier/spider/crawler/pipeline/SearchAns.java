@@ -63,7 +63,7 @@ public class SearchAns{
 
             addFileInfo(root);  //在XML文件中加入签名信息(待订制)
 
-            File save_file = new File(System.currentTimeMillis() + ".xml");
+            File save_file = new File("WeiboData", System.currentTimeMillis() + ".xml");
             FileUtils.writeStringToFile(save_file, formatXML(root));
             logger.info("[保存成功] - " + save_file.getAbsolutePath());
 

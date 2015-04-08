@@ -41,6 +41,15 @@ public class SearchPageProcessor {
      * */
     public void getSearchList(String key, boolean get_user, boolean save) {
         try {
+            StringBuffer buffer = new StringBuffer();
+            buffer.append("[搜索] 进入微博搜索模块. key = " + key);
+            if ( get_user ) {   buffer.append(" [获取]用户资料"); }
+            else {  buffer.append(" [不获取]用户资料");    }
+            if ( save ) {   buffer.append(" [存储]至文件");  }
+            else {  buffer.append(" [不存储]至文件"); }
+
+            logger.info(buffer.toString());
+
             Document document = Downloader.searchDocument(key);
             get_search_list(document, get_user, save);
         }catch (Exception e) {
@@ -53,7 +62,7 @@ public class SearchPageProcessor {
     /**
      * 获取微博搜索页面的微博集合
      * @param document 搜索页面的document文档树
-     * @param get_user 是否需要为条微博附带博主信息, true表示需要, false表示不需要
+     * @param get_user 是否需要为微博附带博主信息, true表示需要, false表示不需要
      * @param save 是否需要将检索到的结果保存起来, true表示需要, false表示不需要
      * */
     private void get_search_list(Document document, boolean get_user, boolean save) {
@@ -190,6 +199,4 @@ public class SearchPageProcessor {
         }
         return null;
     }
-
-
 }

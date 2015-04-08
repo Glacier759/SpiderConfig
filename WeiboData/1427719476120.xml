@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-03-30 20:44:36">
+  <user_info user_id="1564654497" user_url="http://weibo.cn/u/1564654497?f=search_0">
+    <weibo_count>18552</weibo_count>
+    <follow_count>184</follow_count>
+    <fans_count>466</fans_count>
+    <性别>男</性别>
+    <性取向>男</性取向>
+    <生日>0001-00-00</生日>
+    <tag>汽车,时尚,美女,美食,军事</tag>
+    <head_image>http://tp2.sinaimg.cn/1564654497/180/5600844283/1</head_image>
+    <昵称>秋夜风雨</昵称>
+    <地区>河南 漯河</地区>
+  </user_info>
+  <weibo weibo_id="M_CaZpPAMa5">
+    <weibo_sender>秋夜风雨</weibo_sender>
+    <weibo_content>:【汽车保养小知识】 (分享自 @今日头条 ) http://t.cn/RAGbTCH</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>6分钟前 </weibo_date>
+    <weibo_from>来自今日头条</weibo_from>
+  </weibo>
+</root>

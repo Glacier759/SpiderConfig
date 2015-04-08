@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-03-30 20:47:29">
+  <user_info user_id="5505839733" user_url="http://weibo.cn/u/5505839733?f=search_0">
+    <weibo_count>20</weibo_count>
+    <follow_count>0</follow_count>
+    <fans_count>4</fans_count>
+    <性别>男</性别>
+    <生日>1976-05-04</生日>
+    <tag>明星</tag>
+    <head_image>http://tp2.sinaimg.cn/5505839733/180/5721120118/1</head_image>
+    <昵称>森高幸萄</昵称>
+    <地区>山东</地区>
+  </user_info>
+  <weibo weibo_id="M_CaZonrI86">
+    <weibo_sender>森高幸萄</weibo_sender>
+    <weibo_content>:【马自达降低在华目标 销量连降17个月】今年前八个月,马自达在中国的销量已经下降了21%,是表现最差的汽车制造商之一。之前其计划2016年在华目标销量40万辆。现在,这个目标将会降低,预计本财年在华销量达到20万辆。</weibo_content>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/0060BWqFgw1eqng8ie6y3j30c307l0ts.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>13分钟前 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

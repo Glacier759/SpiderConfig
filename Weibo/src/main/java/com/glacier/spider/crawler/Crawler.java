@@ -1,5 +1,6 @@
 package com.glacier.spider.crawler;
 
+import com.glacier.spider.configure.Configure;
 import com.glacier.spider.crawler.downloader.Downloader;
 import com.glacier.spider.crawler.pageprocessor.SearchPageProcessor;
 import com.glacier.spider.crawler.pageprocessor.UserPageProcessor;
@@ -22,9 +23,11 @@ public class Crawler {
 
     private static Logger logger = Logger.getLogger(Crawler.class.getName());
     private DefaultHttpClient httpClient;
+    public static Configure config;
 
-    public Crawler() {
-
+    public Crawler( Configure conf ) {
+        config = conf;
+        logger.info("[初始化] 配置文件加载完成");
     }
 
     /**
@@ -47,7 +50,12 @@ public class Crawler {
 //        UserStruct userStruct = userPageProcessor.getUserStruct();
 //        userStruct.save4xml();
 
+
         SearchPageProcessor searchPageProcessor = new SearchPageProcessor();
-        searchPageProcessor.getSearchList("网络爬虫", true, true);
+        searchPageProcessor.getSearchList("汽车", true, true);
+        searchPageProcessor.getSearchList("轿车", true, true);
+        searchPageProcessor.getSearchList("越野车", true, true);
+        searchPageProcessor.getSearchList("客车", true, true);
+
     }
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-03-30 20:45:40">
+  <user_info user_id="5175150659" user_url="http://weibo.cn/u/5175150659?f=search_0">
+    <weibo_count>190</weibo_count>
+    <follow_count>118</follow_count>
+    <fans_count>38</fans_count>
+    <性别>女</性别>
+    <head_image>http://tp4.sinaimg.cn/5175150659/180/5719683604/0</head_image>
+    <昵称>空白Blood</昵称>
+    <地区>重庆</地区>
+  </user_info>
+  <weibo weibo_id="M_CaZpelxZY">
+    <weibo_sender>空白Blood</weibo_sender>
+    <weibo_content>名牌包包,喜欢吗[不好意思]</weibo_content>
+    <weibo_forward forward_reason="转发理由:[鼻涕][鼻涕]//@奋斗在韩国:[笑cry][笑cry][笑cry]//@韩游网: 看小图以为背着一个汽车方向盘[笑cry]  "> 转发了 整形思密达 的微博:</weibo_forward>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/e604eadatw1eqntk0cfpdj20by0ct3zd.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>9分钟前 </weibo_date>
+    <weibo_from>来自Android客户端</weibo_from>
+  </weibo>
+</root>

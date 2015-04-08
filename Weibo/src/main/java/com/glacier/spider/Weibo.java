@@ -14,7 +14,7 @@ public class Weibo {
 
     public static void main(String[] agrs) {
 
-        Crawler crawler = new Crawler();    //实例化微博爬虫
+        Crawler crawler = new Crawler(null);    //实例化微博爬虫
         crawler.start();                    //开始微博爬虫
     }
 }

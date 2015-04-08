@@ -1,31 +1,24 @@
 package com.glacier.spider.crawler.downloader;
 
 import com.glacier.spider.utils.StringUtils;
-import javafx.geometry.VPos;
 import org.apache.http.*;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.params.CookiePolicy;
+import org.apache.http.conn.params.ConnRouteParams;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.CoreConnectionPNames;
 import org.apache.http.params.CoreProtocolPNames;
-import org.apache.http.params.HttpParams;
-import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import javax.swing.text.html.parser.Entity;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by glacier on 14-12-17.
@@ -102,6 +95,25 @@ public class Downloader {
             document.setBaseUri(url);   //设置document的来源地址
 
             return document;
+        }catch (Exception e) {
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            e.printStackTrace(new PrintStream(baos));
+            logger.error(baos.toString());
+        }
+        return null;
+    }
+
+    /**
+     * 对相应地址使用相应方法返回抓取得到的dom树
+     * @param url 需要获取的地址
+     * @param method 访问该地址需要使用的HTTP请求方法
+     * @param proxy 设置代理
+     * @return 返回获取得到的Document文档树
+     * */
+    public static Document document(String url, String method, HttpHost proxy) {
+        try {
+            httpClient.getParams().setParameter(ConnRouteParams.DEFAULT_PROXY, proxy);
+            return document(url, method);
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             e.printStackTrace(new PrintStream(baos));
