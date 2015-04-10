@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:39:30">
+  <user_info user_id="3882719843" user_url="http://weibo.cn/u/3882719843?f=search_0">
+    <weibo_count>439</weibo_count>
+    <follow_count>136</follow_count>
+    <fans_count>269</fans_count>
+    <性别>女</性别>
+    <生日>0001-00-00</生日>
+    <达人>摄影</达人>
+    <head_image>http://tp4.sinaimg.cn/3882719843/180/5678303834/0</head_image>
+    <昵称>y世逍遥</昵称>
+    <地区>江苏 盐城</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuRq8rqn" search_key="汽车">
+    <weibo_sender>y世逍遥</weibo_sender>
+    <weibo_content>:我懂得怎么看‘七月巧云’,听苏格兰兵吹bagpipe,享受微风中的藤椅,吃盐水花生,欣赏雨夜的霓虹灯,从双层公共汽车上伸出手摘树巅的树叶。</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>8分钟前 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:31:01">
+  <user_info user_id="2892253837" user_url="http://weibo.cn/u/2892253837?f=search_0">
+    <weibo_count>49</weibo_count>
+    <follow_count>101</follow_count>
+    <fans_count>36</fans_count>
+    <性别>男</性别>
+    <简介>你若安好 我便安好</简介>
+    <head_image>http://tp2.sinaimg.cn/2892253837/180/5642565795/1</head_image>
+    <昵称>合体胸</昵称>
+    <地区>陕西 铜川</地区>
+  </user_info>
+  <weibo weibo_id="M_CcgWlat0O" search_key="越野车">
+    <weibo_sender>合体胸</weibo_sender>
+    <weibo_content>:【越野车为避违规车冲下山坡.】</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="1"/>
+    <weibo_date>04月08日 07:05 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

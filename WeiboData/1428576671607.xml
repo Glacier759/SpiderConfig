@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:51:11">
+  <user_info user_id="2726157785" user_url="http://weibo.cn/u/2726157785?f=search_0">
+    <weibo_count>683</weibo_count>
+    <follow_count>99</follow_count>
+    <fans_count>36</fans_count>
+    <性别>男</性别>
+    <简介>黑头发、黄皮肤、中国人、迪粉!</简介>
+    <tag>美食,视频音乐,旅游</tag>
+    <head_image>http://tp2.sinaimg.cn/2726157785/180/5722829013/1</head_image>
+    <昵称>0379zcz</昵称>
+    <地区>河南 洛阳</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuFy2Ubo" search_key="汽车">
+    <weibo_sender>0379zcz</weibo_sender>
+    <weibo_content>#IDF2015#在这群英特尔移动端的合作伙伴中,最惊喜的是BYD,比亚迪不愧是汽车厂商 中做平板电脑最好的[haha]</weibo_content>
+    <weibo_forward forward_reason="转发理由://@江山在手天下我有:汽车厂家中电子做的最好的,IT企业中汽车做的最好的[偷笑]  "> 转发了 ZD于泽 的微博:</weibo_forward>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/7b8e833djw1eqxwsjowq9j20nz0hsdhm.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>49分钟前 </weibo_date>
+    <weibo_from>来自魅蓝手机</weibo_from>
+  </weibo>
+</root>

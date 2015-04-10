@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:47:38">
+  <user_info user_id="2914323045" user_url="http://weibo.cn/u/2914323045?f=search_0">
+    <weibo_count>1237</weibo_count>
+    <follow_count>120</follow_count>
+    <fans_count>150</fans_count>
+    <性别>男</性别>
+    <生日>1994-12-29</生日>
+    <tag>爱睡觉,爱画画,爱周董,爱港漫,爱火影,爱海贼</tag>
+    <head_image>http://tp2.sinaimg.cn/2914323045/180/5723121047/1</head_image>
+    <昵称>Hello--Sea</昵称>
+    <地区>江苏 泰州</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuJwtBj7" search_key="汽车">
+    <weibo_sender>Hello--Sea</weibo_sender>
+    <weibo_content>你喜欢下面哪些奇怪的味道,完全相同的可以考虑在一起了[呵呵]</weibo_content>
+    <weibo_forward forward_reason="转发理由:除了臭豆腐和汽车尾气其他味道都挺喜欢、再加上汽油味  "> 转发了 屌丝学姐 的微博:</weibo_forward>
+    <weibo_image>http://ww4.sinaimg.cn/bmiddle/6654b077jw1eqzdpy1f9mj20go0gowfe.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>35分钟前 </weibo_date>
+    <weibo_from>来自iPhone 6</weibo_from>
+  </weibo>
+</root>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 14:52:06">
+  <user_info user_id="5071267037" user_url="http://weibo.cn/u/5071267037?f=search_0">
+    <weibo_count>177</weibo_count>
+    <follow_count>390</follow_count>
+    <fans_count>29</fans_count>
+    <性别>男</性别>
+    <生日>1971-10-28</生日>
+    <tag>美女</tag>
+    <head_image>http://tp2.sinaimg.cn/5071267037/180/5689912336/1</head_image>
+    <昵称>贵平民天后001</昵称>
+    <地区>黑龙江 绥化</地区>
+  </user_info>
+  <weibo weibo_id="M_Cctk3jQKu">
+    <weibo_sender>贵平民天后001</weibo_sender>
+    <weibo_content>:江淮汽车美女!</weibo_content>
+    <weibo_image>http://ww4.sinaimg.cn/bmiddle/005xcwdDjw1eqzb4pnx65j309a0d90ud.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>15分钟前 </weibo_date>
+    <weibo_from>来自皮皮时光机</weibo_from>
+  </weibo>
+</root>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:24:34">
+  <user_info user_id="5506232512" user_url="http://weibo.cn/u/5506232512?f=search_0">
+    <weibo_count>20</weibo_count>
+    <follow_count>2</follow_count>
+    <fans_count>16</fans_count>
+    <性别>女</性别>
+    <生日>天秤座</生日>
+    <head_image>http://tp1.sinaimg.cn/5506232512/180/5718480317/0</head_image>
+    <昵称>郭玲0uVfar</昵称>
+    <地区>浙江</地区>
+  </user_info>
+  <weibo weibo_id="M_CcpIocDd7" search_key="越野车">
+    <weibo_sender>郭玲0uVfar</weibo_sender>
+    <weibo_content>:【越野车为避ì违规车冲下山坡】</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 05:26 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

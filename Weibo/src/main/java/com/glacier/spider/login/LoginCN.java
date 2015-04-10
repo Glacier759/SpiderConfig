@@ -90,6 +90,8 @@ public class LoginCN {
                 MyHttpConnectionManager.setHandleRedirect(httpClient, true);
             }
 
+            if ( locationURL == null )
+                return null;
             //取得重定向后的首页地址，登陆成功
             HttpGet httpGet = new HttpGet(locationURL);
             MyHttpConnectionManager.setHandleRedirect(httpClient, false);

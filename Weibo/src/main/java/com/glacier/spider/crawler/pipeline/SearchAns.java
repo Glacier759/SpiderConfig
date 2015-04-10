@@ -24,6 +24,12 @@ public class SearchAns{
     public UserInfo userInfo = null;
     public WeiboStruct weiboStruct = null;
 
+    private String search_key = "";
+
+    public SearchAns( String search_key ) {
+        this.search_key = search_key;
+    }
+
     public void save4xml() {
         try {
             org.dom4j.Document document = DocumentHelper.createDocument();
@@ -46,6 +52,7 @@ public class SearchAns{
             if ( weiboStruct != null ) {
                 org.dom4j.Element weibo_ele = root.addElement("weibo");
                 weibo_ele.addAttribute("weibo_id", weiboStruct.getWeiboID());
+                weibo_ele.addAttribute("search_key", search_key);
                 weibo_ele.addElement("weibo_sender").addText(weiboStruct.getWeiboSender());
                 weibo_ele.addElement("weibo_content").addText(weiboStruct.getWeiboText());
                 if (!weiboStruct.getWeiboForward().equals("") && !weiboStruct.getForwardReason().equals("")) {

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:19:04">
+  <user_info user_id="1878979092" user_url="http://weibo.cn/u/1878979092?f=search_0">
+    <weibo_count>2424</weibo_count>
+    <follow_count>56</follow_count>
+    <fans_count>1000</fans_count>
+    <性别>男</性别>
+    <简介>宁波汽车网(www.nbauto.cn),宁波江东平泰汽车服务有限公司,联系电话:0574-87785988 13081982259 传真:0574-87786600</简介>
+    <生日>0001-00-00</生日>
+    <tag>汽车,新闻,交友,美食</tag>
+    <head_image>http://tp1.sinaimg.cn/1878979092/180/5606196674/1</head_image>
+    <昵称>宁波二手车交易</昵称>
+    <地区>浙江 宁波</地区>
+  </user_info>
+  <weibo weibo_id="M_CctKZ97vN" search_key="越野车">
+    <weibo_sender>宁波二手车交易</weibo_sender>
+    <weibo_content>:高档宝马X5 4.4越野车,上牌日期:2005年7月 精品车况,全时四驱,米色运动内饰,三幅多功能方向,大屏幕显示,五副运动轮毂,车非常非常新,加速时发出轰轰的咆哮声,欢迎看车~售价:17.89万元</weibo_content>
+    <weibo_image>http://ww4.sinaimg.cn/bmiddle/6ffef214gw1eqzd1pk1qlj20m80goac6.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 15:43 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

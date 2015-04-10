@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:53:00">
+  <user_info user_id="5413394148" user_url="http://weibo.cn/u/5413394148?f=search_0">
+    <weibo_count>100</weibo_count>
+    <follow_count>46</follow_count>
+    <fans_count>53</fans_count>
+    <性别>女</性别>
+    <生日>1997-05-28</生日>
+    <tag>星座运势,搞笑幽默,体育资讯,美食</tag>
+    <head_image>http://tp1.sinaimg.cn/5413394148/180/22893229631/0</head_image>
+    <昵称>小清新嗄里O蟹</昵称>
+    <地区>内蒙古</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuE1tyMA" search_key="汽车">
+    <weibo_sender>小清新嗄里O蟹</weibo_sender>
+    <weibo_content>:【汽车改装】德国改装厂家Hamann于法兰克福车展推出新款6SeriesConvertible敞篷改装方案</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>54分钟前 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

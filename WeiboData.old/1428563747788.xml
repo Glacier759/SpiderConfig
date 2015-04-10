@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 15:15:47">
+  <user_info user_id="3024860424" user_url="http://weibo.cn/u/3024860424?f=search_0">
+    <weibo_count>4</weibo_count>
+    <follow_count>20</follow_count>
+    <fans_count>10</fans_count>
+    <性别>男</性别>
+    <生日>1992-10-25</生日>
+    <head_image>http://tp1.sinaimg.cn/3024860424/180/5711749453/1</head_image>
+    <昵称>Hide-onDarkness</昵称>
+    <地区>其他</地区>
+  </user_info>
+  <weibo weibo_id="M_CckRRlM6Y">
+    <weibo_sender>Hide-onDarkness</weibo_sender>
+    <weibo_content>:幸好只是造成几趟货车弯路,客车要是晚点我剁手也来不及了</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="1"/>
+    <weibo_date>04月08日 17:05 </weibo_date>
+    <weibo_from>来自vivo</weibo_from>
+  </weibo>
+</root>

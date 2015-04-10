@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:12:14">
+  <user_info user_id="1134664464" user_url="http://weibo.cn/207680999?f=search_0">
+    <weibo_count>4501</weibo_count>
+    <follow_count>70</follow_count>
+    <fans_count>227</fans_count>
+    <性别>男</性别>
+    <达人>旅游 汽车</达人>
+    <tag>军事,旅游,汽车,美女</tag>
+    <head_image>http://tp1.sinaimg.cn/1134664464/180/5649491361/1</head_image>
+    <昵称>飘落的红树林</昵称>
+    <地区>北京 朝阳区</地区>
+  </user_info>
+  <weibo weibo_id="M_CctDXzijV" search_key="轿车">
+    <weibo_sender>飘落的红树林</weibo_sender>
+    <weibo_content>:【这满大街披着SUV皮囊的轿车时代啊!】 (分享自 @今日头条 ) http://t.cn/RAidYJT</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 15:26 </weibo_date>
+    <weibo_from>来自今日头条</weibo_from>
+  </weibo>
+</root>

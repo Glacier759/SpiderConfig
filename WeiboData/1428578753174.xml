@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:25:53">
+  <user_info user_id="1644270304" user_url="http://weibo.cn/u/1644270304?f=search_0">
+    <weibo_count>388</weibo_count>
+    <follow_count>597</follow_count>
+    <fans_count>222</fans_count>
+    <性别>男</性别>
+    <生日>0001-00-00</生日>
+    <head_image>http://tp1.sinaimg.cn/1644270304/180/5717395478/1</head_image>
+    <昵称>yoyomysoul</昵称>
+    <地区>江苏</地区>
+  </user_info>
+  <weibo weibo_id="M_Ccn2bbZmA" search_key="越野车">
+    <weibo_sender>yoyomysoul</weibo_sender>
+    <weibo_content>:劲擎 享野趣 〔四月 越野车〕</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>04月08日 22:36 </weibo_date>
+    <weibo_from>来自iWeekly周末画报</weibo_from>
+  </weibo>
+</root>

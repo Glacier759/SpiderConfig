@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:53:59">
+  <user_info user_id="3964668647" user_url="http://weibo.cn/u/3964668647?f=search_0">
+    <weibo_count>16</weibo_count>
+    <follow_count>17</follow_count>
+    <fans_count>5</fans_count>
+    <性别>男</性别>
+    <简介>平平淡淡</简介>
+    <生日>1986-04-05</生日>
+    <tag>车世界</tag>
+    <head_image>http://tp4.sinaimg.cn/3964668647/180/5683710806/1</head_image>
+    <昵称>So丶Siperman</昵称>
+    <地区>新疆 吐鲁番</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuZKDUel" search_key="轿车">
+    <weibo_sender>So丶Siperman</weibo_sender>
+    <weibo_content>:现在10万左右的轿车有哪些是样子好看点性价比高点的,请推荐,谢谢啊。</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>2分钟前 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

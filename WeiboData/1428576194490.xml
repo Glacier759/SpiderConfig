@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:43:14">
+  <user_info user_id="2029670752" user_url="http://weibo.cn/314392969?f=search_0">
+    <weibo_count>339</weibo_count>
+    <follow_count>133</follow_count>
+    <fans_count>985</fans_count>
+    <性别>男</性别>
+    <生日>0001-00-00</生日>
+    <tag>军事,IT数码,文艺</tag>
+    <head_image>http://tp1.sinaimg.cn/2029670752/180/5600862405/1</head_image>
+    <昵称>Just_4_IT</昵称>
+    <地区>北京 海淀区</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuNKi2Oq" search_key="汽车">
+    <weibo_sender>Just_4_IT</weibo_sender>
+    <weibo_content>:【哈尔滨小伙】---明月随良掾 春潮夜夜深http://t.cn/RAiFK7Z @汽车之家</weibo_content>
+    <weibo_image>http://ww3.sinaimg.cn/bmiddle/78fa5160jw1eqzhnrcflqj20sg01dglt.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>21分钟前 </weibo_date>
+    <weibo_from>来自汽车之家.论坛</weibo_from>
+  </weibo>
+</root>

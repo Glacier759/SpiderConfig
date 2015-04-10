@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:06:05">
+  <user_info user_id="3442678282" user_url="http://weibo.cn/u/3442678282?f=search_0">
+    <weibo_count>59</weibo_count>
+    <follow_count>6</follow_count>
+    <fans_count>11</fans_count>
+    <性别>男</性别>
+    <简介>胸藏文墨怀若谷 腹有诗书气自华 我最爱的诗词</简介>
+    <head_image>http://tp3.sinaimg.cn/3442678282/180/5708745151/1</head_image>
+    <昵称>小米小子7</昵称>
+    <地区>其他</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuDZFKJq" search_key="轿车">
+    <weibo_sender>小米小子7</weibo_sender>
+    <weibo_content>:收藏了 //【现在问题来了,买轿车还是SUV?】http://t.cn/RA67prZ (分享自 @今日头条)</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 17:58 </weibo_date>
+    <weibo_from>来自今日头条</weibo_from>
+  </weibo>
+</root>

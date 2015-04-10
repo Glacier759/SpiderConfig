@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:15:26">
+  <user_info user_id="3912359909" user_url="http://weibo.cn/u/3912359909?f=search_0">
+    <weibo_count>144</weibo_count>
+    <follow_count>443</follow_count>
+    <fans_count>59</fans_count>
+    <性别>男</性别>
+    <简介>海闊天空是我家!</简介>
+    <生日>1990-02-04</生日>
+    <tag>IT数码,美女,搞笑幽默,视频音乐,南京生活</tag>
+    <head_image>http://tp2.sinaimg.cn/3912359909/180/5681307877/1</head_image>
+    <昵称>我是农村来的少年</昵称>
+    <地区>安徽 滁州</地区>
+  </user_info>
+  <weibo weibo_id="M_CcsXP9pzc" search_key="轿车">
+    <weibo_sender>我是农村来的少年</weibo_sender>
+    <weibo_content>:我想在南京下班以后找份兼职,本人有小轿车一辆,希望有人能介绍,谢谢[许愿] [位置]森林摩尔商业街区</weibo_content>
+    <weibo_count like_count="1" forward_count="0" comment_count="1"/>
+    <weibo_date>今天 13:42 </weibo_date>
+    <weibo_from>来自荣耀6</weibo_from>
+  </weibo>
+</root>

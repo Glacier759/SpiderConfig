@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:50:30">
+  <user_info user_id="1152775564" user_url="http://weibo.cn/u/1152775564?f=search_0">
+    <weibo_count>2262</weibo_count>
+    <follow_count>178</follow_count>
+    <fans_count>443</fans_count>
+    <性别>男</性别>
+    <简介>投资、融资、理财,高端金融服务。</简介>
+    <生日>1982-09-13</生日>
+    <tag>前海挂牌,企业融资,新三板</tag>
+    <head_image>http://tp1.sinaimg.cn/1152775564/180/5709006719/1</head_image>
+    <昵称>证券老孙</昵称>
+    <地区>河南</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuFL3zQ5" search_key="汽车">
+    <weibo_sender>证券老孙</weibo_sender>
+    <weibo_content>:国机汽车今日建议客户买入,期待收获!</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>48分钟前 </weibo_date>
+    <weibo_from>来自三星 GALAXY S5</weibo_from>
+  </weibo>
+</root>

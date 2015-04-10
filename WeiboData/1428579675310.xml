@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:41:15">
+  <user_info user_id="1978565913" user_url="http://weibo.cn/u/1978565913?f=search_0">
+    <weibo_count>20</weibo_count>
+    <follow_count>36</follow_count>
+    <fans_count>19</fans_count>
+    <性别>男</性别>
+    <生日>01-01</生日>
+    <tag>旅游</tag>
+    <head_image>http://tp2.sinaimg.cn/1978565913/180/5671270362/1</head_image>
+    <昵称>-贺兰云飞-</昵称>
+    <地区>陕西 西安</地区>
+  </user_info>
+  <weibo weibo_id="M_CcsIbDmMU" search_key="客车">
+    <weibo_sender>-贺兰云飞-</weibo_sender>
+    <weibo_content>#西安车站出行提醒#自4月10日起,西安站将增开西安至长武客运列车,8375次,10:47西安始发,15:02到,途径礼泉、乾县、永寿、彬县;全列硬座,至长武硬座票价为12.5元。@西铁资讯 @西铁李喆</weibo_content>
+    <weibo_forward forward_reason="转发理由:银川车上西平指日可待!//@火车掠过:祝贺西平西局管内客运正式开通,期待直通客车上西平!  "> 转发了 西安站亲情服务台 的微博:</weibo_forward>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 13:03 </weibo_date>
+    <weibo_from>来自魅蓝note</weibo_from>
+  </weibo>
+</root>

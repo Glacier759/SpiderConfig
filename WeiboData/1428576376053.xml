@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:46:16">
+  <user_info user_id="3753339101" user_url="http://weibo.cn/u/3753339101?f=search_0">
+    <weibo_count>1401</weibo_count>
+    <follow_count>664</follow_count>
+    <fans_count>201</fans_count>
+    <性别>男</性别>
+    <简介>文章互转,互赞...😃</简介>
+    <生日>1981-11-29</生日>
+    <head_image>http://tp2.sinaimg.cn/3753339101/180/5722299193/1</head_image>
+    <昵称>喜鹊家族</昵称>
+    <地区>其他</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuKIlw5M" search_key="汽车">
+    <weibo_sender>喜鹊家族</weibo_sender>
+    <weibo_content>:汽车将要出故障的8大先兆,记住能救命!http://t.cn/RA6z9Gd</weibo_content>
+    <weibo_image>http://ww4.sinaimg.cn/bmiddle/dfb768ddjw1eqzhfz9li5j208004lq35.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>31分钟前 </weibo_date>
+    <weibo_from>来自小米手机</weibo_from>
+  </weibo>
+</root>

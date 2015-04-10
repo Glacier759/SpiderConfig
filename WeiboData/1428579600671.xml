@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:40:00">
+  <user_info user_id="5489094669" user_url="http://weibo.cn/u/5489094669?f=search_0">
+    <weibo_count>135</weibo_count>
+    <follow_count>881</follow_count>
+    <fans_count>75</fans_count>
+    <性别>女</性别>
+    <生日>金牛座</生日>
+    <head_image>http://tp2.sinaimg.cn/5489094669/180/5717225881/0</head_image>
+    <昵称>叶敏爱彼岸5l花</昵称>
+    <地区>海外 马来西亚</地区>
+  </user_info>
+  <weibo weibo_id="M_CctgCeB9l" search_key="客车">
+    <weibo_sender>叶敏爱彼岸5l花</weibo_sender>
+    <weibo_content>:超载客车为避处罚强载稽查人员▫狂奔</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="1"/>
+    <weibo_date>今天 14:28 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

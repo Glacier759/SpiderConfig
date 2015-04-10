@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:38:28">
+  <user_info user_id="2675932537" user_url="http://weibo.cn/u/2675932537?f=search_0">
+    <weibo_count>134</weibo_count>
+    <follow_count>368</follow_count>
+    <fans_count>223</fans_count>
+    <性别>男</性别>
+    <生日>0001-00-00</生日>
+    <tag>游戏动漫,IT数码,体育</tag>
+    <head_image>http://tp2.sinaimg.cn/2675932537/180/40020474159/1</head_image>
+    <昵称>KMGDD001</昵称>
+    <地区>云南 昆明</地区>
+  </user_info>
+  <weibo weibo_id="M_CctFN4rCz" search_key="客车">
+    <weibo_sender>KMGDD001</weibo_sender>
+    <weibo_content>:据中国之声《新闻和报纸摘要》报道,昨天是清明小长假的最后一天,也是小型客车免费通行的最后一天。各地公路、铁路迎来返程高峰。其中全国铁路发送旅客超过1000万。</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 15:30 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:12:00">
+  <user_info user_id="1860928897" user_url="http://weibo.cn/air1235?f=search_0">
+    <weibo_count>3441</weibo_count>
+    <follow_count>114</follow_count>
+    <fans_count>411</fans_count>
+    <性别>男</性别>
+    <简介>Take what u can,Give nothing back</简介>
+    <生日>01-01</生日>
+    <tag>探险,80后,旅行</tag>
+    <head_image>http://tp2.sinaimg.cn/1860928897/180/5716289039/1</head_image>
+    <昵称>iDereks</昵称>
+    <地区>上海 闵行区</地区>
+  </user_info>
+  <weibo weibo_id="M_CctGs6o7K" search_key="轿车">
+    <weibo_sender>iDereks</weibo_sender>
+    <weibo_content>:穿着皮鞋和登山鞋在泥地里走路的区别,就好比开着轿车和越野车在山路上行驶的差别。</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 15:32 </weibo_date>
+    <weibo_from>来自iPhone客户端</weibo_from>
+  </weibo>
+</root>

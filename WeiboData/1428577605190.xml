@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:06:45">
+  <user_info user_id="1625184564" user_url="http://weibo.cn/u/1625184564?f=search_0">
+    <weibo_count>30</weibo_count>
+    <follow_count>81</follow_count>
+    <fans_count>12</fans_count>
+    <性别>男</性别>
+    <head_image>http://tp1.sinaimg.cn/1625184564/180/22886224250/1</head_image>
+    <昵称>XDTC</昵称>
+    <地区>其他</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuwW565b" search_key="轿车">
+    <weibo_sender>XDTC</weibo_sender>
+    <weibo_content>:中国红旗L5轿车运抵白俄 将参加阅兵式(组图)—— (分享自 @新浪军事) http://t.cn/RA6hNyW</weibo_content>
+    <weibo_image>http://ww1.sinaimg.cn/bmiddle/60de5934jw1eqzggnt7jkj20p00goju1.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 17:41 </weibo_date>
+    <weibo_from>来自新浪军事</weibo_from>
+  </weibo>
+</root>

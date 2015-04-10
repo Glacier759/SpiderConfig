@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:38:35">
+  <user_info user_id="5227017613" user_url="http://weibo.cn/u/5227017613?f=search_0">
+    <weibo_count>90</weibo_count>
+    <follow_count>161</follow_count>
+    <fans_count>34</fans_count>
+    <性别>女</性别>
+    <生日>1998-09-28</生日>
+    <head_image>http://tp2.sinaimg.cn/5227017613/180/5717726451/0</head_image>
+    <昵称>你是水果糖吗</昵称>
+    <地区>其他</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuSfcXyS" search_key="汽车">
+    <weibo_sender>你是水果糖吗</weibo_sender>
+    <weibo_content>你喜欢下面哪些奇怪的味道,完全相同的可以考虑在一起了[呵呵]</weibo_content>
+    <weibo_forward forward_reason="转发理由:除了汽车尾气其他都超级喜欢[花心]  "> 转发了 屌丝学姐 的微博:</weibo_forward>
+    <weibo_image>http://ww4.sinaimg.cn/bmiddle/6654b077jw1eqzdpy1f9mj20go0gowfe.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>5分钟前 </weibo_date>
+    <weibo_from>来自OPPO Find 5</weibo_from>
+  </weibo>
+</root>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:37:55">
+  <user_info user_id="2593161545" user_url="http://weibo.cn/u/2593161545?f=search_0">
+    <weibo_count>1284</weibo_count>
+    <follow_count>132</follow_count>
+    <fans_count>142</fans_count>
+    <性别>女</性别>
+    <tag>旅游</tag>
+    <head_image>http://tp2.sinaimg.cn/2593161545/180/5723539394/0</head_image>
+    <昵称>行走在探索中</昵称>
+    <地区>河南</地区>
+  </user_info>
+  <weibo weibo_id="M_CctWFF8lE" search_key="客车">
+    <weibo_sender>行走在探索中</weibo_sender>
+    <weibo_content>:独自一人 在暴风雨中等待客车,别人看到的是孤独,而你体验到是小人物的辛酸</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="1"/>
+    <weibo_date>今天 16:12 </weibo_date>
+    <weibo_from>来自360安全浏览器</weibo_from>
+  </weibo>
+</root>

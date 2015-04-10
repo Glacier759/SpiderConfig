@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:44:52">
+  <user_info user_id="5582987349" user_url="http://weibo.cn/u/5582987349?f=search_0">
+    <weibo_count>1</weibo_count>
+    <follow_count>24</follow_count>
+    <fans_count>1</fans_count>
+    <性别>男</性别>
+    <head_image>http://tp2.sinaimg.cn/5582987349/180/5723541300/1</head_image>
+    <昵称>孤寂的狼师太</昵称>
+    <地区>河南 郑州</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuM3DARo" search_key="汽车">
+    <weibo_sender>孤寂的狼师太</weibo_sender>
+    <weibo_content>:大众汽车DSG使用优点http://t.cn/RA6zH80</weibo_content>
+    <weibo_count like_count="1" forward_count="0" comment_count="1"/>
+    <weibo_date>27分钟前 </weibo_date>
+    <weibo_from>来自vivo智能手机</weibo_from>
+  </weibo>
+</root>

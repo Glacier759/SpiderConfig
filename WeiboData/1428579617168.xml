@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:40:17">
+  <user_info user_id="2352105247" user_url="http://weibo.cn/u/2352105247?f=search_0">
+    <weibo_count>296</weibo_count>
+    <follow_count>11</follow_count>
+    <fans_count>106</fans_count>
+    <性别>男</性别>
+    <生日>0001-00-00</生日>
+    <tag>美食</tag>
+    <head_image>http://tp4.sinaimg.cn/2352105247/180/40020283541/1</head_image>
+    <昵称>1990凡尔赛玫瑰</昵称>
+    <地区>其他</地区>
+  </user_info>
+  <weibo weibo_id="M_Cct8smhGI" search_key="客车">
+    <weibo_sender>1990凡尔赛玫瑰</weibo_sender>
+    <weibo_content>:#遇车祸推开同学被撞# 大客车司机,被救者</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 14:08 </weibo_date>
+    <weibo_from>来自微话题</weibo_from>
+  </weibo>
+</root>

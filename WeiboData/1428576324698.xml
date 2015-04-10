@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:45:24">
+  <user_info user_id="5489325127" user_url="http://weibo.cn/u/5489325127?f=search_0">
+    <weibo_count>52</weibo_count>
+    <follow_count>8</follow_count>
+    <fans_count>20</fans_count>
+    <性别>男</性别>
+    <生日>水瓶座</生日>
+    <head_image>http://tp4.sinaimg.cn/5489325127/180/5716872200/1</head_image>
+    <昵称>beyourstP3one</昵称>
+    <地区>云南 保山</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuLCby0r" search_key="汽车">
+    <weibo_sender>beyourstP3one</weibo_sender>
+    <weibo_content>:男人的游戏!2014达喀尔第四赛段精华(汽车组),彼得大帝激战塞恩斯,塞恩斯夺冠升头¡名。</weibo_content>
+    <weibo_image>http://ww3.sinaimg.cn/bmiddle/acf333c7tw1eool0o24y4j20jg0c60ti.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>28分钟前 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

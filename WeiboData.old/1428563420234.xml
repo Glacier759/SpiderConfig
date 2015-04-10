@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 15:10:20">
+  <user_info user_id="5384556620" user_url="http://weibo.cn/KLQ6820GE2?f=search_0">
+    <weibo_count>24</weibo_count>
+    <follow_count>108</follow_count>
+    <fans_count>32</fans_count>
+    <性别>男</性别>
+    <简介>爱公交,爱生活</简介>
+    <生日>1998-12-19</生日>
+    <tag>三明生活,车世界,美图摄影</tag>
+    <head_image>http://tp1.sinaimg.cn/5384556620/180/5723483119/1</head_image>
+    <昵称>泽林沛悦居</昵称>
+    <地区>福建 三明</地区>
+  </user_info>
+  <weibo weibo_id="M_CcojtyTfP">
+    <weibo_sender>泽林沛悦居</weibo_sender>
+    <weibo_content>:三明公交首批新能源客车,XML6125J8CN细拍</weibo_content>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/005Sp39qgw1eqyoywvp5sj31kw0w017w.jpg</weibo_image>
+    <weibo_count like_count="2" forward_count="3" comment_count="1"/>
+    <weibo_date>今天 01:51 </weibo_date>
+    <weibo_from>来自百度浏览器</weibo_from>
+  </weibo>
+</root>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:09:56">
+  <user_info user_id="3205082745" user_url="http://weibo.cn/u/3205082745?f=search_0">
+    <weibo_count>5465</weibo_count>
+    <follow_count>246</follow_count>
+    <fans_count>566</fans_count>
+    <性别>男</性别>
+    <简介>学习知识,记录人生,扩大视野,自勉自励</简介>
+    <生日>0001-00-00</生日>
+    <tag>搞笑幽默,新闻趣事,澳大利亚生活,美食,军事,科技,电影,音乐,旅游</tag>
+    <head_image>http://tp2.sinaimg.cn/3205082745/180/40011872633/1</head_image>
+    <昵称>fuwai2158</昵称>
+    <地区>海外 澳大利亚</地区>
+  </user_info>
+  <weibo weibo_id="M_Ccu3ZhaRk" search_key="轿车">
+    <weibo_sender>fuwai2158</weibo_sender>
+    <weibo_content>:100%自主知识产权 // #我在看新闻# 《中国红旗轿车运抵白俄参加阅兵式》 组图:中国红旗L5轿车运抵白俄将参加阅兵式 http://t.cn/RAiDh0h 来自@腾讯新闻客户端</weibo_content>
+    <weibo_image>http://ww1.sinaimg.cn/bmiddle/bf09ae79jw1eqzeegq4v7j20hs0bvq3e.jpg</weibo_image>
+    <weibo_count like_count="2" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 16:30 </weibo_date>
+    <weibo_from>来自腾讯新闻客户端</weibo_from>
+  </weibo>
+</root>

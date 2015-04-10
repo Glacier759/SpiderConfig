@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 15:10:01">
+  <user_info user_id="3225264192" user_url="http://weibo.cn/u/3225264192?f=search_0">
+    <weibo_count>680</weibo_count>
+    <follow_count>121</follow_count>
+    <fans_count>4521</fans_count>
+    <性别>男</性别>
+    <简介>已婚大叔谨慎关注!</简介>
+    <认证>中国东方航空公司 飞行员</认证>
+    <head_image>http://tp1.sinaimg.cn/3225264192/180/40017863182/1</head_image>
+    <认证信息>中国东方航空公司 飞行员</认证信息>
+    <昵称>天边的贝洛斯</昵称>
+    <地区>上海 长宁区</地区>
+  </user_info>
+  <weibo weibo_id="M_CcoPQger7">
+    <weibo_sender>天边的贝洛斯</weibo_sender>
+    <weibo_content>:相比@空中客车 简洁硬朗的驾驶舱,@波音 773感觉要柔和质感的多,液晶仪表的显示非常清晰稳定。中央操纵台各种操作手柄林立比空客复杂。巡航阶段系统页面不需监控减轻了机组工作负荷,只是巡航高度比330低,平均油耗每小时7~8吨,明显少于346、747。</weibo_content>
+    <weibo_image>http://ww3.sinaimg.cn/bmiddle/c03da040jw1eqyofbcujaj218g0xcqfb.jpg</weibo_image>
+    <weibo_count like_count="20" forward_count="5" comment_count="9"/>
+    <weibo_date>今天 03:11 </weibo_date>
+    <weibo_from>来自魅族 MX4 Pro</weibo_from>
+  </weibo>
+</root>

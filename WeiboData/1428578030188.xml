@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:13:50">
+  <user_info user_id="2601533665" user_url="http://weibo.cn/u/2601533665?f=search_0">
+    <weibo_count>2013</weibo_count>
+    <follow_count>2977</follow_count>
+    <fans_count>810</fans_count>
+    <性别>女</性别>
+    <简介>保密!</简介>
+    <生日>1988-02-18</生日>
+    <tag>盐城生活</tag>
+    <head_image>http://tp2.sinaimg.cn/2601533665/180/5708712345/0</head_image>
+    <昵称>漫彩年华</昵称>
+    <地区>江苏 盐城</地区>
+  </user_info>
+  <weibo weibo_id="M_CctiIA1EW" search_key="轿车">
+    <weibo_sender>漫彩年华</weibo_sender>
+    <weibo_content>:【轿车挡住大妈跳广场舞 大妈合力推开】 http://t.cn/RAi1fde(分享自 @一点资讯)</weibo_content>
+    <weibo_image>http://ww4.sinaimg.cn/bmiddle/9b1040e1jw1eqzb1arkyaj20qe0eu763.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 14:33 </weibo_date>
+    <weibo_from>来自一点资讯_Android</weibo_from>
+  </weibo>
+</root>

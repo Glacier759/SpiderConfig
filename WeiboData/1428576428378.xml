@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:47:08">
+  <user_info user_id="5582766412" user_url="http://weibo.cn/u/5582766412?f=search_0">
+    <weibo_count>4</weibo_count>
+    <follow_count>34</follow_count>
+    <fans_count>4</fans_count>
+    <性别>女</性别>
+    <生日>1990-04-09</生日>
+    <head_image>http://tp1.sinaimg.cn/5582766412/180/5723539582/0</head_image>
+    <昵称>左岸边1998</昵称>
+    <地区>辽宁 大连</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuK8gDeB" search_key="汽车">
+    <weibo_sender>左岸边1998</weibo_sender>
+    <weibo_content>:#微卖# 女士卡通汽车坐垫温馨绣花女士小熊H二便宜啦,只卖￥298.00,http://t.cn/RA67sFF</weibo_content>
+    <weibo_image>http://ww4.sinaimg.cn/bmiddle/0065OIzyjw1eqzhehv9uhj30b40b4dgp.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>34分钟前 </weibo_date>
+    <weibo_from>来自微卖客户端</weibo_from>
+  </weibo>
+</root>

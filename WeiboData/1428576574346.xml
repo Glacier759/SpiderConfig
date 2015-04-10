@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:49:34">
+  <user_info user_id="1245855564" user_url="http://weibo.cn/u/1245855564?f=search_0">
+    <weibo_count>296</weibo_count>
+    <follow_count>21</follow_count>
+    <fans_count>26</fans_count>
+    <性别>男</性别>
+    <tag>IT数码</tag>
+    <head_image>http://tp1.sinaimg.cn/1245855564/180/5679409917/1</head_image>
+    <昵称>volight_WB</昵称>
+    <地区>其他</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuHIutsf" search_key="汽车">
+    <weibo_sender>volight_WB</weibo_sender>
+    <weibo_content>://关于车保养、机油、添加剂的白话版教程 分享自@汽车之家 - http://t.cn/RAIeV1B</weibo_content>
+    <weibo_image>http://ww4.sinaimg.cn/bmiddle/4a423f4cjw1eqzh8big2sj204g03c3yj.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>42分钟前 </weibo_date>
+    <weibo_from>来自汽车之家Android版</weibo_from>
+  </weibo>
+</root>

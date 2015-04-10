@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:42:51">
+  <user_info user_id="5547699744" user_url="http://weibo.cn/u/5547699744?f=search_0">
+    <weibo_count>92</weibo_count>
+    <follow_count>3</follow_count>
+    <fans_count>9</fans_count>
+    <性别>男</性别>
+    <head_image>http://tp1.sinaimg.cn/5547699744/180/5721000443/1</head_image>
+    <昵称>一沫惔惔育</昵称>
+    <地区>北京 东城区</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuOfkGFs" search_key="汽车">
+    <weibo_sender>一沫惔惔育</weibo_sender>
+    <weibo_content>:由汽车人和霸天虎展开的这场争夺能源的战争,是导致此次油价上涨的直接原因!</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>19分钟前 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

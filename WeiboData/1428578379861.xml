@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:19:39">
+  <user_info user_id="2434346675" user_url="http://weibo.cn/u/2434346675?f=search_0">
+    <weibo_count>484</weibo_count>
+    <follow_count>240</follow_count>
+    <fans_count>91</fans_count>
+    <性别>男</性别>
+    <生日>1990-01-22</生日>
+    <tag>旅游,美女,健康,娱乐</tag>
+    <head_image>http://tp4.sinaimg.cn/2434346675/180/5720237790/1</head_image>
+    <昵称>我等待waiting</昵称>
+    <地区>河南 郑州</地区>
+  </user_info>
+  <weibo weibo_id="M_CctlvsdnQ" search_key="越野车">
+    <weibo_sender>我等待waiting</weibo_sender>
+    <weibo_content>:【不到6万的国产四驱纯越野车,可以过河,懂车的人请进!】 http://t.cn/RAi1nvJ (分享自ZAKER)</weibo_content>
+    <weibo_image>http://ww3.sinaimg.cn/bmiddle/91192eb3jw1eqzb8g12p9j20m80vi40j.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 14:40 </weibo_date>
+    <weibo_from>来自ZAKER新闻资讯安卓版</weibo_from>
+  </weibo>
+</root>

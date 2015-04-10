@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:38:59">
+  <user_info user_id="5509284055" user_url="http://weibo.cn/u/5509284055?f=search_0">
+    <weibo_count>26</weibo_count>
+    <follow_count>0</follow_count>
+    <fans_count>11</fans_count>
+    <性别>男</性别>
+    <生日>2007-09-03</生日>
+    <tag>明星</tag>
+    <head_image>http://tp4.sinaimg.cn/5509284055/180/5721407337/1</head_image>
+    <昵称>锦织哪吐</昵称>
+    <地区>福建</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuRPenp7" search_key="汽车">
+    <weibo_sender>锦织哪吐</weibo_sender>
+    <weibo_content>:【汽车知识】汽车在野外或远离修车地点,如遇到制动分泵漏制动液或分泵管路折断,可在分泵管路接头处用铁皮、铜皮做个小垫子,将管路堵死,再旋紧螺钉,或者将断口夹扁、卷曲堵漏,使该轮不起制动用作。但这样做可能会造成单边制动,驾驶时要注意安全,谨慎驾驶。</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>6分钟前 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

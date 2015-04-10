@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 15:11:13">
+  <user_info user_id="1686095900" user_url="http://weibo.cn/vinabq?f=search_0">
+    <weibo_count>1133</weibo_count>
+    <follow_count>222</follow_count>
+    <fans_count>155</fans_count>
+    <性别>女</性别>
+    <简介>有点蛮不讲理。有点通情达理。有点活泼。有点内向。有点固执。希望日子可以欢快些。我想我会努力的。</简介>
+    <head_image>http://tp1.sinaimg.cn/1686095900/180/1283265435/0</head_image>
+    <昵称>celery白菜菜</昵称>
+    <地区>四川 自贡</地区>
+  </user_info>
+  <weibo weibo_id="M_CcnoBszEn">
+    <weibo_sender>celery白菜菜</weibo_sender>
+    <weibo_content>快递小哥写给暗恋的女生的情诗,好暖心,好感动QAQ。</weibo_content>
+    <weibo_forward forward_reason="转发理由:@客车临二三六次 @//@阿甘LG:QAQ  "> 转发了 最佳读物 的微博:</weibo_forward>
+    <weibo_image>http://ww1.sinaimg.cn/bmiddle/d4e38a78gw1eqw3o4ih03j20c72mhn1b.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>04月08日 23:31 </weibo_date>
+    <weibo_from>来自小米手机4</weibo_from>
+  </weibo>
+</root>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:45:43">
+  <user_info user_id="5506226272" user_url="http://weibo.cn/u/5506226272?f=search_0">
+    <weibo_count>55</weibo_count>
+    <follow_count>9</follow_count>
+    <fans_count>12</fans_count>
+    <性别>男</性别>
+    <生日>水瓶座</生日>
+    <head_image>http://tp1.sinaimg.cn/5506226272/180/5718467552/1</head_image>
+    <昵称>瑞瑞Qe要好好学习_TP</昵称>
+    <地区>宁夏 石嘴山</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuLwj8wR" search_key="汽车">
+    <weibo_sender>瑞瑞Qe要好好学习_TP</weibo_sender>
+    <weibo_content>:【世界º上最小的汽车】</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="1"/>
+    <weibo_date>29分钟前 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

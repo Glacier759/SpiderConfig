@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:30:36">
+  <user_info user_id="5546445731" user_url="http://weibo.cn/u/5546445731?f=search_0">
+    <weibo_count>16</weibo_count>
+    <follow_count>33</follow_count>
+    <fans_count>6</fans_count>
+    <性别>男</性别>
+    <简介>只爱她一个</简介>
+    <生日>1992-06-18</生日>
+    <head_image>http://tp4.sinaimg.cn/5546445731/180/5720832176/1</head_image>
+    <昵称>飞飞视你如命</昵称>
+    <地区>陕西 榆林</地区>
+  </user_info>
+  <weibo weibo_id="M_CchGouSZP" search_key="越野车">
+    <weibo_sender>飞飞视你如命</weibo_sender>
+    <weibo_content>:自驾游,组车队。越野车。去的联系我18391290876姓乔。朋友们帮忙转发。</weibo_content>
+    <weibo_count like_count="0" forward_count="1" comment_count="1"/>
+    <weibo_date>04月08日 08:59 </weibo_date>
+    <weibo_from>来自新浪微博4G版</weibo_from>
+  </weibo>
+</root>

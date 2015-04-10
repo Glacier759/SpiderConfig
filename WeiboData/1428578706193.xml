@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:25:06">
+  <user_info user_id="3204445632" user_url="http://weibo.cn/u/3204445632?f=search_0">
+    <weibo_count>158</weibo_count>
+    <follow_count>475</follow_count>
+    <fans_count>1385</fans_count>
+    <性别>男</性别>
+    <简介>存在感。</简介>
+    <生日>1992-12-09</生日>
+    <tag>时尚潮流,软件,好性格,多愁善感,运动,搞笑,安静,射手,旅游,IT数码</tag>
+    <head_image>http://tp1.sinaimg.cn/3204445632/180/5722738197/1</head_image>
+    <昵称>哥也要注册</昵称>
+    <地区>浙江 杭州</地区>
+  </user_info>
+  <weibo weibo_id="M_Cco3tki35" search_key="越野车">
+    <weibo_sender>哥也要注册</weibo_sender>
+    <weibo_content>:我想换浙A 想换越野车。[月亮](做梦呢) [位置]海潮路</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="3"/>
+    <weibo_date>今天 01:12 </weibo_date>
+    <weibo_from>来自iPhone 6</weibo_from>
+  </weibo>
+</root>

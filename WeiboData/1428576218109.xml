@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:43:38">
+  <user_info user_id="2368250490" user_url="http://weibo.cn/u/2368250490?f=search_0">
+    <weibo_count>9323</weibo_count>
+    <follow_count>818</follow_count>
+    <fans_count>766</fans_count>
+    <性别>男</性别>
+    <生日>0001-00-00</生日>
+    <tag>旅游,宅</tag>
+    <head_image>http://tp3.sinaimg.cn/2368250490/180/5609938855/1</head_image>
+    <昵称>盛世国威</昵称>
+    <地区>山东 东营</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuMR2zfr" search_key="汽车">
+    <weibo_sender>盛世国威</weibo_sender>
+    <weibo_content>我分享了@黄超国的微博 的文章 查看文章《实名举报、控告官商勾结陕汽集团走私汽车一条龙的利益链窝案》</weibo_content>
+    <weibo_forward forward_reason="转发理由::广东汕头政府欺下瞒上、官商勾结、给大量的假冒克隆陕汽汽车上牌;不走法定程序,上牌后没有登记证书、没有完税凭证、等等!粤D10487就是典型的案例,大梁焊接加长340毫米,把克隆汽车变成高危汽车,摸取更大的暴利。多方举报就是没人管!  "> 转发了 东关王素玲 的微博:</weibo_forward>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>23分钟前 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

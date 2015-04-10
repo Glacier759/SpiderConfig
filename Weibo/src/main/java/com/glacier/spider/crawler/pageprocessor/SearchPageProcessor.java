@@ -24,6 +24,7 @@ public class SearchPageProcessor {
     private static Logger logger = Logger.getLogger(SearchPageProcessor.class.getName());
 
     private List<SearchAns> searchAnses = new ArrayList<SearchAns>();
+    private String search_key = "";
 
     /**
      * 依据关键字进行搜索, 维护一个存有SearchAns对象的List, SearchAns中包含一个UserInfo对象与一个WeiboStruct对象
@@ -41,6 +42,7 @@ public class SearchPageProcessor {
      * */
     public void getSearchList(String key, boolean get_user, boolean save) {
         try {
+            this.search_key = key;
             StringBuffer buffer = new StringBuffer();
             buffer.append("[搜索] 进入微博搜索模块. key = " + key);
             if ( get_user ) {   buffer.append(" [获取]用户资料"); }
@@ -79,11 +81,23 @@ public class SearchPageProcessor {
             int count = 1;
             do {
                 try {
+                    /**
+                     * 暂时废弃，改为在document()方法中进行判断;
+                     * */
+//                    if ( document.title().equals("微博广场") ) {
+//                        document = Downloader.reLogin();
+//                    }
                     logger.info("[解析] 正在获取第 " + count + " 页 / " + maxPage + " 页");
                     Elements weiboDivs = document.select("div[class=c]").select("div[id]");
                     logger.info("[解析] 当前页解析得到 " + weiboDivs.size() + " 条微博");
+
+                    if ( weiboDivs.size() == 0 ) {
+                        System.out.println(document.toString());
+                        System.exit(1);
+                    }
+
                     for (Element weiboDiv : weiboDivs) {
-                        SearchAns searchAns = new SearchAns();
+                        SearchAns searchAns = new SearchAns(search_key);
                         WeiboStruct struct = new WeiboStruct();
                         struct.setWeiboID(weiboDiv.attr("id"));
                         Element weiboText = weiboDiv.select("span[class=ctt]").first();
@@ -149,6 +163,9 @@ public class SearchPageProcessor {
                         if ( get_user == true ) {
                             String username = searchAns.weiboStruct.getWeiboSender();
                             Document user_doc = Downloader.userDocument(username);
+                            if ( user_doc == null ) {
+                                break;      //如果用户信息获取失败，抛弃该条微博
+                            }
                             searchAns.userInfo = new UserPageProcessor().getUserInfo(user_doc);
                         }
                         searchAnses.add(searchAns);

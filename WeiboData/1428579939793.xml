@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:45:39">
+  <user_info user_id="5423387779" user_url="http://weibo.cn/u/5423387779?f=search_0">
+    <weibo_count>54</weibo_count>
+    <follow_count>3</follow_count>
+    <fans_count>8</fans_count>
+    <性别>男</性别>
+    <head_image>http://tp4.sinaimg.cn/5423387779/180/5714265112/1</head_image>
+    <昵称>江北余哥</昵称>
+    <地区>黑龙江 黑河</地区>
+  </user_info>
+  <weibo weibo_id="M_Ccrdhkaxi" search_key="客车">
+    <weibo_sender>江北余哥</weibo_sender>
+    <weibo_content>:今天踏上去哈市的客车,开始新的旆程,但是老天不作美啊,天下起了中雪,但是外面还是不冷的,安心的踏上旅途吧,,,,</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 09:14 </weibo_date>
+    <weibo_from>来自中国移动定制终端</weibo_from>
+  </weibo>
+</root>

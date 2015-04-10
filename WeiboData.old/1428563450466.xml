@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 15:10:50">
+  <user_info user_id="1852609855" user_url="http://weibo.cn/u/1852609855?f=search_0">
+    <weibo_count>257</weibo_count>
+    <follow_count>114</follow_count>
+    <fans_count>72</fans_count>
+    <性别>女</性别>
+    <简介>不想听,不想说,不想看。</简介>
+    <生日>1990-11-30</生日>
+    <head_image>http://tp4.sinaimg.cn/1852609855/180/5700737672/0</head_image>
+    <昵称>小核桃有颗大脑仁儿</昵称>
+    <地区>辽宁 沈阳</地区>
+  </user_info>
+  <weibo weibo_id="M_CcnFa2Bah">
+    <weibo_sender>小核桃有颗大脑仁儿</weibo_sender>
+    <weibo_content>:空中客车A400M军用运输机 http://t.cn/RAiqSj4</weibo_content>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/6e6c953fjw1eqym57ujo8j20cg0700t6.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 00:12 </weibo_date>
+    <weibo_from>来自优酷iPhone客户端</weibo_from>
+  </weibo>
+</root>

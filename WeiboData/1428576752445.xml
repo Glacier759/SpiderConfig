@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:52:32">
+  <user_info user_id="5501011164" user_url="http://weibo.cn/u/5501011164?f=search_0">
+    <weibo_count>32</weibo_count>
+    <follow_count>2</follow_count>
+    <fans_count>12</fans_count>
+    <性别>男</性别>
+    <head_image>http://tp1.sinaimg.cn/5501011164/180/5720495848/1</head_image>
+    <昵称>黑泽愁沉</昵称>
+    <地区>其他</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuEqzZVh" search_key="汽车">
+    <weibo_sender>黑泽愁沉</weibo_sender>
+    <weibo_content>:【汽车知识】汽车在野外或远离修车地点,如遇到制动分泵漏制动液或分泵管路折断,可在分泵管路接头处用铁皮、铜皮做个小垫子,将管路堵死,再旋紧螺钉,或者将断口夹扁、卷曲堵漏,使该轮不起制动用作。但这样做可能会造成单边制动,驾驶时要注意安全,谨慎驾驶。</weibo_content>
+    <weibo_image>http://ww4.sinaimg.cn/bmiddle/0060hGiwgw1eqzgsjk28yj30bu08j0tz.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>53分钟前 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

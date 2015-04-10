@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:52:31">
+  <user_info user_id="5036768749" user_url="http://weibo.cn/u/5036768749?f=search_0">
+    <weibo_count>233</weibo_count>
+    <follow_count>212</follow_count>
+    <fans_count>41</fans_count>
+    <性别>男</性别>
+    <生日>0001-00-00</生日>
+    <head_image>http://tp2.sinaimg.cn/5036768749/180/5687745600/1</head_image>
+    <昵称>D烧酒D</昵称>
+    <地区>黑龙江 大庆</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuEk69ew" search_key="汽车">
+    <weibo_sender>D烧酒D</weibo_sender>
+    <weibo_content>:我们为什么设计不出好看的汽车 http://t.cn/RA67S2a (分享自@凤凰新闻客户端)</weibo_content>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/005uRLDDjw1eqzgzlejgjj30dc07o0t6.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>53分钟前 </weibo_date>
+    <weibo_from>来自凤凰新闻</weibo_from>
+  </weibo>
+</root>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:20:11">
+  <user_info user_id="5503970423" user_url="http://weibo.cn/u/5503970423?f=search_0">
+    <weibo_count>49</weibo_count>
+    <follow_count>10</follow_count>
+    <fans_count>19</fans_count>
+    <性别>男</性别>
+    <生日>1976-08-24</生日>
+    <tag>明星</tag>
+    <head_image>http://tp4.sinaimg.cn/5503970423/180/5720727171/1</head_image>
+    <昵称>伊势谷莲呜</昵称>
+    <地区>海南</地区>
+  </user_info>
+  <weibo weibo_id="M_Cct2GgbbR" search_key="越野车">
+    <weibo_sender>伊势谷莲呜</weibo_sender>
+    <weibo_content>:【北汽域胜007】域胜007外观富有冲击力,线条流畅、时尚大气、充满流行元素的城市风格。域胜007四驱版采用原丰田霸道越野车底盘的非承载式车身,匹配2.4L发动机,其最大功率和最大扭矩较2.0L版本均得到了大幅提升,分别达到了105/4800kw/rpm和217/(3000-4000)N.m/rpm。</weibo_content>
+    <weibo_image>http://ww1.sinaimg.cn/bmiddle/0060u68vgw1eqz9w6f2gbj30bj0750u3.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 13:54 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

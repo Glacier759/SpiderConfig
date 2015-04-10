@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:41:16">
+  <user_info user_id="5474682935" user_url="http://weibo.cn/u/5474682935?f=search_0">
+    <weibo_count>13</weibo_count>
+    <follow_count>124</follow_count>
+    <fans_count>127</fans_count>
+    <性别>男</性别>
+    <生日>1991-02-19</生日>
+    <tag>明星</tag>
+    <head_image>http://tp4.sinaimg.cn/5474682935/180/5718410812/1</head_image>
+    <昵称>江口扎卜</昵称>
+    <地区>四川</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuPQAkgm" search_key="汽车">
+    <weibo_sender>江口扎卜</weibo_sender>
+    <weibo_content>:“今天我生日,你怎么还没有过来?”女生着急的对电话问到。“嗯…快到了…”…“现在播放一则新闻,刚才西惠路口出现一则交通事故,两辆汽车相撞,另外一名车主车子撞得变形严重,驾驶座里都是血,人却不见了。”</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>13分钟前 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

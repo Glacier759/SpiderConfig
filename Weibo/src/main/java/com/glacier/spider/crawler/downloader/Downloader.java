@@ -1,5 +1,8 @@
 package com.glacier.spider.crawler.downloader;
 
+import com.glacier.spider.crawler.pipeline.Accounts;
+import com.glacier.spider.login.GetAccounts;
+import com.glacier.spider.login.LoginCN;
 import com.glacier.spider.utils.StringUtils;
 import org.apache.http.*;
 import org.apache.http.client.methods.HttpGet;
@@ -30,6 +33,7 @@ public class Downloader {
     private static DefaultHttpClient httpClient;
     public static String HTTP_GET = "get";
     public static String HTTP_POST = "post";
+    public static String last_url;
 
     /**
      * 设置Downloader模块所需的HttpClient
@@ -47,6 +51,7 @@ public class Downloader {
      * */
     public static Document document(String url, String method) {
         try {
+            last_url = url;
             HttpResponse response = null;
             if ( method.equals("get") ) {
                 HttpGet httpGet = new HttpGet(url);
@@ -93,7 +98,15 @@ public class Downloader {
             HttpEntity entity = response.getEntity();
             Document document = Jsoup.parse(getContent(entity, "UTF-8"));
             document.setBaseUri(url);   //设置document的来源地址
+            //logger.info("[URL] - " + url);
 
+            /**
+             * 当获取网页title为“微博广场”时，则重新选择账号登陆并获取
+             * */
+            if ( document.title().equals("微博广场") ) {
+                logger.warn("[重登陆] - 访问频繁导致出现重定向，正在重新登录...");
+                document = reLogin();
+            }
             return document;
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -239,6 +252,24 @@ public class Downloader {
             if ( nextEle.text().equals("下页") ) {
                 return Downloader.document(nextEle.attr("abs:href"), Downloader.HTTP_GET);
             }
+        }catch (Exception e) {
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            e.printStackTrace(new PrintStream(baos));
+            logger.error(baos.toString());
+        }
+        return null;
+    }
+
+    public static Document reLogin() {
+        try {
+            Accounts accounts = GetAccounts.accounts("weibo");
+            DefaultHttpClient httpClient1 = new LoginCN().login(accounts);
+            if ( httpClient1 == null ) {
+                logger.warn("[登陆] - '" + accounts.getUsername() + "' 登录失败");
+                System.exit(1);
+            }
+            setClient(httpClient1);
+            return document(last_url, HTTP_GET);
         }catch (Exception e) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             e.printStackTrace(new PrintStream(baos));

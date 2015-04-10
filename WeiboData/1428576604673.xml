@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:50:04">
+  <user_info user_id="1898594485" user_url="http://weibo.cn/u/1898594485?f=search_0">
+    <weibo_count>853</weibo_count>
+    <follow_count>158</follow_count>
+    <fans_count>185</fans_count>
+    <性别>男</性别>
+    <简介>我说我的落寞, 你当你的过客</简介>
+    <生日>0001-00-00</生日>
+    <tag>微博奇葩</tag>
+    <head_image>http://tp2.sinaimg.cn/1898594485/180/5673276878/1</head_image>
+    <昵称>胖大海里的鱼</昵称>
+    <地区>北京</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuGzAmGR" search_key="汽车">
+    <weibo_sender>胖大海里的鱼</weibo_sender>
+    <weibo_content>:分享网易新闻:「安徽万亩"隆平稻种"减产绝收」 卫星好看,收成难看,大跃进不只是农业科技,计算机,信息,新能源,汽车工业都是重灾区,热门的铝电池更甚,从实验室到田间地头到寻常百姓家还有很长的路要走 http://t.cn/RAijmmj</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>45分钟前 </weibo_date>
+    <weibo_from>来自网易新闻客户端</weibo_from>
+  </weibo>
+</root>

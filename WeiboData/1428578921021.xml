@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:28:41">
+  <user_info user_id="3165041437" user_url="http://weibo.cn/u/3165041437?f=search_0">
+    <weibo_count>224</weibo_count>
+    <follow_count>32</follow_count>
+    <fans_count>77</fans_count>
+    <性别>男</性别>
+    <生日>1991-02-21</生日>
+    <tag>新闻趣事</tag>
+    <head_image>http://tp2.sinaimg.cn/3165041437/180/5668647295/1</head_image>
+    <昵称>夜未央0221</昵称>
+    <地区>其他</地区>
+  </user_info>
+  <weibo weibo_id="M_CcjIngX31" search_key="越野车">
+    <weibo_sender>夜未央0221</weibo_sender>
+    <weibo_content>://全球公认的十大越野车排行 分享自易车apphttp://t.cn/RAJqVdO</weibo_content>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/bca6b31djw1eqy4pqozbvj20go088wfd.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>04月08日 14:09 </weibo_date>
+    <weibo_from>来自易车_安卓版</weibo_from>
+  </weibo>
+</root>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:37:48">
+  <user_info user_id="2749834900" user_url="http://weibo.cn/u/2749834900?f=search_0">
+    <weibo_count>842</weibo_count>
+    <follow_count>285</follow_count>
+    <fans_count>252</fans_count>
+    <性别>男</性别>
+    <生日>1995-10-10</生日>
+    <tag>宅,美食,娱乐,游戏动漫</tag>
+    <head_image>http://tp1.sinaimg.cn/2749834900/180/5713196172/1</head_image>
+    <昵称>读取_默默读取中</昵称>
+    <地区>四川 成都</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuTwrv9l" search_key="汽车">
+    <weibo_sender>读取_默默读取中</weibo_sender>
+    <weibo_content>:#成都突发# 建设路汽车自然 自发送时火以灭</weibo_content>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/a3e72694jw1eqzi241b95j20nz0hsgnb.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>1分钟前 </weibo_date>
+    <weibo_from>来自小米</weibo_from>
+  </weibo>
+</root>

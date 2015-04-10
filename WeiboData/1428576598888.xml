@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:49:58">
+  <user_info user_id="1937596607" user_url="http://weibo.cn/u/1937596607?f=search_0">
+    <weibo_count>55</weibo_count>
+    <follow_count>55</follow_count>
+    <fans_count>28</fans_count>
+    <性别>男</性别>
+    <生日>01-01</生日>
+    <head_image>http://tp4.sinaimg.cn/1937596607/180/5656685876/1</head_image>
+    <昵称>紫Scorpio天蝎</昵称>
+    <地区>其他</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuGQokBz" search_key="汽车">
+    <weibo_sender>紫Scorpio天蝎</weibo_sender>
+    <weibo_content>:直接路上下客,前面就汽车站了@深圳交警 [位置]福田汽车站</weibo_content>
+    <weibo_image>http://ww4.sinaimg.cn/bmiddle/737d60bfjw1eqzh55lc9kj20dc0hs75y.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>44分钟前 </weibo_date>
+    <weibo_from>来自iPhone客户端</weibo_from>
+  </weibo>
+</root>

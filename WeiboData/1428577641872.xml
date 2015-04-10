@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:07:21">
+  <user_info user_id="1872630765" user_url="http://weibo.cn/u/1872630765?f=search_0">
+    <weibo_count>1978</weibo_count>
+    <follow_count>86</follow_count>
+    <fans_count>475</fans_count>
+    <性别>女</性别>
+    <简介>从每一件小事做起。</简介>
+    <生日>1989-03-10</生日>
+    <head_image>http://tp2.sinaimg.cn/1872630765/180/5721575812/0</head_image>
+    <昵称>麻烦的小麻烦</昵称>
+    <地区>河南 周口</地区>
+  </user_info>
+  <weibo weibo_id="M_CcusmoSka" search_key="轿车">
+    <weibo_sender>麻烦的小麻烦</weibo_sender>
+    <weibo_content>:下午没有轿车。我依旧很忙。</weibo_content>
+    <weibo_count like_count="1" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 17:30 </weibo_date>
+    <weibo_from>来自iPhone 6</weibo_from>
+  </weibo>
+</root>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:37:26">
+  <user_info user_id="5138405992" user_url="http://weibo.cn/u/5138405992?f=search_0">
+    <weibo_count>18921</weibo_count>
+    <follow_count>1</follow_count>
+    <fans_count>52466</fans_count>
+    <性别>男</性别>
+    <简介>廊坊市区实时路况情况。注:该帐号不聊天,不加关注,只发布交通信息,聊天请@乐享廊坊 。</简介>
+    <生日>2014-05-01</生日>
+    <tag>廊坊生活</tag>
+    <head_image>http://tp1.sinaimg.cn/5138405992/180/5697807409/1</head_image>
+    <昵称>廊坊实时路况</昵称>
+    <地区>河北 廊坊</地区>
+  </user_info>
+  <weibo weibo_id="M_Ccua7AfbI" search_key="客车">
+    <weibo_sender>廊坊实时路况</weibo_sender>
+    <weibo_content>:#廊坊路况#:16:42【新开路与广阳道】交口东西双向车流量稍大,红灯时段候车约100米,需1-2个灯时通过;16:34【新华路与解放道】交口西向东长途汽车站北门进出站大型客车较多,行车缓慢,提醒司机朋友们减速慢行,耐心等候,保持安全车距;16:31【常...数据来源:河北公安交管网。</weibo_content>
+    <weibo_image>http://ww3.sinaimg.cn/bmiddle/005BKe80jw1eqzeu6zdaaj30ic0icabv.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 16:45 </weibo_date>
+    <weibo_from>来自乐享廊坊</weibo_from>
+  </weibo>
+</root>

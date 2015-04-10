@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:13:11">
+  <user_info user_id="3300767315" user_url="http://weibo.cn/u/3300767315?f=search_0">
+    <weibo_count>108</weibo_count>
+    <follow_count>88</follow_count>
+    <fans_count>94</fans_count>
+    <性别>女</性别>
+    <简介>努力过的有意思些</简介>
+    <生日>1994-04-17</生日>
+    <head_image>http://tp4.sinaimg.cn/3300767315/180/5719367881/0</head_image>
+    <昵称>女大鳄ing</昵称>
+    <地区>浙江 金华</地区>
+  </user_info>
+  <weibo weibo_id="M_CctrRlZBM" search_key="轿车">
+    <weibo_sender>女大鳄ing</weibo_sender>
+    <weibo_content>:这辆黑色轿车停我家店门口老半天,驾驶人不知道去了哪里,导致其他过往的车辆困难行驶,请快点开走啊,请浦江有车人文明行车停车@浦江草根趣事 [位置]47省道</weibo_content>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/c4bdb653jw1eqzblkkdmsj20xc18gwpr.jpg</weibo_image>
+    <weibo_count like_count="1" forward_count="2" comment_count="1"/>
+    <weibo_date>今天 14:56 </weibo_date>
+    <weibo_from>来自vivo智能手机</weibo_from>
+  </weibo>
+</root>

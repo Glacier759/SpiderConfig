@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:42:11">
+  <user_info user_id="2108237403" user_url="http://weibo.cn/xitiezixun?f=search_0">
+    <weibo_count>24867</weibo_count>
+    <follow_count>363</follow_count>
+    <fans_count>1163737</fans_count>
+    <性别>男</性别>
+    <简介>西安铁路局官方微博,提供铁路出行资讯、客货运知识、售票点分布、列车时刻查询服务。更多信息请访问(www.xaronline.com)</简介>
+    <生日>01-01</生日>
+    <认证>西安铁路局官方微博</认证>
+    <head_image>http://tp4.sinaimg.cn/2108237403/180/5689580323/1</head_image>
+    <认证信息>西安铁路局官方微博</认证信息>
+    <昵称>西铁资讯</昵称>
+    <地区>陕西 西安</地区>
+  </user_info>
+  <weibo weibo_id="M_CcseNCEiJ" search_key="客车">
+    <weibo_sender>西铁资讯</weibo_sender>
+    <weibo_content>:#西平铁路开客车了##乘火车•游丝路•品美食#渭北之春 @中国铁路 @西部网 @华商报 @三秦都市报 @距离因交流而拉近</weibo_content>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/7da9265bjw1eqz6c9w7ufj20zk0qo41c.jpg</weibo_image>
+    <weibo_count like_count="1" forward_count="10" comment_count="0"/>
+    <weibo_date>今天 11:51 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

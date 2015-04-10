@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:09:53">
+  <user_info user_id="3262509805" user_url="http://weibo.cn/u/3262509805?f=search_0">
+    <weibo_count>3064</weibo_count>
+    <follow_count>74</follow_count>
+    <fans_count>108</fans_count>
+    <性别>男</性别>
+    <生日>0001-00-00</生日>
+    <tag>美食</tag>
+    <head_image>http://tp2.sinaimg.cn/3262509805/180/0/1</head_image>
+    <昵称>宁波的雷阵雨</昵称>
+    <地区>浙江 宁波</地区>
+  </user_info>
+  <weibo weibo_id="M_Ccu4cyfgX" search_key="轿车">
+    <weibo_sender>宁波的雷阵雨</weibo_sender>
+    <weibo_content>:商机无处不在,就看你怎么看。一汽的困难是暂时的。//白俄罗斯购买红旗轿车作为阅兵车 法国总统访华曾乘坐同型车。 http://t.cn/RAik0nV</weibo_content>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/c275f2edjw1eqzef0idb2j208m064t99.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 16:30 </weibo_date>
+    <weibo_from>来自JiaThis分享按钮</weibo_from>
+  </weibo>
+</root>

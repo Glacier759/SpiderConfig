@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 18:51:28">
+  <user_info user_id="5149851540" user_url="http://weibo.cn/u/5149851540?f=search_0">
+    <weibo_count>14211</weibo_count>
+    <follow_count>13</follow_count>
+    <fans_count>474</fans_count>
+    <性别>男</性别>
+    <生日>1992-11-27</生日>
+    <tag>视频音乐</tag>
+    <head_image>http://tp1.sinaimg.cn/5149851540/180/5720940259/1</head_image>
+    <昵称>小林子-Dandelion</昵称>
+    <地区>湖南 长沙</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuFg1mdB" search_key="汽车">
+    <weibo_sender>小林子-Dandelion</weibo_sender>
+    <weibo_content>:#我在爱奇艺#上传了视频《消防员扑灭自燃汽车突遇轮胎爆炸》,小伙伴们快来围观吧!(分享自@爱奇艺) http://t.cn/RA67E6G</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>50分钟前 </weibo_date>
+    <weibo_from>来自爱奇艺PPS</weibo_from>
+  </weibo>
+</root>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:22:18">
+  <user_info user_id="5582165579" user_url="http://weibo.cn/u/5582165579?f=search_0">
+    <weibo_count>7</weibo_count>
+    <follow_count>3</follow_count>
+    <fans_count>6</fans_count>
+    <性别>女</性别>
+    <生日>2011-03-03</生日>
+    <head_image>http://tp4.sinaimg.cn/5582165579/180/5723357191/0</head_image>
+    <昵称>上汽荣威遵义乾坤4S店</昵称>
+    <地区>贵州 遵义</地区>
+  </user_info>
+  <weibo weibo_id="M_CcrPAc0ec" search_key="越野车">
+    <weibo_sender>上汽荣威遵义乾坤4S店</weibo_sender>
+    <weibo_content>#荣威视点#清明,人间四月天,你在思念谁?</weibo_content>
+    <weibo_forward forward_reason="转发理由:真正的越野车,朋友们,我亲自试过那种路你想都想不到了,真是越野王了,真对得起上汽集团的W5,这个名词  "> 转发了 上海汽车荣威 的微博:</weibo_forward>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/6651e69fgw1eqsjvhlhd4j20n90d1q5e.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 10:49 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

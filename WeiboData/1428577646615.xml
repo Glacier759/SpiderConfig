@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:07:26">
+  <user_info user_id="3014727683" user_url="http://weibo.cn/u/3014727683?f=search_0">
+    <weibo_count>72</weibo_count>
+    <follow_count>177</follow_count>
+    <fans_count>99</fans_count>
+    <性别>女</性别>
+    <简介>对自己好点很有必要</简介>
+    <生日>1994-12-07</生日>
+    <tag>名人明星</tag>
+    <head_image>http://tp4.sinaimg.cn/3014727683/180/5719958118/0</head_image>
+    <昵称>大头儿子是小头爸爸</昵称>
+    <地区>辽宁 沈阳</地区>
+  </user_info>
+  <weibo weibo_id="M_CcurCBQJs" search_key="轿车">
+    <weibo_sender>大头儿子是小头爸爸</weibo_sender>
+    <weibo_content>:趴在轿车上的小巨人[不好意思][胜利][胜利] [位置]锦竹东路</weibo_content>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/b3b11803jw1eqzg2yyctrj20p018gqfo.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 17:28 </weibo_date>
+    <weibo_from>来自三星GALAXY S4</weibo_from>
+  </weibo>
+</root>

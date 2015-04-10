@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 14:50:02">
+  <user_info user_id="5506003487" user_url="http://weibo.cn/u/5506003487?f=search_0">
+    <weibo_count>5</weibo_count>
+    <follow_count>0</follow_count>
+    <fans_count>26</fans_count>
+    <性别>女</性别>
+    <生日>金牛座</生日>
+    <head_image>http://tp4.sinaimg.cn/5506003487/180/5718481743/0</head_image>
+    <昵称>我就随便刷Yhs个微博</昵称>
+    <地区>云南</地区>
+  </user_info>
+  <weibo weibo_id="M_CctluvwSh">
+    <weibo_sender>我就随便刷Yhs个微博</weibo_sender>
+    <weibo_content>:【停车不用愁 折叠电动汽车占车位三分一】韩国近日研发一款可折叠电动汽车,减少停车时占据的空间,从而解决了停车难的问题。据韩国科研人员介绍,这款称为Armadillo-T的车;子可搭载两个人,最高速度为60公里/时,充电10分钟可走100公里。</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>10分钟前 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

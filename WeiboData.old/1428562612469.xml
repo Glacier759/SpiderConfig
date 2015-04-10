@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 14:56:52">
+  <user_info user_id="5567000607" user_url="http://weibo.cn/u/5567000607?f=search_0">
+    <weibo_count>34</weibo_count>
+    <follow_count>62</follow_count>
+    <fans_count>9</fans_count>
+    <性别>男</性别>
+    <生日>1994-02-08</生日>
+    <head_image>http://tp4.sinaimg.cn/5567000607/180/5721913980/1</head_image>
+    <昵称>王麓平</昵称>
+    <地区>广东 广州</地区>
+  </user_info>
+  <weibo weibo_id="M_CcsGnDCvz">
+    <weibo_sender>王麓平</weibo_sender>
+    <weibo_content>:【中国红旗轿车运抵白俄 将参加阅兵式】 http://t.cn/RAiR2C0 (分享自ZAKER)</weibo_content>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/0064Kzanjw1eqz8b1134ij30k00vqmyv.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 12:59 </weibo_date>
+    <weibo_from>来自ZAKER新闻杂志</weibo_from>
+  </weibo>
+</root>

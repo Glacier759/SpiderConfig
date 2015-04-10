@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:05:35">
+  <user_info user_id="1674641164" user_url="http://weibo.cn/u/1674641164?f=search_0">
+    <weibo_count>1305</weibo_count>
+    <follow_count>93</follow_count>
+    <fans_count>118</fans_count>
+    <性别>男</性别>
+    <生日>天蝎座</生日>
+    <head_image>http://tp1.sinaimg.cn/1674641164/180/5676268504/1</head_image>
+    <昵称>苯易</昵称>
+    <地区>四川 成都</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuG9fKco" search_key="轿车">
+    <weibo_sender>苯易</weibo_sender>
+    <weibo_content>:【现在问题来了,买轿车还是SUV?】 (分享自 @今日头条 ) http://t.cn/RA67dxF</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 18:04 </weibo_date>
+    <weibo_from>来自今日头条</weibo_from>
+  </weibo>
+</root>

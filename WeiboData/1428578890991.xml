@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:28:10">
+  <user_info user_id="1236340607" user_url="http://weibo.cn/u/1236340607?f=search_0">
+    <weibo_count>801</weibo_count>
+    <follow_count>323</follow_count>
+    <fans_count>203</fans_count>
+    <性别>男</性别>
+    <简介>大大的日子,小小的生活。</简介>
+    <生日>0001-00-00</生日>
+    <tag>美图摄影,NBA,旅游,摄影,室内设计,设计,公益设计,书,旅行</tag>
+    <head_image>http://tp4.sinaimg.cn/1236340607/180/5675326207/1</head_image>
+    <昵称>我就是Pan</昵称>
+    <地区>福建</地区>
+  </user_info>
+  <weibo weibo_id="M_CckmodDz2" search_key="越野车">
+    <weibo_sender>我就是Pan</weibo_sender>
+    <weibo_content>:人生正如眼前这条路一样,坑坑洼洼,有高有低,当我们开着越野车时,虽然开着很难受,但终究会过去的。</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="4"/>
+    <weibo_date>04月08日 15:48 </weibo_date>
+    <weibo_from>来自一加手机 不将就</weibo_from>
+  </weibo>
+</root>

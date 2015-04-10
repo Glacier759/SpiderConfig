@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:40:41">
+  <user_info user_id="5488551943" user_url="http://weibo.cn/u/5488551943?f=search_0">
+    <weibo_count>27</weibo_count>
+    <follow_count>144</follow_count>
+    <fans_count>16</fans_count>
+    <性别>男</性别>
+    <生日>1992-05-16</生日>
+    <tag>IT数码,美图摄影,体育资讯,西安生活</tag>
+    <head_image>http://tp4.sinaimg.cn/5488551943/180/5716819258/1</head_image>
+    <昵称>pld什么昵称</昵称>
+    <地区>陕西 西安</地区>
+  </user_info>
+  <weibo weibo_id="M_CcsYg2HNp" search_key="客车">
+    <weibo_sender>pld什么昵称</weibo_sender>
+    <weibo_content>:西平铁路明天正式开通西安到彬县客车_看图_永寿吧_百度贴吧 http://t.cn/RAim7NG</weibo_content>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>今天 13:43 </weibo_date>
+    <weibo_from>来自百度分享</weibo_from>
+  </weibo>
+</root>

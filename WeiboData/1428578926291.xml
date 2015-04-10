@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:28:46">
+  <user_info user_id="3211513630" user_url="http://weibo.cn/u/3211513630?f=search_0">
+    <weibo_count>247</weibo_count>
+    <follow_count>1730</follow_count>
+    <fans_count>82</fans_count>
+    <性别>男</性别>
+    <简介>杂想琐事</简介>
+    <生日>1986-04-30</生日>
+    <tag>美食</tag>
+    <head_image>http://tp3.sinaimg.cn/3211513630/180/5717841419/1</head_image>
+    <昵称>凤飞飞lpp</昵称>
+    <地区>湖南 郴州</地区>
+  </user_info>
+  <weibo weibo_id="M_CcjBKc3wf" search_key="越野车">
+    <weibo_sender>凤飞飞lpp</weibo_sender>
+    <weibo_content>:2011款雷克萨斯RX35ǐ0越野车。</weibo_content>
+    <weibo_image>http://ww1.sinaimg.cn/bmiddle/b7913803tw1eonh0v8hisj20dw0ac3z1.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="1"/>
+    <weibo_date>04月08日 13:53 </weibo_date>
+    <weibo_from>来自微博 weibo.com</weibo_from>
+  </weibo>
+</root>

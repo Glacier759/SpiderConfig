@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root crawl_date="2015-04-09 19:03:58">
+  <user_info user_id="3933821758" user_url="http://weibo.cn/u/3933821758?f=search_0">
+    <weibo_count>589</weibo_count>
+    <follow_count>74</follow_count>
+    <fans_count>410</fans_count>
+    <性别>男</性别>
+    <简介>干干干干,就是干</简介>
+    <生日>1996-03-18</生日>
+    <tag>其他生活</tag>
+    <head_image>http://tp3.sinaimg.cn/3933821758/180/5699179699/1</head_image>
+    <昵称>毛桂方</昵称>
+    <地区>四川 成都</地区>
+  </user_info>
+  <weibo weibo_id="M_CcuV1dOPI" search_key="轿车">
+    <weibo_sender>毛桂方</weibo_sender>
+    <weibo_content>:成都一环路一辆轿车自燃,第一手资料 [位置]高地中心</weibo_content>
+    <weibo_image>http://ww2.sinaimg.cn/bmiddle/ea795b3ejw1eqzi4pdllrj20hs0npjt6.jpg</weibo_image>
+    <weibo_count like_count="0" forward_count="0" comment_count="0"/>
+    <weibo_date>24分钟前 </weibo_date>
+    <weibo_from>来自华为Ascend P6</weibo_from>
+  </weibo>
+</root>
