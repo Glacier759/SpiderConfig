@@ -69,4 +69,3 @@ SpiderConfig
 
 >> <p>样式: "%d{yyyy-MM-dd HH:mm:ss} [%p] - %m {%l}%n"</p>
 
->> 考虑挑战杯评委的口味..  输出日志增加HTML形式
