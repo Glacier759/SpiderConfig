@@ -1,5 +1,5 @@
 <root>
-	<crawl_type user="true" search="false">抓取模式, user=true会抓取user_list中的微博，search=true会抓取微博搜索内容</crawl_type>
+	<crawl_type user="false" search="true">抓取模式, user=true会抓取user_list中的微博，search=true会抓取微博搜索内容</crawl_type>
 	<!--user的情况下-->
 	<user_list>		<!--user模式下待抓取用户主页列表-->
 		<start_url>http://weibo.cn/u/2314283235</start_url>
