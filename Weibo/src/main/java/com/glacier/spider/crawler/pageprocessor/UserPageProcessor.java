@@ -397,5 +397,19 @@ public class UserPageProcessor {
         return null;
     }
 
+    public void save4xml() {
+        userStruct.save4xml();
+    }
+
+    public void clear() {
+        userStruct.weiboList.clear();
+        if (userStruct.followMap != null) {
+            userStruct.followMap.clear();
+        }
+        if (userStruct.fansMap != null) {
+            userStruct.fansMap.clear();
+        }
+        userStruct.weiboList.clear();
+    }
 
 }

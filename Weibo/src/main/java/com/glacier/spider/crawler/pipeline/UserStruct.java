@@ -43,7 +43,7 @@ public class UserStruct {
                 }
             }
 
-            if ( weiboList.size() != 0 ) {
+            if ( weiboList != null && weiboList.size() != 0 ) {
                 Element weiboEle = root.addElement("weibo_list");
                 for ( WeiboStruct key : weiboList ) {
                     Element weibo_ele = weiboEle.addElement("weibo");
@@ -64,7 +64,7 @@ public class UserStruct {
                 }
             }
 
-            if ( fansMap.size() != 0 ) {
+            if ( fansMap != null && fansMap.size() != 0 ) {
                 Element fansEle = root.addElement("fans_list").addAttribute("total_count", fansMap.size()+"");
                 for ( String fans_name : fansMap.keySet() ) {
                     fansEle.addElement("weibo_fans").addAttribute("fans_name", fans_name)
@@ -72,7 +72,7 @@ public class UserStruct {
                 }
             }
 
-            if ( followMap.size() != 0 ) {
+            if ( followMap != null && followMap.size() != 0 ) {
                 Element followEle = root.addElement("follow_list").addAttribute("total_count", followMap.size()+"");
                 for ( String follow_name : followMap.keySet() ) {
                     followEle.addElement("weibo_follow").addAttribute("follow_name", follow_name)
@@ -82,7 +82,7 @@ public class UserStruct {
 
             SearchAns.addFileInfo(root);
 
-            File save_file = new File(System.currentTimeMillis() + ".xml");
+            File save_file = new File("WeiboData", System.currentTimeMillis() + ".xml");
             FileUtils.writeStringToFile(save_file, formatXML(root));
             logger.info("[保存成功] - " + save_file.getAbsolutePath());
         } catch (Exception e) {

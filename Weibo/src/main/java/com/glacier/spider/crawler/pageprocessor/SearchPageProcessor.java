@@ -91,9 +91,10 @@ public class SearchPageProcessor {
                     Elements weiboDivs = document.select("div[class=c]").select("div[id]");
                     logger.info("[解析] 当前页解析得到 " + weiboDivs.size() + " 条微博");
 
-                    if ( weiboDivs.size() == 0 ) {
-                        System.out.println(document.toString());
-                        System.exit(1);
+                    while ( weiboDivs.size() == 0 ) {
+                        logger.info("[解析] 当前页面微博数为0, 更换账号重访问中...");
+                        document = Downloader.reLogin();
+                        weiboDivs = document.select("div[class=c]").select("div[id]");
                     }
 
                     for (Element weiboDiv : weiboDivs) {
@@ -215,5 +216,15 @@ public class SearchPageProcessor {
             logger.error(baos.toString());
         }
         return null;
+    }
+
+    public void save4xml() {
+        for ( SearchAns searchAns : searchAnses ) {
+            searchAns.save4xml();
+        }
+    }
+
+    public void clear() {
+        searchAnses.clear();
     }
 }

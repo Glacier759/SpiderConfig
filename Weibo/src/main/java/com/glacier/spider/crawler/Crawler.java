@@ -3,11 +3,19 @@ package com.glacier.spider.crawler;
 import com.glacier.spider.configure.Configure;
 import com.glacier.spider.crawler.downloader.Downloader;
 import com.glacier.spider.crawler.pageprocessor.SearchPageProcessor;
+import com.glacier.spider.crawler.pageprocessor.UserPageProcessor;
 import com.glacier.spider.crawler.pipeline.Accounts;
+import com.glacier.spider.crawler.pipeline.SearchAns;
+import com.glacier.spider.crawler.pipeline.UserInfo;
+import com.glacier.spider.crawler.pipeline.UserStruct;
 import com.glacier.spider.login.GetAccounts;
 import com.glacier.spider.login.LoginCN;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.log4j.Logger;
+import org.jsoup.nodes.Document;
+
+import java.net.URL;
+import java.util.List;
 
 /**
  * Created by glacier on 14-12-17.
@@ -34,32 +42,59 @@ public class Crawler {
             logger.warn("[登陆] - '" + accounts.getUsername() + "' 登录失败");
             System.exit(1);
         }
-
         Downloader.setClient(httpClient);       //为Downloader模块设置HttpClient
-//        Document document = Downloader.document("http://weibo.cn/3217179555", Downloader.HTTP_GET);     //给予起始路径
-//        //Document document = Downloader.document("http://weibo.cn/musicmusicmusic", Downloader.HTTP_GET);
-//        UserPageProcessor userPageProcessor = new UserPageProcessor();
-//        UserInfo userInfo = userPageProcessor.getUserInfo(document);
-//        System.out.println(userInfo);
-//        userPageProcessor.getFollowMap(document);
-//        userPageProcessor.getFansMap(document);
-//        userPageProcessor.getWeibo(document);
-//
-//        UserStruct userStruct = userPageProcessor.getUserStruct();
-//        userStruct.save4xml();
 
+        switch(Configure.getInstance().getCrawl_type()) {
+            case 0: break;
+            case 1:
+                runWithSearchPageProcessor();
+                break;
+            case 2:
+                runWithUserPageProcessor();
+                break;
+            case 3:
+                runWithSearchPageProcessor();
+                runWithUserPageProcessor();
+                break;
+        }
 
+    }
+
+    private void runWithUserPageProcessor() {
+        UserPageProcessor userPageProcessor = new UserPageProcessor();
+        for ( String start_url : Configure.getInstance().getUser_list() ) {
+            try {
+                URL startURL = new URL(start_url);
+                if ( startURL.getHost().equals("weibo.com") ) {
+                    startURL = new URL(start_url.replace("weibo.com", "weibo.cn"));
+                }
+                logger.info("[任务] 开始任务 - " + startURL.toString());
+                Document document = Downloader.document(startURL.toString(), Downloader.HTTP_GET);
+                if (Configure.getInstance().isUser_info()) {
+                    userPageProcessor.getUserInfo(document);
+                }
+                if (Configure.getInstance().isFollow_list()) {
+                    userPageProcessor.getFollowMap(document);
+                }
+                if (Configure.getInstance().isFans_list()) {
+                    userPageProcessor.getFansMap(document);
+                }
+                if (Configure.getInstance().isWeibo_list()) {
+                    userPageProcessor.getWeibo(document);
+                }
+                userPageProcessor.save4xml();
+                userPageProcessor.clear();
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void runWithSearchPageProcessor() {
         SearchPageProcessor searchPageProcessor = new SearchPageProcessor();
-        //searchPageProcessor.getSearchList("汽车", true, true);
-        //searchPageProcessor.getSearchList("轿车", true, true);
-        //searchPageProcessor.getSearchList("越野车", true, true);
-        //searchPageProcessor.getSearchList("客车", true, true);
-        searchPageProcessor.getSearchList("一汽", true, true);
-        searchPageProcessor.getSearchList("东风", true, true);
-        searchPageProcessor.getSearchList("日产", true, true);
-        searchPageProcessor.getSearchList("大众", true, true);
-        searchPageProcessor.getSearchList("本田", true, true);
-        searchPageProcessor.getSearchList("现代", true, true);
-        searchPageProcessor.getSearchList("上海汽车", true, true);
+        for ( String keywords : Configure.getInstance().getKeywords_list() ) {
+            searchPageProcessor.getSearchList(keywords, Configure.getInstance().isUser_info(), true);
+            searchPageProcessor.clear();
+        }
     }
 }
