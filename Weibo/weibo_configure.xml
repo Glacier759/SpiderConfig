@@ -1,21 +1,22 @@
 <root>
 	<crawl_type user="true" search="false">抓取模式, user=true会抓取user_list中的微博，search=true会抓取微博搜索内容</crawl_type>
 	<!--user的情况下-->
-	<user_list>		<!--地址预处理-->
+	<user_list>		<!--user模式下待抓取用户主页列表-->
+		<start_url>http://weibo.cn/u/2314283235</start_url>
 		<start_url>http://weibo.com/163music</start_url>
-		<start_url>http://weibo.com/u/3172190991?from=feed&amp;loc=nickname</start_url>
+		<start_url>http://weibo.com/u/3172190991?from=feed&amp;loc=nickname</start_url>		<!--&等特殊字符需要转义-->
 	</user_list>
 	<!--search的情况下-->
-	<keywords_list>
-		<keywords>任立翔</keywords>
-		<keywords>网络爬虫</keywords>
+	<keywords_list>	 <!--search模式下检索关键词列表-->
+		<keywords>西邮Linux兴趣小组</keywords>
+		<keywords>林达意</keywords>
 	</keywords_list>
 
 	<!--需要提取的微博信息-->
-	<user_info>true</user_info> <!--博主基本资料-->
+	<user_info>true</user_info> <!--博主基本资料 search模式下获取检索列表中微博对应的博主信息-->
+	<!--以下配置仅在user模式适用-->
 	<follow_list>true</follow_list> <!--博主关注列表-->
 	<fans_list>true</fans_list> <!--博主粉丝列表-->
 	<weibo_list>true</weibo_list> <!--博主微博正文-->
-	<!--可以考虑增加一些高级用法,比如获取粉丝的微博指定递归层级之类的-->
 
 </root>
