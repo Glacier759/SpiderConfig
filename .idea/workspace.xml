@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eccc6d8a-7616-4f2b-94da-2b5e1d4a072d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/configure/Configure.java" afterPath="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/configure/Configure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/Crawler.java" afterPath="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/Crawler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pageprocessor/SearchPageProcessor.java" afterPath="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pageprocessor/SearchPageProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pageprocessor/UserPageProcessor.java" afterPath="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pageprocessor/UserPageProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pipeline/UserStruct.java" afterPath="$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pipeline/UserStruct.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/Weibo" afterPath="$PROJECT_DIR$/logs/Weibo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.1448968406600.xml.swp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weibo/logs/Weibo" afterPath="$PROJECT_DIR$/Weibo/logs/Weibo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weibo/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/Weibo/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weibo/weibo_configure.xml" afterPath="$PROJECT_DIR$/Weibo/weibo_configure.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SpiderConfig.iws" />
@@ -84,21 +81,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserStruct.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserStruct.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pipeline/UserStruct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22994652">
-              <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="61" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Downloader.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Downloader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/downloader/Downloader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.14438502">
+              <caret line="62" column="141" selection-start-line="62" selection-start-column="141" selection-end-line="62" selection-end-column="141" />
               <folding />
             </state>
           </provider>
@@ -961,12 +958,12 @@
       <workItem from="1430625162863" duration="5567000" />
       <workItem from="1431859220730" duration="2895000" />
       <workItem from="1448471639959" duration="1046000" />
-      <workItem from="1448962049717" duration="8168000" />
+      <workItem from="1448962049717" duration="8991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258106000" />
+    <option name="totallyTimeSpent" value="258929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1365" y="27" width="1368" height="742" extended-state="6" />
@@ -1376,14 +1373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/downloader/Downloader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/Crawler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1462,8 +1451,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/pipeline/UserStruct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22994652">
-          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="61" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weibo/src/main/java/com/glacier/spider/crawler/downloader/Downloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14438502">
+          <caret line="62" column="141" selection-start-line="62" selection-start-column="141" selection-end-line="62" selection-end-column="141" />
           <folding />
         </state>
       </provider>
